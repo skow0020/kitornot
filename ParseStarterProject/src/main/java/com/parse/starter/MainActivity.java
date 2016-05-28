@@ -12,6 +12,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.BitmapFactory;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -47,7 +48,6 @@ import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, View.OnKeyListener {
-
   EditText usernameField, passwordField;
   TextView changeSignUpModeTextView;
   Button signUpButton;
@@ -57,60 +57,44 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
   @Override
   public boolean onKey(View v, int keyCode, KeyEvent event) {
-
-
     if (keyCode == KeyEvent.KEYCODE_ENTER && event.getAction() == KeyEvent.ACTION_DOWN) {
-
       signUpOrLogIn(v);
-
     }
-
     return false;
-
   }
 
   @Override
   public void onClick(View v) {
-
-    if (v.getId() == R.id.login_signup_txt) {
-
-      if (signUpModeActive == true) {
-
+    if (v.getId() == R.id.login_signup_txt)
+    {
+      if (signUpModeActive == true)
+      {
         signUpModeActive = false;
         changeSignUpModeTextView.setText("Sign Up");
         signUpButton.setText("Log In");
-
-
-      } else {
-
+      } else
+      {
         signUpModeActive = true;
         changeSignUpModeTextView.setText("Log In");
         signUpButton.setText("Sign Up");
-
       }
-
-    } else if (v.getId() == R.id.logo || v.getId() == R.id.relativeLayout){
-
+    } else if (v.getId() == R.id.logo || v.getId() == R.id.relativeLayout)
+    {
       InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
       imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
-
     }
     else if ( v.getId() == R.id.password)
     {
       passwordField.setText("");
-
     }
     else if (v.getId() == R.id.username)
     {
       usernameField.setText("");
     }
-
   }
 
   public void signUpOrLogIn(View view) {
-
     if (signUpModeActive == true) {
-
       ParseUser user = new ParseUser();
       user.setUsername(String.valueOf(usernameField.getText()));
       user.setPassword(String.valueOf(passwordField.getText()));
@@ -118,20 +102,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       user.signUpInBackground(new SignUpCallback() {
         @Override
         public void done(ParseException e) {
-
           if (e == null) {
-
             Log.i("AppInfo", "Signup Successful");
 
             //DO WHAT UPON SIGNUP
             //showUserList();
 
-          } else {
-
+          } else
+          {
             Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
-
           }
-
         }
       });
 
@@ -140,26 +120,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       ParseUser.logInInBackground(String.valueOf(usernameField.getText()), String.valueOf(passwordField.getText()), new LogInCallback() {
         @Override
         public void done(ParseUser user, ParseException e) {
-
-          if (user != null) {
-
+          if (user != null)
+          {
             Log.i("AppInfo", "Login Successful");
 
             //DO WHAT UPON LOGIN
             //showUserList();
 
-          } else {
-
+          } else
+          {
             Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
-
-
           }
-
         }
       });
-
     }
-
   }
 
 //  public void showUserList () {
@@ -173,6 +147,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+
+    //Set font of the title text
+    TextView title = (TextView)findViewById(R.id.apptitle);
+    Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/pacifico.ttf");
+    title.setTypeface(custom_font);
 
     if (ParseUser.getCurrentUser() != null) {
 
@@ -195,10 +174,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     relativeLayout.setOnClickListener(this);
     usernameField.setOnKeyListener(this);
     passwordField.setOnKeyListener(this);
+    usernameField.setOnClickListener(this);
+    passwordField.setOnClickListener(this);
 
     ParseAnalytics.trackAppOpenedInBackground(getIntent());
-
-
   }
 
   @Override
@@ -219,10 +198,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     if (id == R.id.action_settings) {
       return true;
     }
-
     return super.onOptionsItemSelected(item);
   }
-
-
-
 }

@@ -25,7 +25,7 @@
         android:allowBackup="true"
         android:icon="@drawable/loginicon"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/NoActionBar" >
         <meta-data
             android:name="com.parse.APPLICATION_ID"
             android:value="@string/parse_app_id" />
@@ -43,6 +43,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.parse.starter.UserHome"
+            android:label="@string/title_activity_user_home"
+            android:theme="@style/NoActionBar" />
     </application>
 
 </manifest>
