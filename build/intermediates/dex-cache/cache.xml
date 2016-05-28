@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Colin\.gradle\caches\modules-2\files-2.1\com.parse\parse-android\1.13.0\58a7d54b6a4f28be11f0cecec93097eddf473e6f\parse-android-1.13.0.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="58a7d54b6a4f28be11f0cecec93097eddf473e6f">
+        <dex dex="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\parse-android-1.13.0_f874684f0c1833dd55a1d39cdd19d977b9466822\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="3a201861519e9966c9c6ed0502c7fde27d9c1a95">
+        <dex dex="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_3febb6a2887268323da80e81c6c294865401080c\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Colin\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-22.2.0_5893be8dc9fc387341efb364a61055b349d16983\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-22.2.0_d191d1131e81a42f346c9d5e0b810da2aef50ab6\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="57d0bb0abf253f08a828b7f56754bb8a163361da">
+        <dex dex="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_926631bb187810ae25f86ee053cebbd96e00c209\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Colin\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\bolts-tasks-1.4.0_f858cc5a4dc3c39c8a2e783a3bf119c7a1bc5c61\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-22.2.0_04aad960902cd0b421f3500d8bb88f7dc103db28\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-22.2.0_f09c56fb28a343e58e33cfaf70ec371a92b7217f\classes.dex" />
+    </item>
+
+</items>
