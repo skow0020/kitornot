@@ -2094,6 +2094,7 @@ containing a value of this type.
         public static final int search_src_text=0x7f0c0060;
         public static final int search_voice_btn=0x7f0c0064;
         public static final int select_dialog_listview=0x7f0c0065;
+        public static final int share=0x7f0c007f;
         public static final int shortcut=0x7f0c0050;
         public static final int showCustom=0x7f0c0010;
         public static final int showHome=0x7f0c0011;
@@ -2185,6 +2186,7 @@ containing a value of this type.
     }
     public static final class menu {
         public static final int menu_main=0x7f0d0000;
+        public static final int menu_user_home=0x7f0d0001;
     }
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;
@@ -2211,16 +2213,17 @@ containing a value of this type.
         public static final int app_name=0x7f060012;
         public static final int appbar_scrolling_view_behavior=0x7f060013;
         public static final int cat_backside=0x7f060014;
-        public static final int hello_world=0x7f060015;
-        public static final int kit_or_not=0x7f060016;
-        public static final int log_in=0x7f060017;
-        public static final int parse_app_id=0x7f060018;
-        public static final int parse_client_key=0x7f060019;
-        public static final int password=0x7f06001a;
-        public static final int sign_up=0x7f06001b;
-        public static final int status_bar_notification_info_overflow=0x7f06001c;
-        public static final int title_activity_user_home=0x7f06001d;
-        public static final int username=0x7f06001e;
+        public static final int empty=0x7f060015;
+        public static final int hello_world=0x7f060016;
+        public static final int kit_or_not=0x7f060017;
+        public static final int log_in=0x7f060018;
+        public static final int parse_app_id=0x7f060019;
+        public static final int parse_client_key=0x7f06001a;
+        public static final int password=0x7f06001b;
+        public static final int sign_up=0x7f06001c;
+        public static final int status_bar_notification_info_overflow=0x7f06001d;
+        public static final int title_activity_user_home=0x7f06001e;
+        public static final int username=0x7f06001f;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f080074;

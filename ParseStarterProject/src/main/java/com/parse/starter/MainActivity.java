@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
   public void signUpOrLogIn(View view) {
     if (signUpModeActive == true) {
-      ParseUser user = new ParseUser();
+      final ParseUser user = new ParseUser();
       user.setUsername(String.valueOf(usernameField.getText()));
       user.setPassword(String.valueOf(passwordField.getText()));
 
@@ -104,9 +104,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         public void done(ParseException e) {
           if (e == null) {
             Log.i("AppInfo", "Signup Successful");
-
-            //DO WHAT UPON SIGNUP
-            //showUserList();
+            Toast.makeText(getApplicationContext(), "Welcome, " + user.getUsername(), Toast.LENGTH_LONG).show();
+            userHome();
 
           } else
           {
@@ -123,11 +122,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
           if (user != null)
           {
             Log.i("AppInfo", "Login Successful");
-
-            //DO WHAT UPON LOGIN
-            //showUserList();
-
-          } else
+            Toast.makeText(getApplicationContext(), "Welcome back, " + user.getUsername(), Toast.LENGTH_LONG).show();
+            userHome();
+          }
+          else
           {
             Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
           }
@@ -136,12 +134,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
   }
 
-//  public void showUserList () {
-//
-//    Intent i = new Intent(getApplicationContext(), UserList.class);
-//    startActivity(i);
-//
-//  }
+  public void userHome () {
+
+    Intent i =  new Intent(getApplicationContext(), UserHome.class);
+    startActivity(i);
+
+  }
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -154,10 +152,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     title.setTypeface(custom_font);
 
     if (ParseUser.getCurrentUser() != null) {
-
-      //DO WHAT IF CURRENT USER IS LOGGED IN
-      //showUserList();
-
+      //userHome();
     }
 
     signUpModeActive = true;

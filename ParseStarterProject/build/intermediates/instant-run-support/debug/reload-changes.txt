@@ -1,0 +1,3 @@
+CHANGED,C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\parse\starter\UserHome$2$override.class
+CHANGED,C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
+CHANGED,C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\parse\starter\UserHome$override.class

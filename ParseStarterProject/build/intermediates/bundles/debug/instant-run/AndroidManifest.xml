@@ -18,6 +18,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         name="com.parse.starter.StarterApplication"
@@ -45,7 +46,8 @@
         </activity>
         <activity
             android:name="com.parse.starter.UserHome"
-            android:label="@string/title_activity_user_home"
+            android:label="@string/empty"
+            android:screenOrientation="portrait"
             android:theme="@style/NoActionBar" />
     </application>
 
