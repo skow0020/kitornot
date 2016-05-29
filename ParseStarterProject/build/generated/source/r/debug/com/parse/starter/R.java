@@ -2013,6 +2013,7 @@ containing a value of this type.
         public static final int action_mode_close_button=0x7f0c003c;
         public static final int action_settings=0x7f0c007e;
         public static final int activity_chooser_view_content=0x7f0c003d;
+        public static final int addCat=0x7f0c006e;
         public static final int alertTitle=0x7f0c0047;
         public static final int always=0x7f0c002b;
         public static final int apptitle=0x7f0c0067;
@@ -2044,7 +2045,6 @@ containing a value of this type.
         public static final int exitUntilCollapsed=0x7f0c0016;
         public static final int expand_activities_button=0x7f0c003e;
         public static final int expanded_menu=0x7f0c004e;
-        public static final int fab=0x7f0c006e;
         public static final int fill=0x7f0c0021;
         public static final int fill_horizontal=0x7f0c0022;
         public static final int fill_vertical=0x7f0c0023;
@@ -2115,11 +2115,11 @@ containing a value of this type.
         public static final int time=0x7f0c0077;
         public static final int title=0x7f0c0043;
         public static final int title_template=0x7f0c0046;
-        public static final int toolbar=0x7f0c006d;
         public static final int top=0x7f0c0027;
         public static final int topPanel=0x7f0c0045;
         public static final int up=0x7f0c0008;
         public static final int useLogo=0x7f0c0013;
+        public static final int userPage=0x7f0c006d;
         public static final int username=0x7f0c0069;
         public static final int view_offset_helper=0x7f0c0009;
         public static final int withText=0x7f0c002f;
@@ -2224,6 +2224,7 @@ containing a value of this type.
         public static final int status_bar_notification_info_overflow=0x7f06001d;
         public static final int title_activity_user_home=0x7f06001e;
         public static final int username=0x7f06001f;
+        public static final int yourcats=0x7f060020;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f080074;

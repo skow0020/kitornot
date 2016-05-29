@@ -45,7 +45,7 @@
         </activity>
         <activity
             android:name="com.parse.starter.UserHome"
-            android:label="@string/empty"
+            android:label="@string/yourcats"
             android:screenOrientation="portrait"
             android:theme="@style/NoActionBar" />
     </application>

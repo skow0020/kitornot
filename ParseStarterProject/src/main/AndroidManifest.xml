@@ -39,7 +39,7 @@
 
         <activity
             android:name=".UserHome"
-            android:label="@string/empty"
+            android:label="@string/yourcats"
             android:theme="@style/NoActionBar"
             android:screenOrientation="portrait"></activity>
     </application>

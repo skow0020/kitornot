@@ -78,7 +78,7 @@ ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidM
 	android:screenOrientation
 		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:44:13-49
 	android:label
-		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:42:13-42
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:42:13-45
 	android:theme
 		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:43:13-47
 	android:name

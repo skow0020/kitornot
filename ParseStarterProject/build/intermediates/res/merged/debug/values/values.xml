@@ -256,6 +256,7 @@
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="title_activity_user_home">UserHome</string>
     <string name="username">Username</string>
+    <string name="yourcats">Your Cats</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
