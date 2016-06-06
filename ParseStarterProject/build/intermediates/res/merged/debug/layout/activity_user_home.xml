@@ -26,11 +26,12 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:contentDescription="@string/addcatimage" />
+        android:contentDescription="@string/addcatimage"
+        android:onClick="addCat" />
 
     <GridView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:id="@+id/userCats"
         android:layout_below="@+id/addCat"
         android:columnWidth="115dp"
@@ -38,5 +39,6 @@
         android:verticalSpacing="5dp"
         android:horizontalSpacing="5dp"
         android:stretchMode="columnWidth"
-        android:gravity="center" />
+        android:gravity="center"
+        android:minHeight="50dp" />
 </RelativeLayout>

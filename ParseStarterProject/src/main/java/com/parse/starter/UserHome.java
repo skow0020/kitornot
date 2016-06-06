@@ -89,8 +89,6 @@ public class UserHome extends AppCompatActivity {
             }
         });
 
-        int x = catImages.size();
-
         this.userCatGrid.setAdapter(new ImageAdapter(this, this.catImages));
     }
 
@@ -107,23 +105,23 @@ public class UserHome extends AppCompatActivity {
         startActivityForResult(i, 1);
     }
 
-    //Resizing image if it is too large for Parse
-    public Bitmap getResizedBitmap(Bitmap bm, int newWidth, int newHeight) {
-        int width = bm.getWidth();
-        int height = bm.getHeight();
-        float scaleWidth = ((float) newWidth) / width;
-        float scaleHeight = ((float) newHeight) / height;
-        // CREATE A MATRIX FOR THE MANIPULATION
-        Matrix matrix = new Matrix();
-        // RESIZE THE BIT MAP
-        matrix.postScale(scaleWidth, scaleHeight);
-
-        // "RECREATE" THE NEW BITMAP
-        Bitmap resizedBitmap = Bitmap.createBitmap(
-                bm, 0, 0, width, height, matrix, false);
-        bm.recycle();
-        return resizedBitmap;
-    }
+    //Resizing image if it is too large for Parse----DOES NOT APPEAR NECESSARY AFTER ALL
+//    public Bitmap getResizedBitmap(Bitmap bm, int newWidth, int newHeight) {
+//        int width = bm.getWidth();
+//        int height = bm.getHeight();
+//        float scaleWidth = ((float) newWidth) / width;
+//        float scaleHeight = ((float) newHeight) / height;
+//        // CREATE A MATRIX FOR THE MANIPULATION
+//        Matrix matrix = new Matrix();
+//        // RESIZE THE BIT MAP
+//        matrix.postScale(scaleWidth, scaleHeight);
+//
+//        // "RECREATE" THE NEW BITMAP
+//        Bitmap resizedBitmap = Bitmap.createBitmap(
+//                bm, 0, 0, width, height, matrix, false);
+//        bm.recycle();
+//        return resizedBitmap;
+//    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -145,20 +143,22 @@ public class UserHome extends AppCompatActivity {
                 bitmapImage.compress(Bitmap.CompressFormat.PNG, 100, stream);
 
                 byte[] byteArray = stream.toByteArray();
-                if (byteArray.length > 10485760) {
-                    int newWidth = (int)Math.round(bitmapImage.getWidth()*0.9);
-                    int newHeight = (int)Math.round(bitmapImage.getHeight()*0.9);
-                    while (byteArray.length > 10485760)
-                    {
-                        stream.reset();
-                        bitmapImage = getResizedBitmap(bitmapImage, newWidth, newHeight);
-                        bitmapImage.compress(Bitmap.CompressFormat.PNG, 100, stream);
-                        byteArray = stream.toByteArray();
-                        int x = byteArray.length;
-                        newWidth = (int)Math.round(newWidth*0.9);
-                        newHeight = (int)Math.round(newHeight*0.9);
-                    }
-                }
+
+                //DOES NOT APPEAR NECESSARY AFTER ALL
+//                if (byteArray.length > 10485760) {
+//                    int newWidth = (int)Math.round(bitmapImage.getWidth()*0.95);
+//                    int newHeight = (int)Math.round(bitmapImage.getHeight()*0.95);
+//                    while (byteArray.length > 10485760)
+//                    {
+//                        stream.reset();
+//                        bitmapImage = getResizedBitmap(bitmapImage, newWidth, newHeight);
+//                        bitmapImage.compress(Bitmap.CompressFormat.PNG, 100, stream);
+//                        byteArray = stream.toByteArray();
+//                        int x = byteArray.length;
+//                        newWidth = (int)Math.round(newWidth*0.5);
+//                        newHeight = (int)Math.round(newHeight*0.5);
+//                    }
+//                }
 
                 ParseFile file = new ParseFile("image.png", byteArray);
 

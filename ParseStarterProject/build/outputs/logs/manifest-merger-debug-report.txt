@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:9:1-47:12
+ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:9:1-49:12
 	package
 		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:10:5-32
 		INJECTED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml
@@ -26,7 +26,7 @@ ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidM
 	android:name
 		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:14:22-77
 application
-ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:16:5-45:19
+ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:16:5-47:19
 MERGED from [com.android.support:appcompat-v7:22.2.1] C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:22.2.1] C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:22.2.1] C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\design\22.2.1\AndroidManifest.xml:22:5-20
@@ -39,50 +39,52 @@ MERGED from [com.android.support:support-v4:22.2.1] C:\Users\Colin\Desktop\KitOr
 		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:18:9-35
 	android:icon
 		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:19:9-43
+	android:largeHeap
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:22:9-33
 	android:theme
 		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:21:9-43
 	android:name
 		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:17:9-43
 meta-data#com.parse.APPLICATION_ID
-ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:22:9-24:52
+ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:24:9-26:52
 	android:value
-		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:24:13-49
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:26:13-49
 	android:name
-		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:23:13-52
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:25:13-52
 meta-data#com.parse.CLIENT_KEY
-ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:25:9-27:56
+ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:27:9-29:56
 	android:value
-		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:27:13-53
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:29:13-53
 	android:name
-		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:26:13-48
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:28:13-48
 activity#com.parse.starter.MainActivity
-ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:29:9-38:20
+ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:31:9-40:20
 	android:screenOrientation
-		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:32:13-49
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:34:13-49
 	android:label
-		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:31:13-45
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:33:13-45
 	android:name
-		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:30:13-41
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:32:13-41
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:33:13-37:29
+ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:35:13-39:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:34:17-69
+ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:36:17-69
 	android:name
-		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:34:25-66
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:36:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:36:17-77
+ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:38:17-77
 	android:name
-		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:36:27-74
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:38:27-74
 activity#com.parse.starter.UserHome
-ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:40:9-44:61
+ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:42:9-46:61
 	android:screenOrientation
-		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:44:13-49
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:46:13-49
 	android:label
-		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:42:13-45
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:44:13-45
 	android:theme
-		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:43:13-47
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:45:13-47
 	android:name
-		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:41:13-37
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml:43:13-37
 uses-sdk
 INJECTED from C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:22.2.1] C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\AndroidManifest.xml:20:5-43
