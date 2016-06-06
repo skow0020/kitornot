@@ -1,15 +1,3 @@
-CHANGED,C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\parse\starter\R$mipmap$override.class
-CHANGED,C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\parse\starter\R$override.class
-CHANGED,C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\parse\starter\R$string$override.class
-CHANGED,C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\parse\starter\UserHome$override.class
-CHANGED,C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\parse\starter\R$id$override.class
-CHANGED,C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\parse\starter\R$layout$override.class
-CHANGED,C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\parse\starter\R$styleable$override.class
-CHANGED,C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\parse\starter\R$style$override.class
-CHANGED,C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\android\support\v7\appcompat\R$id$override.class
-CHANGED,C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\android\support\design\R$id$override.class
-CHANGED,C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\parse\starter\R$menu$override.class
-CHANGED,C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\parse\starter\UserHome$1$override.class
-CHANGED,C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\parse\starter\MainActivity$override.class
+CHANGED,C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\parse\starter\UserHome$2$override.class
 CHANGED,C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
-CHANGED,C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\parse\starter\R$integer$override.class
+CHANGED,C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\parse\starter\UserHome$override.class

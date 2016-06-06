@@ -4,52 +4,39 @@
     api-level="23"
     density="xxxhdpi"
     format="7"
-    timestamp="1257982845304006" >
+    timestamp="609109773418897" >
 
     <task
         name="javac"
-        duration="12596" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="2064" />
+        duration="0" />
     <task
         name="verifier"
-        duration="108" />
+        duration="0" />
 
     <artifact
         location="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\res\resources-debug.ap_"
         type="RESOURCES" />
-    <artifact
-        location="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
-        type="DEX" />
-    <artifact
-        location="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\5\slice_9\classes.dex"
-        type="DEX" />
-    <artifact
-        location="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
-        type="DEX" />
 
-    <build timestamp="1256451901971102" >
+    <build timestamp="604944858510203" >
         <artifact
             location="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\outputs\apk\ParseStarterProject-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="1257982845304006" >
-        <artifact
-            location="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\res\resources-debug.ap_"
-            type="RESOURCES" />
-        <artifact
-            location="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
-            type="DEX" />
+    <build timestamp="608696352133918" >
         <artifact
             location="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\5\slice_9\classes.dex"
             type="DEX" />
+    </build>
+    <build timestamp="609109773418897" >
         <artifact
-            location="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
-            type="DEX" />
+            location="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\res\resources-debug.ap_"
+            type="RESOURCES" />
     </build>
 
 </instant-run>

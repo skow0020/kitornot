@@ -1,5 +1,6 @@
 package com.parse.starter;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -16,20 +17,34 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.BaseAdapter;
+import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.parse.FindCallback;
+import com.parse.GetDataCallback;
+import com.parse.Parse;
+import com.parse.ParseACL;
 import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
+import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserHome extends AppCompatActivity {
     TextView userPage;
+    GridView userCatGrid;
+    ArrayList<Bitmap> catImages = new ArrayList<Bitmap>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +53,45 @@ public class UserHome extends AppCompatActivity {
 
         userPage = (TextView) findViewById(R.id.userPage);
         userPage.setText(ParseUser.getCurrentUser().getUsername() + "'s cats");
+        userCatGrid = (GridView) findViewById(R.id.userCats);
+
+        ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("images");
+        query.whereEqualTo("username", ParseUser.getCurrentUser().getUsername());
+        query.orderByDescending("createdAt");
+
+        query.findInBackground(new FindCallback<ParseObject>() {
+            @Override
+            public void done(List<ParseObject> objects, ParseException e) {
+                if (e == null)
+                {
+                    if (objects.size() > 0)
+                    {
+                        for (ParseObject object : objects)
+                        {
+                            ParseFile imgFile = (ParseFile) object.get("image");
+                            imgFile.getDataInBackground(new GetDataCallback() {
+                                @Override
+                                public void done(byte[] data, ParseException e) {
+                                    if (e == null)
+                                    {
+                                        Bitmap img = BitmapFactory.decodeByteArray(data, 0, data.length);
+                                        catImages.add(img);
+                                    }
+                                }
+                            });
+                        }
+                    }
+                }
+                else
+                {
+                    Toast.makeText(getApplication().getBaseContext(), "Your images failed to laod", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        int x = catImages.size();
+
+        this.userCatGrid.setAdapter(new ImageAdapter(this, this.catImages));
     }
 
     @Override
@@ -53,6 +107,7 @@ public class UserHome extends AppCompatActivity {
         startActivityForResult(i, 1);
     }
 
+    //Resizing image if it is too large for Parse
     public Bitmap getResizedBitmap(Bitmap bm, int newWidth, int newHeight) {
         int width = bm.getWidth();
         int height = bm.getHeight();
@@ -113,6 +168,10 @@ public class UserHome extends AppCompatActivity {
 
                 object.put("image", file);
 
+                ParseACL parseACL = new ParseACL();
+                parseACL.setPublicReadAccess(true);
+                object.setACL(parseACL);
+
                 object.saveInBackground(new SaveCallback() {
 
                     @Override
@@ -140,3 +199,4 @@ public class UserHome extends AppCompatActivity {
 
     }
 }
+
