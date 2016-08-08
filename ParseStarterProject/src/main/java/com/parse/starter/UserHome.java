@@ -53,6 +53,11 @@ public class UserHome extends AppCompatActivity {
 
         userPage = (TextView) findViewById(R.id.userPage);
         userPage.setText(ParseUser.getCurrentUser().getUsername() + "'s cats");
+        SetCatGrid();
+    }
+
+    public void SetCatGrid()
+    {
         userCatGrid = (GridView) findViewById(R.id.userCats);
 
         ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("images");
@@ -62,12 +67,14 @@ public class UserHome extends AppCompatActivity {
         query.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> objects, ParseException e) {
+
                 if (e == null)
                 {
                     if (objects.size() > 0)
                     {
                         for (ParseObject object : objects)
                         {
+                            final int numObjects = objects.size();
                             ParseFile imgFile = (ParseFile) object.get("image");
                             imgFile.getDataInBackground(new GetDataCallback() {
                                 @Override
@@ -76,6 +83,14 @@ public class UserHome extends AppCompatActivity {
                                     {
                                         Bitmap img = BitmapFactory.decodeByteArray(data, 0, data.length);
                                         catImages.add(img);
+                                        if (catImages.size() == numObjects)
+                                        {
+                                            userCatGrid.setAdapter(new ImageAdapter(getApplicationContext(), catImages));
+                                        }
+                                    }
+                                    else
+                                    {
+                                        Toast.makeText(getApplication().getBaseContext(), "Your images failed to laod", Toast.LENGTH_LONG).show();
                                     }
                                 }
                             });
@@ -88,8 +103,6 @@ public class UserHome extends AppCompatActivity {
                 }
             }
         });
-
-        this.userCatGrid.setAdapter(new ImageAdapter(this, this.catImages));
     }
 
     @Override
@@ -106,22 +119,22 @@ public class UserHome extends AppCompatActivity {
     }
 
     //Resizing image if it is too large for Parse----DOES NOT APPEAR NECESSARY AFTER ALL
-//    public Bitmap getResizedBitmap(Bitmap bm, int newWidth, int newHeight) {
-//        int width = bm.getWidth();
-//        int height = bm.getHeight();
-//        float scaleWidth = ((float) newWidth) / width;
-//        float scaleHeight = ((float) newHeight) / height;
-//        // CREATE A MATRIX FOR THE MANIPULATION
-//        Matrix matrix = new Matrix();
-//        // RESIZE THE BIT MAP
-//        matrix.postScale(scaleWidth, scaleHeight);
-//
-//        // "RECREATE" THE NEW BITMAP
-//        Bitmap resizedBitmap = Bitmap.createBitmap(
-//                bm, 0, 0, width, height, matrix, false);
-//        bm.recycle();
-//        return resizedBitmap;
-//    }
+    public Bitmap getResizedBitmap(Bitmap bm, int newWidth, int newHeight) {
+        int width = bm.getWidth();
+        int height = bm.getHeight();
+        float scaleWidth = ((float) newWidth) / width;
+        float scaleHeight = ((float) newHeight) / height;
+        // CREATE A MATRIX FOR THE MANIPULATION
+        Matrix matrix = new Matrix();
+        // RESIZE THE BIT MAP
+        matrix.postScale(scaleWidth, scaleHeight);
+
+        // "RECREATE" THE NEW BITMAP
+        Bitmap resizedBitmap = Bitmap.createBitmap(
+                bm, 0, 0, width, height, matrix, false);
+        bm.recycle();
+        return resizedBitmap;
+    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -144,21 +157,21 @@ public class UserHome extends AppCompatActivity {
 
                 byte[] byteArray = stream.toByteArray();
 
-                //DOES NOT APPEAR NECESSARY AFTER ALL
-//                if (byteArray.length > 10485760) {
-//                    int newWidth = (int)Math.round(bitmapImage.getWidth()*0.95);
-//                    int newHeight = (int)Math.round(bitmapImage.getHeight()*0.95);
-//                    while (byteArray.length > 10485760)
-//                    {
-//                        stream.reset();
-//                        bitmapImage = getResizedBitmap(bitmapImage, newWidth, newHeight);
-//                        bitmapImage.compress(Bitmap.CompressFormat.PNG, 100, stream);
-//                        byteArray = stream.toByteArray();
-//                        int x = byteArray.length;
-//                        newWidth = (int)Math.round(newWidth*0.5);
-//                        newHeight = (int)Math.round(newHeight*0.5);
-//                    }
-//                }
+
+                if (byteArray.length > 10485760) {
+                    int newWidth = (int)Math.round(bitmapImage.getWidth()*0.95);
+                    int newHeight = (int)Math.round(bitmapImage.getHeight()*0.95);
+                    while (byteArray.length > 10485760)
+                    {
+                        stream.reset();
+                        bitmapImage = getResizedBitmap(bitmapImage, newWidth, newHeight);
+                        bitmapImage.compress(Bitmap.CompressFormat.PNG, 100, stream);
+                        byteArray = stream.toByteArray();
+                        int x = byteArray.length;
+                        newWidth = (int)Math.round(newWidth*0.5);
+                        newHeight = (int)Math.round(newHeight*0.5);
+                    }
+                }
 
                 ParseFile file = new ParseFile("image.png", byteArray);
 
@@ -182,6 +195,8 @@ public class UserHome extends AppCompatActivity {
 
                             Toast.makeText(getApplication().getBaseContext(), "Your image has been posted!", Toast.LENGTH_LONG).show();
 
+                            catImages.clear();
+                            SetCatGrid();
                         } else {
                             Log.i("ImageUpload", " FAILED!!");
                             Toast.makeText(getApplication().getBaseContext(), "There was an error - please try again", Toast.LENGTH_LONG).show();
