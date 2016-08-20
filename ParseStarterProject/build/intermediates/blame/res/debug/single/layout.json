@@ -40,12 +40,12 @@
         "source": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\abc_screen_content_include.xml"
     },
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
-        "source": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\notification_template_part_chronometer.xml"
-    },
-    {
         "merged": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\layout_snackbar_include.xml",
         "source": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.android.support\\design\\22.2.1\\res\\layout\\layout_snackbar_include.xml"
+    },
+    {
+        "merged": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
+        "source": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
         "merged": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",

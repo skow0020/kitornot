@@ -4,34 +4,29 @@
     api-level="23"
     density="xxxhdpi"
     format="7"
-    timestamp="1173610991255266" >
+    timestamp="1177467865801352" >
 
     <task
         name="javac"
-        duration="1265" />
+        duration="3858" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="692" />
+        duration="856" />
     <task
         name="verifier"
-        duration="3" />
+        duration="223" />
 
     <artifact
-        location="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\5\slice_9\classes.dex"
-        type="DEX" />
+        location="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\outputs\apk\ParseStarterProject-debug.apk"
+        type="MAIN" />
 
-    <build timestamp="1171260874965478" >
+    <build timestamp="1177467865801352" >
         <artifact
             location="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\outputs\apk\ParseStarterProject-debug.apk"
             type="MAIN" />
-    </build>
-    <build timestamp="1173610991255266" >
-        <artifact
-            location="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\5\slice_9\classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>
