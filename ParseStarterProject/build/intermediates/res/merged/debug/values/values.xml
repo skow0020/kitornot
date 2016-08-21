@@ -246,6 +246,7 @@
     <string name="app_name">Kit or Not</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="cat_backside">Cat Backside</string>
+    <string name="catimage">catImage</string>
     <string name="empty"/>
     <string name="hello_world">Hello World!</string>
     <string name="kit_or_not">Kit Or Not?</string>
@@ -255,6 +256,8 @@
     <string name="password">Password</string>
     <string name="sign_up">Sign Up</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="title_activity_rating">RatingActivity</string>
+    <string name="title_activity_user_cat_details">UserCatDetails</string>
     <string name="title_activity_user_home">UserHome</string>
     <string name="username">Username</string>
     <string name="yourcats">Your Cats</string>

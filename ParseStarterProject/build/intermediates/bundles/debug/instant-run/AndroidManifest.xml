@@ -50,6 +50,15 @@
             android:label="@string/yourcats"
             android:screenOrientation="portrait"
             android:theme="@style/NoActionBar" />
+        <activity
+            android:name="com.parse.starter.UserCatDetails"
+            android:label="@string/title_activity_user_cat_details"
+            android:parentActivityName="com.parse.starter.UserHome"
+            android:theme="@style/NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.parse.starter.UserHome" />
+        </activity>
     </application>
 
 </manifest>

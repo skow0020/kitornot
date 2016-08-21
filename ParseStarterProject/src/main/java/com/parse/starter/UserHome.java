@@ -37,6 +37,7 @@ import com.parse.ParseUser;
 import com.parse.SaveCallback;
 
 import java.io.ByteArrayOutputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -46,6 +47,7 @@ public class UserHome extends AppCompatActivity {
     GridView userCatGrid;
     ArrayList<Bitmap> catImages = new ArrayList<Bitmap>();
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +56,33 @@ public class UserHome extends AppCompatActivity {
         userPage = (TextView) findViewById(R.id.userPage);
         userPage.setText(ParseUser.getCurrentUser().getUsername() + "'s cats");
         SetCatGrid();
+
+        userCatGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            ImageView catImage = (ImageView) findViewById(R.id.catImage);
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                createImageFromBitmap(catImages.get(position));
+
+                Intent i = new Intent(UserHome.this, UserCatDetails.class);
+                startActivity(i);
+            }
+        });
+    }
+
+    public String createImageFromBitmap(Bitmap bitmap) {
+        String fileName = "catImage";//no .png or .jpg needed
+        try {
+            ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+            FileOutputStream fo = openFileOutput(fileName, Context.MODE_PRIVATE);
+            fo.write(bytes.toByteArray());
+            // remember close file output
+            fo.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            fileName = null;
+        }
+        return fileName;
     }
 
     public void SetCatGrid()
@@ -167,9 +196,9 @@ public class UserHome extends AppCompatActivity {
                         bitmapImage = getResizedBitmap(bitmapImage, newWidth, newHeight);
                         bitmapImage.compress(Bitmap.CompressFormat.PNG, 100, stream);
                         byteArray = stream.toByteArray();
-                        int x = byteArray.length;
                         newWidth = (int)Math.round(newWidth*0.5);
                         newHeight = (int)Math.round(newHeight*0.5);
+
                     }
                 }
 

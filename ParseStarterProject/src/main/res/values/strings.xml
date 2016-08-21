@@ -22,4 +22,7 @@
     <string name="empty"></string>
     <string name="yourcats">Your Cats</string>
     <string name="addcatimage">addCatImage</string>
+    <string name="title_activity_user_cat_details">UserCatDetails</string>
+    <string name="title_activity_rating">RatingActivity</string>
+    <string name="catimage">catImage</string>
 </resources>

@@ -16,6 +16,10 @@
         "source": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
+        "merged": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\activity_user_cat_details2.xml",
+        "source": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\src\\main\\res\\layout\\activity_user_cat_details2.xml"
+    },
+    {
         "merged": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
         "source": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
@@ -40,12 +44,12 @@
         "source": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\abc_screen_content_include.xml"
     },
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\layout_snackbar_include.xml",
-        "source": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.android.support\\design\\22.2.1\\res\\layout\\layout_snackbar_include.xml"
-    },
-    {
         "merged": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
         "source": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\layout_snackbar_include.xml",
+        "source": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.android.support\\design\\22.2.1\\res\\layout\\layout_snackbar_include.xml"
     },
     {
         "merged": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
@@ -110,6 +114,10 @@
     {
         "merged": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_separator.xml",
         "source": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.android.support\\design\\22.2.1\\res\\layout\\design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\content_user_cat_details2.xml",
+        "source": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\src\\main\\res\\layout\\content_user_cat_details2.xml"
     },
     {
         "merged": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",

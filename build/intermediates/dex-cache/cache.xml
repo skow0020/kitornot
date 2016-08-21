@@ -19,7 +19,7 @@
         jar="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         revision="23.0.1"
-        sha1="cf0e7eec05342dcd2a7f053f5fc42f08407deccc">
+        sha1="4d159a38a1e14f10041dc5c64b6f6e5759b03184">
         <dex dex="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_3febb6a2887268323da80e81c6c294865401080c\classes.dex" />
     </item>
     <item
@@ -40,7 +40,7 @@
         jar="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.1"
-        sha1="724740657f727d9a5e39a815202b87afc86442b3">
+        sha1="3c8fad83c70362ccdca1acea0fddf8cfa72e00b1">
         <dex dex="C:\Users\Colin\Desktop\KitOrNot\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_926631bb187810ae25f86ee053cebbd96e00c209\classes.dex" />
     </item>
     <item
