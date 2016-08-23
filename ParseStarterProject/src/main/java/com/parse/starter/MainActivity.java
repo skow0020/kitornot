@@ -144,36 +144,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+
+
+    //Set font of the title text
+    TextView title = (TextView) findViewById(R.id.apptitle);
+    Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/pacifico.ttf");
+    title.setTypeface(custom_font);
+
+    signUpModeActive = true;
+
+    usernameField = (EditText) findViewById(R.id.username);
+    passwordField = (EditText) findViewById(R.id.password);
+    changeSignUpModeTextView = (TextView) findViewById(R.id.login_signup_txt);
+    signUpButton = (Button) findViewById(R.id.login_signup_btn);
+    logo = (ImageView) findViewById(R.id.logo);
+    relativeLayout = (RelativeLayout) findViewById(R.id.relativeLayout);
+
+    changeSignUpModeTextView.setOnClickListener(this);
+    logo.setOnClickListener(this);
+    relativeLayout.setOnClickListener(this);
+    usernameField.setOnKeyListener(this);
+    passwordField.setOnKeyListener(this);
+    usernameField.setOnClickListener(this);
+    passwordField.setOnClickListener(this);
+
+    ParseAnalytics.trackAppOpenedInBackground(getIntent());
     if (ParseUser.getCurrentUser().getUsername() != null)
     {
       Log.i("CURRENT USER", ParseUser.getCurrentUser().toString());
       userHome();
-    }
-    else
-    {
-      //Set font of the title text
-      TextView title = (TextView) findViewById(R.id.apptitle);
-      Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/pacifico.ttf");
-      title.setTypeface(custom_font);
-
-      signUpModeActive = true;
-
-      usernameField = (EditText) findViewById(R.id.username);
-      passwordField = (EditText) findViewById(R.id.password);
-      changeSignUpModeTextView = (TextView) findViewById(R.id.login_signup_txt);
-      signUpButton = (Button) findViewById(R.id.login_signup_btn);
-      logo = (ImageView) findViewById(R.id.logo);
-      relativeLayout = (RelativeLayout) findViewById(R.id.relativeLayout);
-
-      changeSignUpModeTextView.setOnClickListener(this);
-      logo.setOnClickListener(this);
-      relativeLayout.setOnClickListener(this);
-      usernameField.setOnKeyListener(this);
-      passwordField.setOnKeyListener(this);
-      usernameField.setOnClickListener(this);
-      passwordField.setOnClickListener(this);
-
-      ParseAnalytics.trackAppOpenedInBackground(getIntent());
     }
   }
 
