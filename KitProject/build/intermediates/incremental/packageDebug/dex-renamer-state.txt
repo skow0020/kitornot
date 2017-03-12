@@ -1,0 +1,7 @@
+#Sun Mar 12 14:05:54 CDT 2017
+base.0=C\:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_bf49a3f25252ccfc29fc1bbd27e9f48b5017addc
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_9a48a98bd17fcd5824b781e418f6adbfbef76e41\\classes.dex
+base.1=C\:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_9a48a98bd17fcd5824b781e418f6adbfbef76e41
+file.0=C\:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_bf49a3f25252ccfc29fc1bbd27e9f48b5017addc\\classes.dex

@@ -1,0 +1,22 @@
+#Sun Mar 12 14:05:44 CDT 2017
+renamed.6=classes7.dex
+renamed.5=classes3.dex
+renamed.4=classes.dex
+renamed.3=classes5.dex
+renamed.2=classes4.dex
+renamed.1=classes6.dex
+renamed.0=classes2.dex
+base.6=C\:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-annotations-22.2.1_519eea99617b0d8b0cd62c6344cc47d764fe64dc
+base.5=C\:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_e453aae53c23bdf8ab6b7c4e71f7be57dc5fca5a
+base.4=C\:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\bolts-tasks-1.4.0_f858cc5a4dc3c39c8a2e783a3bf119c7a1bc5c61
+base.3=C\:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\internal_impl-22.2.1_626c81974b8c353cf6f30a0776828eb404ec87f5
+base.2=C\:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_fd3162c3f520bf044067f3b65e7aeb09f04f506f
+base.1=C\:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\parse-android-1.13.0_f874684f0c1833dd55a1d39cdd19d977b9466822
+base.0=C\:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_1ce05fe8e6334aee03116fd88c10d9cd1175a6a3
+file.6=C\:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-annotations-22.2.1_519eea99617b0d8b0cd62c6344cc47d764fe64dc\\classes.dex
+file.5=C\:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_e453aae53c23bdf8ab6b7c4e71f7be57dc5fca5a\\classes.dex
+file.4=C\:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\bolts-tasks-1.4.0_f858cc5a4dc3c39c8a2e783a3bf119c7a1bc5c61\\classes.dex
+file.3=C\:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\internal_impl-22.2.1_626c81974b8c353cf6f30a0776828eb404ec87f5\\classes.dex
+file.2=C\:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_fd3162c3f520bf044067f3b65e7aeb09f04f506f\\classes.dex
+file.1=C\:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\parse-android-1.13.0_f874684f0c1833dd55a1d39cdd19d977b9466822\\classes.dex
+file.0=C\:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_1ce05fe8e6334aee03116fd88c10d9cd1175a6a3\\classes.dex

@@ -1,0 +1,121 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:9:1-65:12
+	package
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:10:5-32
+		INJECTED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:9:11-69
+	android:versionCode
+		INJECTED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:12:5-67
+	android:name
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:12:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:13:5-79
+	android:name
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:13:22-76
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:14:5-80
+	android:name
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:14:22-77
+application
+ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:16:5-63:19
+MERGED from [com.android.support:design:22.2.1] C:\Users\Colin\.android\build-cache\ecd9d6f8c5a2d58ad55ddbe5f0204eb260af0525\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:22.2.1] C:\Users\Colin\.android\build-cache\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:22.2.1] C:\Users\Colin\.android\build-cache\88e8d4961a3d8c92ae1277210f83378a6327abae\output\AndroidManifest.xml:22:5-20
+	android:label
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:20:9-41
+	android:allowBackup
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:18:9-35
+	android:icon
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:19:9-43
+	android:largeHeap
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:21:9-33
+	android:theme
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:22:9-43
+	android:name
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:17:9-43
+meta-data#com.parse.APPLICATION_ID
+ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:23:9-25:52
+	android:value
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:25:13-49
+	android:name
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:24:13-52
+meta-data#com.parse.CLIENT_KEY
+ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:26:9-28:56
+	android:value
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:28:13-53
+	android:name
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:27:13-48
+activity#com.parse.starter.MainActivity
+ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:30:9-39:20
+	android:screenOrientation
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:33:13-49
+	android:label
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:32:13-45
+	android:name
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:31:13-41
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:34:13-38:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:35:17-69
+	android:name
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:35:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:37:17-77
+	android:name
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:37:27-74
+activity#com.parse.starter.UserHome
+ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:40:9-44:50
+	android:screenOrientation
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:43:13-49
+	android:label
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:42:13-45
+	android:theme
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:44:13-47
+	android:name
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:41:13-37
+activity#com.parse.starter.UserCatDetails
+ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:45:9-53:20
+	android:label
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:47:13-68
+	android:parentActivityName
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:48:13-51
+	android:theme
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:49:13-47
+	android:name
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:46:13-43
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:50:13-52:62
+	android:value
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:52:17-59
+	android:name
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:51:17-63
+activity#com.parse.starter.RatingActivity
+ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:54:9-62:20
+	android:label
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:56:13-58
+	android:parentActivityName
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:57:13-51
+	android:theme
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:58:13-47
+	android:name
+		ADDED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml:55:13-43
+uses-sdk
+INJECTED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:design:22.2.1] C:\Users\Colin\.android\build-cache\ecd9d6f8c5a2d58ad55ddbe5f0204eb260af0525\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:22.2.1] C:\Users\Colin\.android\build-cache\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:22.2.1] C:\Users\Colin\.android\build-cache\88e8d4961a3d8c92ae1277210f83378a6327abae\output\AndroidManifest.xml:20:5-43
+	android:targetSdkVersion
+		INJECTED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Colin\Desktop\KitOrNot\KitProject\src\main\AndroidManifest.xml
