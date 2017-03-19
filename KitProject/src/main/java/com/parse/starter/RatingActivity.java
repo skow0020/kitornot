@@ -2,13 +2,8 @@ package com.parse.starter;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
-import android.media.Image;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -29,12 +24,11 @@ import java.util.List;
 import java.util.Random;
 
 public class RatingActivity extends AppCompatActivity {
-    int randomInt;
+    int randomInt, totalRatings, positiveRatings;;
     Random generator = new Random();
     ratingCatObject chosenCat;
     Bitmap chosenCatImage;
     public static List<ratingCatObject> ratingCatObjects = new ArrayList<>();
-    int totalRatings, positiveRatings;
     String catID;
 
     @Override
@@ -90,15 +84,16 @@ public class RatingActivity extends AppCompatActivity {
                         public void done(ParseException e) {
                             if (e == null)
                             {
-                                Log.i("Rating Updated", " Successful");
-                                loadRandomCat();
+
+                                Toast.makeText(getApplication().getBaseContext(), "Rating updated successfully", Toast.LENGTH_LONG).show();
+
                             }
                             else
                             {
-                                Toast.makeText(getApplication().getBaseContext(), "Rating not updated successfully", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplication().getBaseContext(), "Rating failed", Toast.LENGTH_LONG).show();
                                 e.printStackTrace();
-                                loadRandomCat();
                             }
+                            loadRandomCat();
                         }
                     });
                 }
@@ -118,15 +113,14 @@ public class RatingActivity extends AppCompatActivity {
                         public void done(ParseException e) {
                             if (e == null)
                             {
-                                Log.i("Rating Updated", " Successful");
-                                loadRandomCat();
+                                Toast.makeText(getApplication().getBaseContext(), "Rating updated successfully!", Toast.LENGTH_LONG).show();
                             }
                             else
                             {
-                                Toast.makeText(getApplication().getBaseContext(), "Rating not updated successfully", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplication().getBaseContext(), "Rating failed", Toast.LENGTH_LONG).show();
                                 e.printStackTrace();
-                                loadRandomCat();
                             }
+                            loadRandomCat();
                         }
                     });
                 }

@@ -8,17 +8,10 @@
  */
 package com.parse.starter;
 
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
-import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -31,29 +24,20 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.parse.FindCallback;
-import com.parse.GetCallback;
 import com.parse.LogInCallback;
-import com.parse.Parse;
 import com.parse.ParseAnalytics;
 import com.parse.ParseException;
-import com.parse.ParseObject;
-import com.parse.ParseQuery;
 import com.parse.ParseUser;
-import com.parse.SaveCallback;
 import com.parse.SignUpCallback;
-import com.parse.ParseAnalytics;
-
-import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, View.OnKeyListener {
-  EditText usernameField, passwordField;
-  TextView changeSignUpModeTextView;
-  Button signUpButton;
-  ImageView logo;
-  RelativeLayout relativeLayout;
-  Boolean signUpModeActive;
+  private EditText usernameField, passwordField;
+  private TextView changeSignUpModeTextView;
+  private Button signUpButton;
+  private ImageView logo;
+  private RelativeLayout relativeLayout;
+  private Boolean signUpModeActive;
 
   @Override
   public boolean onKey(View v, int keyCode, KeyEvent event) {
@@ -103,7 +87,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         @Override
         public void done(ParseException e) {
           if (e == null) {
-            Log.i("AppInfo", "Signup Successful");
             Toast.makeText(getApplicationContext(), "Welcome, " + user.getUsername(), Toast.LENGTH_LONG).show();
             userHome();
 
@@ -121,7 +104,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         public void done(ParseUser user, ParseException e) {
           if (user != null)
           {
-            Log.i("AppInfo", "Login Successful");
             Toast.makeText(getApplicationContext(), "Welcome back, " + user.getUsername(), Toast.LENGTH_LONG).show();
             userHome();
           }
@@ -134,7 +116,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
   }
 
-  public void userHome () {
+  private void userHome () {
     Intent i =  new Intent(getApplicationContext(), UserHome.class);
     startActivity(i);
   }
@@ -143,7 +125,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-
 
     //Set font of the title text
     TextView title = (TextView) findViewById(R.id.apptitle);
@@ -162,15 +143,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     changeSignUpModeTextView.setOnClickListener(this);
     logo.setOnClickListener(this);
     relativeLayout.setOnClickListener(this);
-    usernameField.setOnKeyListener(this);
-    passwordField.setOnKeyListener(this);
     usernameField.setOnClickListener(this);
     passwordField.setOnClickListener(this);
+    usernameField.setOnKeyListener(this);
+    passwordField.setOnKeyListener(this);
 
     ParseAnalytics.trackAppOpenedInBackground(getIntent());
     if (ParseUser.getCurrentUser().getUsername() != null)
     {
-      Log.i("CURRENT USER", ParseUser.getCurrentUser().toString());
       userHome();
     }
   }

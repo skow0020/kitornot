@@ -1,9 +1,5 @@
 [
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
-        "source": "C:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
         "source": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     }

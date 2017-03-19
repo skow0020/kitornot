@@ -8,18 +8,11 @@ import android.graphics.Matrix;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.util.Base64;
 import android.util.Log;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -27,7 +20,6 @@ import android.widget.Toast;
 
 import com.parse.FindCallback;
 import com.parse.GetDataCallback;
-import com.parse.Parse;
 import com.parse.ParseACL;
 import com.parse.ParseException;
 import com.parse.ParseFile;
@@ -47,7 +39,6 @@ public class UserHome extends AppCompatActivity {
     GridView userCatGrid;
     ArrayList<Bitmap> catImages = new ArrayList<Bitmap>();
     public static List<catObject> catObjects = new ArrayList<catObject>();
-    int totalRatings, positiveRatings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +51,6 @@ public class UserHome extends AppCompatActivity {
 
         //Listening for a click on a cat image - Start UserCatDetails activity showing cat image and info on click
         userCatGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            ImageView catImage = (ImageView) findViewById(R.id.catImage);
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 createImageFromBitmap(catImages.get(position));
@@ -73,7 +63,7 @@ public class UserHome extends AppCompatActivity {
     }
 
     //Creates image from bitmap and saves it locally to be accessed in other activities
-    public String createImageFromBitmap(Bitmap bitmap) {
+    private String createImageFromBitmap(Bitmap bitmap) {
         String fileName = "catImage";//no .png or .jpg needed
         try {
             ByteArrayOutputStream bytes = new ByteArrayOutputStream();
@@ -101,7 +91,6 @@ public class UserHome extends AppCompatActivity {
         query.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> objects, ParseException e) {
-
                 if (e == null)
                 {
                     if (objects.size() > 0)
@@ -131,9 +120,7 @@ public class UserHome extends AppCompatActivity {
                                 }
                             });
 
-                            totalRatings = (Integer) object.get("totalRatings");
-                            positiveRatings = (Integer) object.get("positiveRatings");
-                            catObject cat = new catObject(imgFile, totalRatings, positiveRatings);
+                            catObject cat = new catObject(imgFile, (Integer)object.get("totalRatings"), (Integer)object.get("positiveRatings"));
                             catObjects.add(cat);
                         }
                     }
@@ -162,7 +149,7 @@ public class UserHome extends AppCompatActivity {
 
     public void RatingActivity(View view)
     {
-        Intent i = new Intent (UserHome.this, RatingActivity.class);
+        Intent i = new Intent(UserHome.this, RatingActivity.class);
         startActivity(i);
     }
 
@@ -193,17 +180,10 @@ public class UserHome extends AppCompatActivity {
             Uri selectedImage = data.getData();
 
             try {
-
                 Bitmap bitmapImage = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImage);
-
-                Log.i("AppInfo", "Image Received");
-
                 ByteArrayOutputStream stream = new ByteArrayOutputStream();
-
                 bitmapImage.compress(Bitmap.CompressFormat.PNG, 100, stream);
-
                 byte[] byteArray = stream.toByteArray();
-
 
                 if (byteArray.length > 10485760) {
                     int newWidth = (int)Math.round(bitmapImage.getWidth()*0.95);
@@ -219,19 +199,19 @@ public class UserHome extends AppCompatActivity {
                     }
                 }
 
-                ParseFile file2 = new ParseFile("image.png", byteArray);
+                ParseFile file = new ParseFile("image.png", byteArray);
 
                 ParseObject object = new ParseObject("images");
 
                 object.put("username", ParseUser.getCurrentUser().getUsername());
                 object.put("totalRatings", 0);
                 object.put("positiveRatings", 0);
-                object.put("image", file2);
-
+                object.put("image", file);
 
                 ParseACL parseACL = new ParseACL();
                 parseACL.setPublicReadAccess(true);
                 parseACL.setPublicWriteAccess(true);
+
                 object.setACL(parseACL);
                 object.saveInBackground(new SaveCallback() {
                     @Override
@@ -257,14 +237,13 @@ public class UserHome extends AppCompatActivity {
                 Toast.makeText(getApplication().getBaseContext(), "There was an error - please try again", Toast.LENGTH_LONG).show();
             }
         }
-
     }
 }
 
 class catObject
 {
     private ParseFile catImage;
-    private int catTotalRatings, catPositiveRatings;
+    private double catTotalRatings, catPositiveRatings;
     public catObject(ParseFile Image, int totalRatings, int positiveRatings)
     {
         catImage = Image;
@@ -272,15 +251,19 @@ class catObject
         catPositiveRatings = positiveRatings;
     }
 
+    public double getPercentage() {
+        if (catTotalRatings == 0) { return 0; }
+        else { return 100*catPositiveRatings/catTotalRatings; }
+    }
     public ParseFile getcatImage()
     {
         return this.catImage;
     }
-    public int getTotalRatings()
+    public double getTotalRatings()
     {
         return this.catTotalRatings;
     }
-    public int getPositiveRatings()
+    public double getPositiveRatings()
     {
         return this.catPositiveRatings;
     }

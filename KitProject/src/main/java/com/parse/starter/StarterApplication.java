@@ -9,14 +9,10 @@
 package com.parse.starter;
 
 import android.app.Application;
-import android.util.Log;
 
 import com.parse.Parse;
 import com.parse.ParseACL;
-import com.parse.ParseException;
-import com.parse.ParseObject;
 import com.parse.ParseUser;
-import com.parse.SaveCallback;
 
 
 public class StarterApplication extends Application {
@@ -30,12 +26,11 @@ public class StarterApplication extends Application {
 
     // Add your initialization code here
     Parse.initialize(new Parse.Configuration.Builder(getApplicationContext())
-            .applicationId("kit12345")
-            .clientKey(null)
-            .server(" https://kitornot.herokuapp.com/parse/")
+            .applicationId("b688b965e7d11efeb92422b7c00e0d27f0bd1b38")
+            .clientKey("ff1fbfb5e435d0fc6f12196c972e55abe558786a")
+            .server("http://ec2-52-91-81-222.compute-1.amazonaws.com:80/parse/")
     .build()
     );
-
 
       ParseUser.enableAutomaticUser();
     ParseACL defaultACL = new ParseACL();
