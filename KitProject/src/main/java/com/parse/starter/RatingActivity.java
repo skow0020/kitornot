@@ -83,7 +83,6 @@ public class RatingActivity extends AppCompatActivity
                         public void done(ParseException e) {
                             if (e == null)
                             {
-
                                 Toast.makeText(getApplication().getBaseContext(), "Rating updated successfully", Toast.LENGTH_LONG).show();
 
                             }

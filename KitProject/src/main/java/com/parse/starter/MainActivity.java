@@ -145,12 +145,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         signUpModeActive = true;
 
+        RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.relativeLayout);
+        ImageView logo = (ImageView) findViewById(R.id.logo);
         usernameField = (EditText) findViewById(R.id.username);
         passwordField = (EditText) findViewById(R.id.password);
         changeSignUpModeTextView = (TextView) findViewById(R.id.login_signup_txt);
         signUpButton = (Button) findViewById(R.id.login_signup_btn);
-        ImageView logo = (ImageView) findViewById(R.id.logo);
-        RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.relativeLayout);
 
         changeSignUpModeTextView.setOnClickListener(this);
         logo.setOnClickListener(this);

@@ -261,6 +261,5 @@ class catObject
     {
         return this.catTotalRatings;
     }
-
 }
 
