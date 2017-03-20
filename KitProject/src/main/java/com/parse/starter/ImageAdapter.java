@@ -10,12 +10,13 @@ import android.widget.ImageView;
 
 import java.util.ArrayList;
 
-public class ImageAdapter extends BaseAdapter {
-
+class ImageAdapter extends BaseAdapter
+{
     private Context context;
     private ArrayList<Bitmap> bitmapList;
 
-    public ImageAdapter(Context context, ArrayList<Bitmap> bitmapList) {
+    ImageAdapter(Context context, ArrayList<Bitmap> bitmapList)
+    {
         this.context = context;
         this.bitmapList = bitmapList;
     }
@@ -32,13 +33,17 @@ public class ImageAdapter extends BaseAdapter {
         return 0;
     }
 
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, ViewGroup parent)
+    {
         ImageView imageView;
-        if (convertView == null) {
+        if (convertView == null)
+        {
             imageView = new ImageView(this.context);
             imageView.setLayoutParams(new GridView.LayoutParams(300, 300));
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        } else {
+        }
+        else
+        {
             imageView = (ImageView) convertView;
         }
 

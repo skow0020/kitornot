@@ -2168,7 +2168,7 @@ containing a value of this type.
         public static final int abc_simple_dropdown_hint=0x7f030018;
         public static final int activity_main=0x7f030019;
         public static final int activity_rating=0x7f03001a;
-        public static final int activity_user_cat_details2=0x7f03001b;
+        public static final int activity_user_cat_details=0x7f03001b;
         public static final int activity_user_home=0x7f03001c;
         public static final int design_navigation_item=0x7f03001d;
         public static final int design_navigation_item_header=0x7f03001e;
@@ -2222,17 +2222,21 @@ containing a value of this type.
         public static final int catimage=0x7f050016;
         public static final int kit_or_not=0x7f050017;
         public static final int log_in=0x7f050018;
-        public static final int parse_app_id=0x7f050019;
-        public static final int parse_client_key=0x7f05001a;
-        public static final int password=0x7f05001b;
-        public static final int sign_up=0x7f05001c;
-        public static final int status_bar_notification_info_overflow=0x7f05001d;
-        public static final int thumbs_down=0x7f05001e;
-        public static final int thumbs_up=0x7f05001f;
-        public static final int title_activity_rating=0x7f050020;
-        public static final int title_activity_user_cat_details=0x7f050021;
-        public static final int username=0x7f050022;
-        public static final int yourcats=0x7f050023;
+        public static final int log_in_str=0x7f050019;
+        public static final int no_ratings=0x7f05001a;
+        public static final int parse_app_id=0x7f05001b;
+        public static final int parse_client_key=0x7f05001c;
+        public static final int password=0x7f05001d;
+        public static final int person_cats=0x7f05001e;
+        public static final int sign_up=0x7f05001f;
+        public static final int sign_up_str=0x7f050020;
+        public static final int status_bar_notification_info_overflow=0x7f050021;
+        public static final int thumbs_down=0x7f050022;
+        public static final int thumbs_up=0x7f050023;
+        public static final int title_activity_rating=0x7f050024;
+        public static final int title_activity_user_cat_details=0x7f050025;
+        public static final int username=0x7f050026;
+        public static final int yourcats=0x7f050027;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f070074;

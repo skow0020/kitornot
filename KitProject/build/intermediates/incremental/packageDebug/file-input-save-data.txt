@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Mar 12 16:27:56 CDT 2017
+#Sun Mar 19 18:51:20 CDT 2017
 122.file=C\:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxhdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png
 60.set=ANDROID_RESOURCE
 129.file=C\:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\res\\resources-debug.ap_\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml
@@ -171,7 +171,7 @@
 150.set=ANDROID_RESOURCE
 104.base=C\:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\res\\resources-debug.ap_
 142.set=ANDROID_RESOURCE
-141.file=C\:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\activity_user_cat_details2.xml
+141.file=C\:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\activity_user_cat_details.xml
 151.base=C\:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\res\\resources-debug.ap_
 5.set=ASSET
 50.file=C\:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\res\\resources-debug.ap_\\res\\color\\abc_primary_text_disable_only_material_light.xml

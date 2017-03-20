@@ -24,4 +24,8 @@
     <string name="catimage">catImage</string>
     <string name="thumbs_up">Thumbs up</string>
     <string name="thumbs_down">Thumbs down</string>
+    <string name="person_cats">\'s cats</string>
+    <string name="no_ratings">No ratings yet</string>
+    <string name="sign_up_str">Sign Up</string>
+    <string name="log_in_str">Log In</string>
 </resources>

@@ -4,7 +4,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -23,19 +22,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class RatingActivity extends AppCompatActivity {
-    int randomInt, totalRatings, positiveRatings;;
+public class RatingActivity extends AppCompatActivity
+{
+    int randomInt, totalRatings, positiveRatings;
     Random generator = new Random();
     ratingCatObject chosenCat;
     Bitmap chosenCatImage;
     public static List<ratingCatObject> ratingCatObjects = new ArrayList<>();
-    String catID;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
 
-        ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("images");
+        ParseQuery<ParseObject> query = new ParseQuery<>("images");
         query.whereNotEqualTo("username", ParseUser.getCurrentUser().getUsername());
 
         query.findInBackground(new FindCallback<ParseObject>() {
@@ -50,8 +50,7 @@ public class RatingActivity extends AppCompatActivity {
                             ParseFile imgFile = (ParseFile) object.get("image");
                             totalRatings = (Integer) object.get("totalRatings");
                             positiveRatings = (Integer) object.get("positiveRatings");
-                            catID = object.getObjectId();
-                            ratingCatObject ratingCat = new ratingCatObject(catID, imgFile, totalRatings, positiveRatings);
+                            ratingCatObject ratingCat = new ratingCatObject(object.getObjectId(), imgFile, totalRatings, positiveRatings);
                             ratingCatObjects.add(ratingCat);
 
                             if (ratingCatObjects.size() == objects.size())
@@ -168,7 +167,7 @@ class ratingCatObject
     private ParseFile catImage;
     private int catTotalRatings, catPositiveRatings;
     private String imageID;
-    public ratingCatObject(String objID, ParseFile Image, int totalRatings, int positiveRatings)
+    ratingCatObject(String objID, ParseFile Image, int totalRatings, int positiveRatings)
     {
         catImage = Image;
         catTotalRatings = totalRatings;
@@ -176,17 +175,9 @@ class ratingCatObject
         imageID = objID;
     }
 
-    public ParseFile getcatImage()
+    ParseFile getcatImage()
     {
         return this.catImage;
     }
-    public int getTotalRatings()
-    {
-        return this.catTotalRatings;
-    }
-    public int getPositiveRatings()
-    {
-        return this.catPositiveRatings;
-    }
-    public String getImageID() { return this.imageID; }
+    String getImageID() { return this.imageID; }
 }

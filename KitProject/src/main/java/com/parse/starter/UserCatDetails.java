@@ -16,7 +16,7 @@ public class UserCatDetails extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_cat_details2);
+        setContentView(R.layout.activity_user_cat_details);
 
         Intent i = getIntent();
         int catListPosition = i.getIntExtra("catListPosition", 0);
@@ -45,11 +45,11 @@ public class UserCatDetails extends AppCompatActivity {
 
         if (cat.getTotalRatings() > 0)
         {
-            percentText.setText(df.format(cat.getPercentage()) + "%");
+            percentText.setText(String.format("%s%%", df.format(cat.getPercentage())));
         }
         else
         {
-            percentText.setText("No ratings yet");
+            percentText.setText(R.string.no_ratings);
         }
     }
 }

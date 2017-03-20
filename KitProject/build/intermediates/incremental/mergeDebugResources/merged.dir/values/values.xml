@@ -248,10 +248,14 @@
     <string name="catimage">catImage</string>
     <string name="kit_or_not">Kit Or Not?</string>
     <string name="log_in">Log In</string>
+    <string name="log_in_str">Log In</string>
+    <string name="no_ratings">No ratings yet</string>
     <string name="parse_app_id">YOUR_APPLICATION_ID</string>
     <string name="parse_client_key">YOUR_CLIENT_KEY</string>
     <string name="password">Password</string>
+    <string name="person_cats">\'s cats</string>
     <string name="sign_up">Sign Up</string>
+    <string name="sign_up_str">Sign Up</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="thumbs_down">Thumbs down</string>
     <string name="thumbs_up">Thumbs up</string>

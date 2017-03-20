@@ -36,12 +36,12 @@
         "source": "C:\\Users\\Colin\\.android\\build-cache\\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\\output\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
-        "source": "C:\\Users\\Colin\\.android\\build-cache\\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\\output\\res\\layout\\abc_popup_menu_item_layout.xml"
-    },
-    {
         "merged": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\activity_user_cat_details2.xml",
         "source": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\src\\main\\res\\layout\\activity_user_cat_details2.xml"
+    },
+    {
+        "merged": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "C:\\Users\\Colin\\.android\\build-cache\\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\\output\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
         "merged": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
@@ -68,12 +68,12 @@
         "source": "C:\\Users\\Colin\\.android\\build-cache\\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\\output\\res\\layout\\abc_search_view.xml"
     },
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
-        "source": "C:\\Users\\Colin\\.android\\build-cache\\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\\output\\res\\layout\\notification_template_big_media.xml"
-    },
-    {
         "merged": "C:\\Users\\Colin\\Desktop\\KitOrNot - Copy\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
         "source": "C:\\Users\\Colin\\Desktop\\KitOrNot - Copy\\ParseStarterProject\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
+        "source": "C:\\Users\\Colin\\.android\\build-cache\\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\\output\\res\\layout\\notification_template_big_media.xml"
     },
     {
         "merged": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\layout_snackbar_include.xml",
@@ -118,6 +118,10 @@
     {
         "merged": "C:\\Users\\Colin\\Desktop\\KitOrNot\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
         "source": "C:\\Users\\Colin\\.android\\build-cache\\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\\output\\res\\layout\\abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "C:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\res\\merged\\debug\\layout\\activity_user_cat_details.xml",
+        "source": "C:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\src\\main\\res\\layout\\activity_user_cat_details.xml"
     },
     {
         "merged": "C:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_subheader.xml",
@@ -474,10 +478,6 @@
     {
         "merged": "C:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
         "source": "C:\\Users\\Colin\\.android\\build-cache\\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\\output\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
-    },
-    {
-        "merged": "C:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\res\\merged\\debug\\layout\\activity_user_cat_details2.xml",
-        "source": "C:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\src\\main\\res\\layout\\activity_user_cat_details2.xml"
     },
     {
         "merged": "C:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",

@@ -1,4 +1,4 @@
-#Sun Mar 12 16:27:56 CDT 2017
+#Sun Mar 19 18:51:19 CDT 2017
 base.0=C\:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_bf49a3f25252ccfc29fc1bbd27e9f48b5017addc
 renamed.1=classes2.dex
 renamed.0=classes.dex

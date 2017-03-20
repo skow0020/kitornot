@@ -14,7 +14,6 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,18 +34,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserHome extends AppCompatActivity {
-    TextView userPage;
-    GridView userCatGrid;
-    ArrayList<Bitmap> catImages = new ArrayList<Bitmap>();
-    public static List<catObject> catObjects = new ArrayList<catObject>();
+    private GridView userCatGrid;
+    private ArrayList<Bitmap> catImages = new ArrayList<>();
+    public static List<catObject> catObjects = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_home);
 
-        userPage = (TextView) findViewById(R.id.userPage);
-        userPage.setText(ParseUser.getCurrentUser().getUsername() + "'s cats");
+        TextView userPage = (TextView) findViewById(R.id.userPage);
+        userPage.setText(String.format("%s's cats", ParseUser.getCurrentUser().getUsername()));
         SetCatGrid();
 
         //Listening for a click on a cat image - Start UserCatDetails activity showing cat image and info on click
@@ -84,7 +82,7 @@ public class UserHome extends AppCompatActivity {
     {
         userCatGrid = (GridView) findViewById(R.id.userCats);
 
-        ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("images");
+        ParseQuery<ParseObject> query = new ParseQuery<>("images");
         query.whereEqualTo("username", ParseUser.getCurrentUser().getUsername());
         query.orderByDescending("createdAt");
 
@@ -173,13 +171,15 @@ public class UserHome extends AppCompatActivity {
 
     //Adding Cat images from internal Gallery
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 1 && resultCode == RESULT_OK && data != null) {
-
+        if (requestCode == 1 && resultCode == RESULT_OK && data != null)
+        {
             Uri selectedImage = data.getData();
 
-            try {
+            try
+            {
                 Bitmap bitmapImage = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImage);
                 ByteArrayOutputStream stream = new ByteArrayOutputStream();
                 bitmapImage.compress(Bitmap.CompressFormat.PNG, 100, stream);
@@ -216,17 +216,16 @@ public class UserHome extends AppCompatActivity {
                 object.saveInBackground(new SaveCallback() {
                     @Override
                     public void done(ParseException e) {
-                        if (e == null) {
-                            Log.i("ImageUpload", " Successful");
-
+                        if (e == null)
+                        {
                             Toast.makeText(getApplication().getBaseContext(), "Your image has been posted!", Toast.LENGTH_LONG).show();
                             catObjects.clear();
                             catImages.clear();
                             SetCatGrid();
-                        } else {
-                            Log.i("ImageUpload", " FAILED!!");
-                            Toast.makeText(getApplication().getBaseContext(), "There was an error - please try again", Toast.LENGTH_LONG).show();
-                            e.printStackTrace();
+                        }
+                        else
+                        {
+                            Toast.makeText(getApplication().getBaseContext(), "There was an error uploading image - please try again", Toast.LENGTH_LONG).show();
                         }
                     }
                 });
@@ -244,28 +243,24 @@ class catObject
 {
     private ParseFile catImage;
     private double catTotalRatings, catPositiveRatings;
-    public catObject(ParseFile Image, int totalRatings, int positiveRatings)
+
+    catObject(ParseFile Image, int totalRatings, int positiveRatings)
     {
         catImage = Image;
         catTotalRatings = totalRatings;
         catPositiveRatings = positiveRatings;
     }
 
-    public double getPercentage() {
+    double getPercentage()
+    {
         if (catTotalRatings == 0) { return 0; }
         else { return 100*catPositiveRatings/catTotalRatings; }
     }
-    public ParseFile getcatImage()
-    {
-        return this.catImage;
-    }
-    public double getTotalRatings()
+
+    double getTotalRatings()
     {
         return this.catTotalRatings;
     }
-    public double getPositiveRatings()
-    {
-        return this.catPositiveRatings;
-    }
+
 }
 
