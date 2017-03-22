@@ -1,4 +1,4 @@
-package com.parse.starter;
+package com.parse.starter.UserHome;
 
 import android.content.Context;
 import android.content.Intent;
@@ -26,6 +26,10 @@ import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
+import com.parse.starter.ImageAdapter;
+import com.parse.starter.R;
+import com.parse.starter.RatingActivity.RatingActivity;
+import com.parse.starter.UserCatDetails;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileOutputStream;
@@ -36,7 +40,8 @@ import java.util.List;
 public class UserHome extends AppCompatActivity {
     private GridView userCatGrid;
     private ArrayList<Bitmap> catImages = new ArrayList<>();
-    public static List<catObject> catObjects = new ArrayList<>();
+    public static List<CatObject> catObjects = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,11 +56,67 @@ public class UserHome extends AppCompatActivity {
         userCatGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                createImageFromBitmap(catImages.get(position));
+                //createImageFromBitmap(catImages.get(position));
 
                 Intent i = new Intent(UserHome.this, UserCatDetails.class);
                 i.putExtra("catListPosition", position);
                 startActivity(i);
+            }
+        });
+    }
+
+    //Query Parse server for a list of users cats and set the Grid
+    public void SetCatGrid()
+    {
+        userCatGrid = (GridView) findViewById(R.id.userCats);
+        final boolean[] finished = {false};
+
+        ParseQuery<ParseObject> query = new ParseQuery<>("images");
+        query.whereEqualTo("username", ParseUser.getCurrentUser().getUsername()).orderByDescending("createdAt");
+
+        query.findInBackground(new FindCallback<ParseObject>() {
+            @Override
+            public void done(List<ParseObject> objects, ParseException e) {
+                if (e == null)
+                {
+                    final int numObjectsReturned = objects.size();
+                    if (numObjectsReturned == 0) {
+                        Toast.makeText(getApplication().getBaseContext(), "You have no cat images to load", Toast.LENGTH_LONG).show();
+                        finished[0] = true;
+                    }
+                    for (final ParseObject object : objects)
+                    {
+                        final int totalRatings = (Integer) object.get("totalRatings");
+                        final int positiveRatings = (Integer) object.get("positiveRatings");
+
+                        ParseFile imgFile = (ParseFile) object.get("image");
+
+                        imgFile.getDataInBackground(new GetDataCallback() {
+                            @Override
+                            public void done(byte[] data, ParseException e) {
+                                if (e == null)
+                                {
+                                    Bitmap img = BitmapFactory.decodeByteArray(data, 0, data.length);
+                                    CatObject cat = new CatObject(img, totalRatings, positiveRatings);
+
+                                    catImages.add(img);
+                                    catObjects.add(cat);
+                                    if (catObjects.size() == numObjectsReturned)
+                                    {
+                                        finished[0] = true;
+                                        userCatGrid.setAdapter(new ImageAdapter(getApplicationContext(), catImages));
+                                    }
+                                }
+                                else
+                                {
+                                    Toast.makeText(getApplication().getBaseContext(), "Your images failed to load", Toast.LENGTH_LONG).show();
+                                    e.printStackTrace();
+                                }
+                            }
+                        });
+                    }
+                }
+                else Toast.makeText(getApplication().getBaseContext(), "Your cats failed to load", Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -77,60 +138,6 @@ public class UserHome extends AppCompatActivity {
         return fileName;
     }
 
-    //Query Parse server for a list of users cats and set the Grid
-    public void SetCatGrid()
-    {
-        userCatGrid = (GridView) findViewById(R.id.userCats);
-
-        ParseQuery<ParseObject> query = new ParseQuery<>("images");
-        query.whereEqualTo("username", ParseUser.getCurrentUser().getUsername());
-        query.orderByDescending("createdAt");
-
-        query.findInBackground(new FindCallback<ParseObject>() {
-            @Override
-            public void done(List<ParseObject> objects, ParseException e) {
-                if (e == null)
-                {
-                    if (objects.size() > 0)
-                    {
-                        for (ParseObject object : objects)
-                        {
-                            final int numObjects = objects.size();
-                            ParseFile imgFile = (ParseFile) object.get("image");
-
-                            imgFile.getDataInBackground(new GetDataCallback() {
-                                @Override
-                                public void done(byte[] data, ParseException e) {
-                                    if (e == null)
-                                    {
-                                        Bitmap img = BitmapFactory.decodeByteArray(data, 0, data.length);
-                                        catImages.add(img);
-                                        if (catImages.size() == numObjects)
-                                        {
-                                            userCatGrid.setAdapter(new ImageAdapter(getApplicationContext(), catImages));
-                                        }
-                                    }
-                                    else
-                                    {
-                                        Toast.makeText(getApplication().getBaseContext(), "Your images failed to load", Toast.LENGTH_LONG).show();
-                                        e.printStackTrace();
-                                    }
-                                }
-                            });
-
-                            catObject cat = new catObject(imgFile, (Integer)object.get("totalRatings"), (Integer)object.get("positiveRatings"));
-                            catObjects.add(cat);
-                        }
-                    }
-                }
-                else
-                {
-                    Toast.makeText(getApplication().getBaseContext(), "Your images failed to laod", Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -145,7 +152,7 @@ public class UserHome extends AppCompatActivity {
         startActivityForResult(i, 1);
     }
 
-    public void RatingActivity(View view)
+    public void ratingActivity(View view)
     {
         Intent i = new Intent(UserHome.this, RatingActivity.class);
         startActivity(i);
@@ -200,7 +207,6 @@ public class UserHome extends AppCompatActivity {
                 }
 
                 ParseFile file = new ParseFile("image.png", byteArray);
-
                 ParseObject object = new ParseObject("images");
 
                 object.put("username", ParseUser.getCurrentUser().getUsername());
@@ -223,10 +229,7 @@ public class UserHome extends AppCompatActivity {
                             catImages.clear();
                             SetCatGrid();
                         }
-                        else
-                        {
-                            Toast.makeText(getApplication().getBaseContext(), "There was an error uploading image - please try again", Toast.LENGTH_LONG).show();
-                        }
+                        else Toast.makeText(getApplication().getBaseContext(), "There was an error uploading image - please try again", Toast.LENGTH_LONG).show();
                     }
                 });
 
@@ -236,30 +239,6 @@ public class UserHome extends AppCompatActivity {
                 Toast.makeText(getApplication().getBaseContext(), "There was an error - please try again", Toast.LENGTH_LONG).show();
             }
         }
-    }
-}
-
-class catObject
-{
-    private ParseFile catImage;
-    private double catTotalRatings, catPositiveRatings;
-
-    catObject(ParseFile Image, int totalRatings, int positiveRatings)
-    {
-        catImage = Image;
-        catTotalRatings = totalRatings;
-        catPositiveRatings = positiveRatings;
-    }
-
-    double getPercentage()
-    {
-        if (catTotalRatings == 0) { return 0; }
-        else { return 100*catPositiveRatings/catTotalRatings; }
-    }
-
-    double getTotalRatings()
-    {
-        return this.catTotalRatings;
     }
 }
 

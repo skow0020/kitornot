@@ -1,4 +1,4 @@
-package com.parse.starter;
+package com.parse.starter.RatingActivity;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -17,6 +17,7 @@ import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
+import com.parse.starter.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,9 +27,9 @@ public class RatingActivity extends AppCompatActivity
 {
     int randomInt, totalRatings, positiveRatings;
     Random generator = new Random();
-    ratingCatObject chosenCat;
+    RatingCatObject chosenCat;
     Bitmap chosenCatImage;
-    public static List<ratingCatObject> ratingCatObjects = new ArrayList<>();
+    public static List<RatingCatObject> ratingCatObjects = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -50,7 +51,7 @@ public class RatingActivity extends AppCompatActivity
                             ParseFile imgFile = (ParseFile) object.get("image");
                             totalRatings = (Integer) object.get("totalRatings");
                             positiveRatings = (Integer) object.get("positiveRatings");
-                            ratingCatObject ratingCat = new ratingCatObject(object.getObjectId(), imgFile, totalRatings, positiveRatings);
+                            RatingCatObject ratingCat = new RatingCatObject(object.getObjectId(), imgFile, totalRatings, positiveRatings);
                             ratingCatObjects.add(ratingCat);
 
                             if (ratingCatObjects.size() == objects.size())
@@ -127,7 +128,7 @@ public class RatingActivity extends AppCompatActivity
 
     }
 
-    public ratingCatObject loadRandomCat()
+    public RatingCatObject loadRandomCat()
     {
         randomInt = generator.nextInt(ratingCatObjects.size());
         chosenCat = ratingCatObjects.get(randomInt);
@@ -159,24 +160,4 @@ public class RatingActivity extends AppCompatActivity
         setContentView(R.layout.activity_rating);
         return chosenCat;
     }
-}
-
-class ratingCatObject
-{
-    private ParseFile catImage;
-    private int catTotalRatings, catPositiveRatings;
-    private String imageID;
-    ratingCatObject(String objID, ParseFile Image, int totalRatings, int positiveRatings)
-    {
-        catImage = Image;
-        catTotalRatings = totalRatings;
-        catPositiveRatings = positiveRatings;
-        imageID = objID;
-    }
-
-    ParseFile getcatImage()
-    {
-        return this.catImage;
-    }
-    String getImageID() { return this.imageID; }
 }

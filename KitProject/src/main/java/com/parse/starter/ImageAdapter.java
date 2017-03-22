@@ -10,12 +10,12 @@ import android.widget.ImageView;
 
 import java.util.ArrayList;
 
-class ImageAdapter extends BaseAdapter
+public class ImageAdapter extends BaseAdapter
 {
     private Context context;
     private ArrayList<Bitmap> bitmapList;
 
-    ImageAdapter(Context context, ArrayList<Bitmap> bitmapList)
+    public ImageAdapter(Context context, ArrayList<Bitmap> bitmapList)
     {
         this.context = context;
         this.bitmapList = bitmapList;
@@ -50,5 +50,4 @@ class ImageAdapter extends BaseAdapter
         imageView.setImageBitmap(this.bitmapList.get(position));
         return imageView;
     }
-
 }

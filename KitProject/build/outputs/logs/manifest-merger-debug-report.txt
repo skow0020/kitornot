@@ -72,7 +72,7 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\src\main\AndroidManifest.xml:37:17-77
 	android:name
 		ADDED from C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\src\main\AndroidManifest.xml:37:27-74
-activity#com.parse.starter.UserHome
+activity#com.parse.starter.UserHome.UserHome
 ADDED from C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\src\main\AndroidManifest.xml:40:9-44:50
 	android:screenOrientation
 		ADDED from C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\src\main\AndroidManifest.xml:43:13-49
@@ -81,33 +81,33 @@ ADDED from C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\src\main\An
 	android:theme
 		ADDED from C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\src\main\AndroidManifest.xml:44:13-47
 	android:name
-		ADDED from C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\src\main\AndroidManifest.xml:41:13-37
+		ADDED from C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\src\main\AndroidManifest.xml:41:13-46
 activity#com.parse.starter.UserCatDetails
 ADDED from C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\src\main\AndroidManifest.xml:45:9-53:20
 	android:label
 		ADDED from C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\src\main\AndroidManifest.xml:47:13-68
 	android:parentActivityName
-		ADDED from C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\src\main\AndroidManifest.xml:48:13-51
+		ADDED from C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\src\main\AndroidManifest.xml:48:13-60
 	android:theme
 		ADDED from C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\src\main\AndroidManifest.xml:49:13-47
 	android:name
 		ADDED from C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\src\main\AndroidManifest.xml:46:13-43
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\src\main\AndroidManifest.xml:50:13-52:62
+ADDED from C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\src\main\AndroidManifest.xml:50:13-52:71
 	android:value
-		ADDED from C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\src\main\AndroidManifest.xml:52:17-59
+		ADDED from C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\src\main\AndroidManifest.xml:52:17-68
 	android:name
 		ADDED from C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\src\main\AndroidManifest.xml:51:17-63
-activity#com.parse.starter.RatingActivity
+activity#com.parse.starter.RatingActivity.RatingActivity
 ADDED from C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\src\main\AndroidManifest.xml:54:9-62:20
 	android:label
 		ADDED from C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\src\main\AndroidManifest.xml:56:13-58
 	android:parentActivityName
-		ADDED from C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\src\main\AndroidManifest.xml:57:13-51
+		ADDED from C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\src\main\AndroidManifest.xml:57:13-60
 	android:theme
 		ADDED from C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\src\main\AndroidManifest.xml:58:13-47
 	android:name
-		ADDED from C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\src\main\AndroidManifest.xml:55:13-43
+		ADDED from C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\src\main\AndroidManifest.xml:55:13-58
 uses-sdk
 INJECTED from C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:22.2.1] C:\Users\Colin\.android\build-cache\9aa24a459dce41ecb4ffd75675f3a1ee24eda416\output\AndroidManifest.xml:20:5-43

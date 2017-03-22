@@ -45,27 +45,27 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.parse.starter.UserHome"
+            android:name="com.parse.starter.UserHome.UserHome"
             android:label="@string/yourcats"
             android:screenOrientation="portrait"
             android:theme="@style/NoActionBar" />
         <activity
             android:name="com.parse.starter.UserCatDetails"
             android:label="@string/title_activity_user_cat_details"
-            android:parentActivityName="com.parse.starter.UserHome"
+            android:parentActivityName="com.parse.starter.UserHome.UserHome"
             android:theme="@style/NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.parse.starter.UserHome" />
+                android:value="com.parse.starter.UserHome.UserHome" />
         </activity>
         <activity
-            android:name="com.parse.starter.RatingActivity"
+            android:name="com.parse.starter.RatingActivity.RatingActivity"
             android:label="@string/title_activity_rating"
-            android:parentActivityName="com.parse.starter.UserHome"
+            android:parentActivityName="com.parse.starter.UserHome.UserHome"
             android:theme="@style/NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.parse.starter.UserHome" />
+                android:value="com.parse.starter.UserHome.UserHome" />
         </activity>
     </application>
 

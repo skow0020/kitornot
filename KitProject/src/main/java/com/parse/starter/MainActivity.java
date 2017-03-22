@@ -29,6 +29,7 @@ import com.parse.ParseAnalytics;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
+import com.parse.starter.UserHome.UserHome;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, View.OnKeyListener
@@ -37,6 +38,93 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView changeSignUpModeTextView;
     private Button signUpButton;
     private Boolean signUpModeActive;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        //Set font of the title text
+        TextView title = (TextView) findViewById(R.id.apptitle);
+        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/pacifico.ttf");
+        title.setTypeface(custom_font);
+
+        signUpModeActive = true;
+
+        RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.relativeLayout);
+        ImageView logo = (ImageView) findViewById(R.id.logo);
+        usernameField = (EditText) findViewById(R.id.username);
+        passwordField = (EditText) findViewById(R.id.password);
+        changeSignUpModeTextView = (TextView) findViewById(R.id.login_signup_txt);
+        signUpButton = (Button) findViewById(R.id.login_signup_btn);
+
+        changeSignUpModeTextView.setOnClickListener(this);
+        logo.setOnClickListener(this);
+        relativeLayout.setOnClickListener(this);
+        usernameField.setOnClickListener(this);
+        passwordField.setOnClickListener(this);
+        usernameField.setOnKeyListener(this);
+        passwordField.setOnKeyListener(this);
+
+        ParseAnalytics.trackAppOpenedInBackground(getIntent());
+        if (ParseUser.getCurrentUser().getUsername() != null)
+        {
+            userHome();
+        }
+    }
+
+    public void signUpOrLogIn(View view)
+    {
+        if (signUpModeActive)
+        {
+            final ParseUser user = new ParseUser();
+            user.setUsername(String.valueOf(usernameField.getText()));
+            user.setPassword(String.valueOf(passwordField.getText()));
+
+            user.signUpInBackground(new SignUpCallback()
+            {
+                @Override
+                public void done(ParseException e)
+                {
+                    if (e == null)
+                    {
+                        Toast.makeText(getApplicationContext(), "Welcome, " + user.getUsername(), Toast.LENGTH_LONG).show();
+                        userHome();
+                    }
+                    else
+                    {
+                        Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                }
+            });
+
+        }
+        else
+        {
+            ParseUser.logInInBackground(String.valueOf(usernameField.getText()), String.valueOf(passwordField.getText()), new LogInCallback() {
+                @Override
+                public void done(ParseUser user, ParseException e)
+                {
+                    if (user != null)
+                    {
+                        Toast.makeText(getApplicationContext(), "Welcome back, " + user.getUsername(), Toast.LENGTH_LONG).show();
+                        userHome();
+                    }
+                    else
+                    {
+                        Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                }
+            });
+        }
+    }
+
+    private void userHome ()
+    {
+        Intent i =  new Intent(getApplicationContext(), UserHome.class);
+        startActivity(i);
+    }
 
     @Override
     public boolean onKey(View v, int keyCode, KeyEvent event)
@@ -77,93 +165,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         else if (v.getId() == R.id.username)
         {
             usernameField.setText("");
-        }
-    }
-
-    public void signUpOrLogIn(View view)
-    {
-        if (signUpModeActive)
-        {
-            final ParseUser user = new ParseUser();
-            user.setUsername(String.valueOf(usernameField.getText()));
-            user.setPassword(String.valueOf(passwordField.getText()));
-
-            user.signUpInBackground(new SignUpCallback()
-            {
-                @Override
-                public void done(ParseException e)
-                {
-                    if (e == null)
-                    {
-                        Toast.makeText(getApplicationContext(), "Welcome, " + user.getUsername(), Toast.LENGTH_LONG).show();
-                        userHome();
-                    }
-                    else
-                    {
-                        Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
-                    }
-                }
-            });
-
-        }
-        else
-        {
-            ParseUser.logInInBackground(String.valueOf(usernameField.getText()), String.valueOf(passwordField.getText()), new LogInCallback() {
-            @Override
-                public void done(ParseUser user, ParseException e)
-                {
-                    if (user != null)
-                    {
-                        Toast.makeText(getApplicationContext(), "Welcome back, " + user.getUsername(), Toast.LENGTH_LONG).show();
-                        userHome();
-                    }
-                    else
-                    {
-                        Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
-                    }
-                }
-            });
-        }
-    }
-
-    private void userHome ()
-    {
-        Intent i =  new Intent(getApplicationContext(), UserHome.class);
-        startActivity(i);
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        //Set font of the title text
-        TextView title = (TextView) findViewById(R.id.apptitle);
-        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/pacifico.ttf");
-        title.setTypeface(custom_font);
-
-        signUpModeActive = true;
-
-        RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.relativeLayout);
-        ImageView logo = (ImageView) findViewById(R.id.logo);
-        usernameField = (EditText) findViewById(R.id.username);
-        passwordField = (EditText) findViewById(R.id.password);
-        changeSignUpModeTextView = (TextView) findViewById(R.id.login_signup_txt);
-        signUpButton = (Button) findViewById(R.id.login_signup_btn);
-
-        changeSignUpModeTextView.setOnClickListener(this);
-        logo.setOnClickListener(this);
-        relativeLayout.setOnClickListener(this);
-        usernameField.setOnClickListener(this);
-        passwordField.setOnClickListener(this);
-        usernameField.setOnKeyListener(this);
-        passwordField.setOnKeyListener(this);
-
-        ParseAnalytics.trackAppOpenedInBackground(getIntent());
-        if (ParseUser.getCurrentUser().getUsername() != null)
-        {
-          userHome();
         }
     }
 
