@@ -62,10 +62,7 @@ public class RatingActivity extends AppCompatActivity
                         }
                     }
                 }
-                else
-                {
-                    Toast.makeText(getApplication().getBaseContext(), "Images failed to laod", Toast.LENGTH_LONG).show();
-                }
+                else Toast.makeText(getApplication().getBaseContext(), "Images failed to laod", Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -125,13 +122,11 @@ public class RatingActivity extends AppCompatActivity
                 }
             }
         });
-
     }
 
     public RatingCatObject loadRandomCat()
     {
-        randomInt = generator.nextInt(ratingCatObjects.size());
-        chosenCat = ratingCatObjects.get(randomInt);
+        chosenCat = ratingCatObjects.get(generator.nextInt(ratingCatObjects.size()));
 
         ParseFile imgFile = chosenCat.getcatImage();
 
@@ -151,10 +146,7 @@ public class RatingActivity extends AppCompatActivity
                     ImageView imageView = (ImageView) findViewById(R.id.catImage);
                     imageView.setImageBitmap(chosenCatImage);
                 }
-                else
-                {
-                    Toast.makeText(getApplication().getBaseContext(), "Random cat image failed to load", Toast.LENGTH_LONG).show();
-                }
+                else Toast.makeText(getApplication().getBaseContext(), "Random cat image failed to load", Toast.LENGTH_LONG).show();
             }
         });
         setContentView(R.layout.activity_rating);

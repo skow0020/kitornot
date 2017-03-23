@@ -42,12 +42,12 @@
         android:gravity="center" />
 
     <ImageButton
+        android:id="@+id/ratingBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/ratingBtn"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:src="@android:drawable/star_big_on"
-        android:onClick="RatingActivity" />
+        android:layout_alignParentRight="true"
+        android:onClick="ratingActivity"
+        android:src="@android:drawable/star_big_on" />
 </RelativeLayout>
