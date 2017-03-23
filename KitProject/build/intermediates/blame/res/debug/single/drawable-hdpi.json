@@ -120,12 +120,12 @@
         "source": "C:\\Users\\Colin\\.android\\build-cache\\6d4ccf307234fbecdab11d7fc85da00c4d78b214\\output\\res\\drawable-hdpi\\abc_textfield_search_activated_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\abc_ic_menu_copy_mtrl_am_alpha.png",
-        "source": "C:\\Users\\Colin\\.android\\build-cache\\6d4ccf307234fbecdab11d7fc85da00c4d78b214\\output\\res\\drawable-hdpi\\abc_ic_menu_copy_mtrl_am_alpha.png"
-    },
-    {
         "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\abc_cab_background_top_mtrl_alpha.9.png",
         "source": "C:\\Users\\Colin\\.android\\build-cache\\6d4ccf307234fbecdab11d7fc85da00c4d78b214\\output\\res\\drawable-hdpi\\abc_cab_background_top_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\abc_ic_menu_copy_mtrl_am_alpha.png",
+        "source": "C:\\Users\\Colin\\.android\\build-cache\\6d4ccf307234fbecdab11d7fc85da00c4d78b214\\output\\res\\drawable-hdpi\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
         "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\abc_spinner_mtrl_am_alpha.9.png",
