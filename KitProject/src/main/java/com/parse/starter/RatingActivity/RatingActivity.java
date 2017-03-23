@@ -25,7 +25,7 @@ import java.util.Random;
 
 public class RatingActivity extends AppCompatActivity
 {
-    int randomInt, totalRatings, positiveRatings;
+    int totalRatings, positiveRatings;
     Random generator = new Random();
     RatingCatObject chosenCat;
     Bitmap chosenCatImage;
@@ -79,16 +79,8 @@ public class RatingActivity extends AppCompatActivity
                     catObject.saveInBackground(new SaveCallback() {
                         @Override
                         public void done(ParseException e) {
-                            if (e == null)
-                            {
-                                Toast.makeText(getApplication().getBaseContext(), "Rating updated successfully", Toast.LENGTH_LONG).show();
-
-                            }
-                            else
-                            {
-                                Toast.makeText(getApplication().getBaseContext(), "Rating failed", Toast.LENGTH_LONG).show();
-                                e.printStackTrace();
-                            }
+                            if (e == null) Toast.makeText(getApplication().getBaseContext(), "Rating updated successfully", Toast.LENGTH_LONG).show();
+                            else Toast.makeText(getApplication().getBaseContext(), "Rating failed", Toast.LENGTH_LONG).show();
                             loadRandomCat();
                         }
                     });
@@ -107,15 +99,8 @@ public class RatingActivity extends AppCompatActivity
                     catObject.saveInBackground(new SaveCallback() {
                         @Override
                         public void done(ParseException e) {
-                            if (e == null)
-                            {
-                                Toast.makeText(getApplication().getBaseContext(), "Rating updated successfully!", Toast.LENGTH_LONG).show();
-                            }
-                            else
-                            {
-                                Toast.makeText(getApplication().getBaseContext(), "Rating failed", Toast.LENGTH_LONG).show();
-                                e.printStackTrace();
-                            }
+                            if (e == null) Toast.makeText(getApplication().getBaseContext(), "Rating updated successfully!", Toast.LENGTH_LONG).show();
+                            else Toast.makeText(getApplication().getBaseContext(), "Rating failed", Toast.LENGTH_LONG).show();
                             loadRandomCat();
                         }
                     });

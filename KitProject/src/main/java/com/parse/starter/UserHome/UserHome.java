@@ -32,7 +32,6 @@ import com.parse.starter.RatingActivity.RatingActivity;
 import com.parse.starter.UserCatDetails;
 
 import java.io.ByteArrayOutputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -41,8 +40,7 @@ public class UserHome extends AppCompatActivity {
     private GridView userCatGrid;
     private ArrayList<Bitmap> catImages = new ArrayList<>();
     public static List<CatObject> catObjects = new ArrayList<>();
-
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,8 +54,6 @@ public class UserHome extends AppCompatActivity {
         userCatGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //createImageFromBitmap(catImages.get(position));
-
                 Intent i = new Intent(UserHome.this, UserCatDetails.class);
                 i.putExtra("catListPosition", position);
                 startActivity(i);
@@ -69,7 +65,6 @@ public class UserHome extends AppCompatActivity {
     public void SetCatGrid()
     {
         userCatGrid = (GridView) findViewById(R.id.userCats);
-        final boolean[] finished = {false};
 
         ParseQuery<ParseObject> query = new ParseQuery<>("images");
         query.whereEqualTo("username", ParseUser.getCurrentUser().getUsername()).orderByDescending("createdAt");
@@ -82,7 +77,6 @@ public class UserHome extends AppCompatActivity {
                     final int numObjectsReturned = objects.size();
                     if (numObjectsReturned == 0) {
                         Toast.makeText(getApplication().getBaseContext(), "You have no cat images to load", Toast.LENGTH_LONG).show();
-                        finished[0] = true;
                     }
                     for (final ParseObject object : objects)
                     {
@@ -103,7 +97,6 @@ public class UserHome extends AppCompatActivity {
                                     catObjects.add(cat);
                                     if (catObjects.size() == numObjectsReturned)
                                     {
-                                        finished[0] = true;
                                         userCatGrid.setAdapter(new ImageAdapter(getApplicationContext(), catImages));
                                     }
                                 }
@@ -119,23 +112,6 @@ public class UserHome extends AppCompatActivity {
                 else Toast.makeText(getApplication().getBaseContext(), "Your cats failed to load", Toast.LENGTH_LONG).show();
             }
         });
-    }
-
-    //Creates image from bitmap and saves it locally to be accessed in other activities
-    private String createImageFromBitmap(Bitmap bitmap) {
-        String fileName = "catImage";//no .png or .jpg needed
-        try {
-            ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
-            FileOutputStream fo = openFileOutput(fileName, Context.MODE_PRIVATE);
-            fo.write(bytes.toByteArray());
-            // remember close file output
-            fo.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-            fileName = null;
-        }
-        return fileName;
     }
 
     @Override
@@ -159,7 +135,7 @@ public class UserHome extends AppCompatActivity {
     }
 
     //Resizing image if it is too large for Parse
-    public Bitmap getResizedBitmap(Bitmap bm, int newWidth, int newHeight) {
+    private Bitmap getResizedBitmap(Bitmap bm, int newWidth, int newHeight) {
         int width = bm.getWidth();
         int height = bm.getHeight();
         float scaleWidth = ((float) newWidth) / width;
@@ -170,8 +146,7 @@ public class UserHome extends AppCompatActivity {
         matrix.postScale(scaleWidth, scaleHeight);
 
         // "RECREATE" THE NEW BITMAP
-        Bitmap resizedBitmap = Bitmap.createBitmap(
-                bm, 0, 0, width, height, matrix, false);
+        Bitmap resizedBitmap = Bitmap.createBitmap(bm, 0, 0, width, height, matrix, false);
         bm.recycle();
         return resizedBitmap;
     }
@@ -189,6 +164,7 @@ public class UserHome extends AppCompatActivity {
             {
                 Bitmap bitmapImage = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImage);
                 ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                bitmapImage.compress(Bitmap.CompressFormat.PNG, 100, stream);
                 bitmapImage.compress(Bitmap.CompressFormat.PNG, 100, stream);
                 byte[] byteArray = stream.toByteArray();
 
@@ -234,7 +210,6 @@ public class UserHome extends AppCompatActivity {
                 });
 
             } catch (IOException e) {
-                e.printStackTrace();
                 Log.i("ImageUpload", " FAILED WEIRDLY!!");
                 Toast.makeText(getApplication().getBaseContext(), "There was an error - please try again", Toast.LENGTH_LONG).show();
             }

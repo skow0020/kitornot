@@ -11,19 +11,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db46db15-6f2e-4031-a08c-4687444247f7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KitProject/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_KitProject_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_KitProject_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_KitProject_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_KitProject_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KitProject/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/KitProject/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KitProject/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/KitProject/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KitProject/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/KitProject/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KitProject/build/intermediates/res/merged/debug/layout/activity_user_home.xml" afterPath="$PROJECT_DIR$/KitProject/build/intermediates/res/merged/debug/layout/activity_user_home.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/RatingActivity/RatingActivity.java" afterPath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/RatingActivity/RatingActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KitProject/src/main/res/layout/activity_user_home.xml" afterPath="$PROJECT_DIR$/KitProject/src/main/res/layout/activity_user_home.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserCatDetails.java" afterPath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserCatDetails.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome/CatObject.java" afterPath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome/CatObject.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome/UserHome.java" afterPath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome/UserHome.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
     </list>
     <ignored path="KitOrNot - Copy.iws" />
@@ -56,60 +56,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserHome.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserHome.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome/UserHome.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="152" column="5" selection-start-line="152" selection-start-column="5" selection-end-line="152" selection-end-column="5" />
+            <state relative-caret-position="173">
+              <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserCatDetails.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserCatDetails.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CatObject.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome/CatObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RatingActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/RatingActivity/RatingActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="148" column="132" selection-start-line="148" selection-start-column="132" selection-end-line="148" selection-end-column="132" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RatingCatObject.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/RatingActivity/RatingCatObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -1798,16 +1752,16 @@
         <option value="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/StarterApplication.java" />
         <option value="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/RatingActivity.java" />
         <option value="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome.java" />
-        <option value="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/RatingActivity/RatingCatObject.java" />
         <option value="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/MainActivity.java" />
         <option value="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/Timer.java" />
-        <option value="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome/CatObject.java" />
-        <option value="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserCatDetails.java" />
-        <option value="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome/UserHome.java" />
         <option value="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/ImageAdapter.java" />
-        <option value="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/RatingActivity/RatingActivity.java" />
         <option value="$USER_HOME$/AppData/Local/Android/sdk/platforms/android-22/android.jar!/android/view/View.class" />
         <option value="$PROJECT_DIR$/KitProject/src/main/res/layout/activity_user_home.xml" />
+        <option value="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserCatDetails.java" />
+        <option value="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome/CatObject.java" />
+        <option value="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/RatingActivity/RatingActivity.java" />
+        <option value="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/RatingActivity/RatingCatObject.java" />
+        <option value="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome/UserHome.java" />
       </list>
     </option>
   </component>
@@ -2521,15 +2475,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1608" y="-125" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286908" sideWeight="0.48200515" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3955432" sideWeight="0.20115681" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3955432" sideWeight="0.7988432" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3593315" sideWeight="0.5340617" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3955432" sideWeight="0.7988432" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24421594" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286908" sideWeight="0.4974293" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -2542,7 +2496,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3593315" sideWeight="0.468509" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3593315" sideWeight="0.4659383" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2570,14 +2524,8 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserCatDetails.java</url>
-          <line>34</line>
-          <properties />
-          <option name="timeStamp" value="54" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome/UserHome.java</url>
-          <line>156</line>
+          <line>132</line>
           <properties />
           <option name="timeStamp" value="55" />
         </line-breakpoint>
@@ -2594,7 +2542,7 @@
           <option name="timeStamp" value="57" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="58" />
+      <option name="time" value="60" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2612,6 +2560,8 @@
           <caret line="84" column="29" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3038#3524#0" expanded="true" />
+            <element signature="e#3523#3524#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2642,9 +2592,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2661,6 +2609,8 @@
           <caret line="164" column="7" selection-start-line="164" selection-start-column="7" selection-end-line="164" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3038#3524#0" expanded="true" />
+            <element signature="e#3523#3524#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2686,9 +2636,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="42" column="53" selection-start-line="42" selection-start-column="53" selection-end-line="42" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2712,6 +2660,8 @@
           <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3038#3524#0" expanded="true" />
+            <element signature="e#3523#3524#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2730,9 +2680,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="42" column="53" selection-start-line="42" selection-start-column="53" selection-end-line="42" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2756,6 +2704,8 @@
           <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3038#3524#0" expanded="true" />
+            <element signature="e#3523#3524#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2774,9 +2724,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2786,6 +2734,8 @@
           <caret line="89" column="12" selection-start-line="89" selection-start-column="12" selection-end-line="89" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3038#3524#0" expanded="true" />
+            <element signature="e#3523#3524#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2807,6 +2757,8 @@
           <caret line="89" column="12" selection-start-line="89" selection-start-column="12" selection-end-line="89" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3038#3524#0" expanded="true" />
+            <element signature="e#3523#3524#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2834,6 +2786,8 @@
           <caret line="84" column="29" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3038#3524#0" expanded="true" />
+            <element signature="e#3523#3524#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2946,46 +2900,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome/CatObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserCatDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome/UserHome.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="152" column="5" selection-start-line="152" selection-start-column="5" selection-end-line="152" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/RatingActivity/RatingActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="148" column="132" selection-start-line="148" selection-start-column="132" selection-end-line="148" selection-end-column="132" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-22/android.jar!/android/view/View.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21098">
@@ -3007,9 +2921,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/RatingActivity/RatingCatObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+        <state relative-caret-position="306">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/RatingActivity/RatingActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1431">
+          <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3038#3524#0" expanded="true" />
+            <element signature="e#3523#3524#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome/CatObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserCatDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome/UserHome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
