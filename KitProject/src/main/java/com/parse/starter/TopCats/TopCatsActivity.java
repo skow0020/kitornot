@@ -20,7 +20,6 @@ import com.parse.ParseQuery;
 import com.parse.starter.CatObject;
 import com.parse.starter.ImageAdapter;
 import com.parse.starter.R;
-import com.parse.starter.UserHome.UserCatDetails;
 
 import java.util.ArrayList;
 import java.util.List;

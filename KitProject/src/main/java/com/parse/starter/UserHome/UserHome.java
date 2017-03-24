@@ -1,6 +1,8 @@
 package com.parse.starter.UserHome;
 
+import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
@@ -33,6 +35,7 @@ import com.parse.starter.TopCats.TopCatsActivity;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -132,21 +135,65 @@ public class UserHome extends AppCompatActivity {
         startActivity(i);
     }
 
-    //Resizing image if it is too large for Parse
-    private Bitmap getResizedBitmap(Bitmap bm, int newWidth, int newHeight) {
-        int width = bm.getWidth();
-        int height = bm.getHeight();
-        float scaleWidth = ((float) newWidth) / width;
-        float scaleHeight = ((float) newHeight) / height;
-        // CREATE A MATRIX FOR THE MANIPULATION
-        Matrix matrix = new Matrix();
-        // RESIZE THE BIT MAP
-        matrix.postScale(scaleWidth, scaleHeight);
+    public static int getOrientation(Context context, Uri photoUri) {
+    /* it's on the external media. */
+        Cursor cursor = context.getContentResolver().query(photoUri,
+                new String[] { MediaStore.Images.ImageColumns.ORIENTATION }, null, null, null);
 
-        // "RECREATE" THE NEW BITMAP
-        Bitmap resizedBitmap = Bitmap.createBitmap(bm, 0, 0, width, height, matrix, false);
-        bm.recycle();
-        return resizedBitmap;
+        if (cursor.getCount() != 1) {
+            return -1;
+        }
+
+        cursor.moveToFirst();
+        cursor.close();
+        return cursor.getInt(0);
+    }
+
+    public static Bitmap getCorrectlyOrientedImage(Context context, Uri photoUri) throws IOException {
+        InputStream is = context.getContentResolver().openInputStream(photoUri);
+        BitmapFactory.Options dbo = new BitmapFactory.Options();
+        dbo.inJustDecodeBounds = true;
+        BitmapFactory.decodeStream(is, null, dbo);
+        is.close();
+
+        int rotatedWidth, rotatedHeight;
+        int orientation = getOrientation(context, photoUri);
+
+        if (orientation == 90 || orientation == 270) {
+            rotatedWidth = dbo.outHeight;
+            rotatedHeight = dbo.outWidth;
+        } else {
+            rotatedWidth = dbo.outWidth;
+            rotatedHeight = dbo.outHeight;
+        }
+
+        Bitmap srcBitmap;
+        is = context.getContentResolver().openInputStream(photoUri);
+        if (rotatedWidth > 1024 || rotatedHeight > 1024) {
+            float widthRatio = ((float) rotatedWidth) / ((float) 1024);
+            float heightRatio = ((float) rotatedHeight) / ((float) 1024);
+            float maxRatio = Math.max(widthRatio, heightRatio);
+
+            // Create the bitmap from file
+            BitmapFactory.Options options = new BitmapFactory.Options();
+            options.inSampleSize = (int) maxRatio;
+            srcBitmap = BitmapFactory.decodeStream(is, null, options);
+        } else srcBitmap = BitmapFactory.decodeStream(is);
+        is.close();
+
+    /*
+     * if the orientation is not 0 (or -1, which means we don't know), we
+     * have to do a rotation.
+     */
+        if (orientation > 0) {
+            Matrix matrix = new Matrix();
+            matrix.postRotate(orientation);
+
+            srcBitmap = Bitmap.createBitmap(srcBitmap, 0, 0, srcBitmap.getWidth(),
+                    srcBitmap.getHeight(), matrix, true);
+        }
+
+        return srcBitmap;
     }
 
     //Adding Cat images from internal Gallery
@@ -154,31 +201,20 @@ public class UserHome extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
         super.onActivityResult(requestCode, resultCode, data);
+
         if (requestCode == 1 && resultCode == RESULT_OK && data != null)
         {
             Uri selectedImage = data.getData();
+            Bitmap bitmapImage;
+            try {
+                bitmapImage = getCorrectlyOrientedImage(this, selectedImage);
 
-            try
-            {
-                Bitmap bitmapImage = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImage);
+                //Bitmap bitmapImage = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImage);
+
                 ByteArrayOutputStream stream = new ByteArrayOutputStream();
                 bitmapImage.compress(Bitmap.CompressFormat.PNG, 100, stream);
                 bitmapImage.compress(Bitmap.CompressFormat.PNG, 100, stream);
                 byte[] byteArray = stream.toByteArray();
-
-                if (byteArray.length > 10485760) {
-                    int newWidth = (int)Math.round(bitmapImage.getWidth()*0.95);
-                    int newHeight = (int)Math.round(bitmapImage.getHeight()*0.95);
-                    while (byteArray.length > 10485760)
-                    {
-                        stream.reset();
-                        bitmapImage = getResizedBitmap(bitmapImage, newWidth, newHeight);
-                        bitmapImage.compress(Bitmap.CompressFormat.PNG, 100, stream);
-                        byteArray = stream.toByteArray();
-                        newWidth = (int)Math.round(newWidth*0.5);
-                        newHeight = (int)Math.round(newHeight*0.5);
-                    }
-                }
 
                 ParseFile file = new ParseFile("image.png", byteArray);
                 ParseObject object = new ParseObject("images");

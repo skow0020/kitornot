@@ -8,7 +8,6 @@ import android.widget.TextView;
 
 import com.parse.starter.CatObject;
 import com.parse.starter.R;
-import com.parse.starter.UserHome.UserHome;
 
 import java.text.DecimalFormat;
 
