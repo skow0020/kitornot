@@ -145,7 +145,6 @@ public class UserHome extends AppCompatActivity {
         }
 
         cursor.moveToFirst();
-        cursor.close();
         return cursor.getInt(0);
     }
 
