@@ -2,10 +2,6 @@ package com.parse.starter.RatingActivity;
 
 import com.parse.ParseFile;
 
-/**
- * Created by Colin on 3/21/2017.
- */
-
 public class RatingCatObject {
     private ParseFile catImage;
     private int catTotalRatings, catPositiveRatings;

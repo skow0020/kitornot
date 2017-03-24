@@ -68,10 +68,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         passwordField.setOnKeyListener(this);
 
         ParseAnalytics.trackAppOpenedInBackground(getIntent());
-        if (ParseUser.getCurrentUser().getUsername() != null)
-        {
-            userHome();
-        }
+        if (ParseUser.getCurrentUser().getUsername() != null) userHome();
     }
 
     public void signUpOrLogIn(View view)
@@ -92,10 +89,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         Toast.makeText(getApplicationContext(), "Welcome, " + user.getUsername(), Toast.LENGTH_LONG).show();
                         userHome();
                     }
-                    else
-                    {
-                        Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
-                    }
+                    else Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
                 }
             });
 
@@ -111,10 +105,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         Toast.makeText(getApplicationContext(), "Welcome back, " + user.getUsername(), Toast.LENGTH_LONG).show();
                         userHome();
                     }
-                    else
-                    {
-                        Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
-                    }
+                    else Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
                 }
             });
         }
@@ -129,10 +120,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public boolean onKey(View v, int keyCode, KeyEvent event)
     {
-        if (keyCode == KeyEvent.KEYCODE_ENTER && event.getAction() == KeyEvent.ACTION_DOWN)
-        {
-            signUpOrLogIn(v);
-        }
+        if (keyCode == KeyEvent.KEYCODE_ENTER && event.getAction() == KeyEvent.ACTION_DOWN) signUpOrLogIn(v);
         return false;
     }
 
@@ -158,14 +146,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
         }
-        else if ( v.getId() == R.id.password)
-        {
-            passwordField.setText("");
-        }
-        else if (v.getId() == R.id.username)
-        {
-            usernameField.setText("");
-        }
+        else if ( v.getId() == R.id.password) passwordField.setText("");
+        else if (v.getId() == R.id.username) usernameField.setText("");
     }
 
     @Override
@@ -185,9 +167,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-          return true;
-        }
+        if (id == R.id.action_settings) return true;
         return super.onOptionsItemSelected(item);
     }
 }

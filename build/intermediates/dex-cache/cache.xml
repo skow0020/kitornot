@@ -3,6 +3,15 @@
 
     <item
         is-multidex="true"
+        jar="C:\Users\Colin\.android\build-cache\05548f0e7e69d2e1028f7f2d00512e16cd581737\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\build\intermediates\transforms\dex\debug\folders\1000\10\classes_1cd9ae1b3e968f794e5d35543b8862d0bc39da89\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
@@ -12,11 +21,20 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Colin\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.2_f8b783a0b51b4d9782ea76c69450430a52a81e7f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="105a7e70787e8ac2dc72e396269fe487dbdc872c">
+        sha1="6db0bd536d39697a1afbafc6b592869473018744">
         <dex dex="C:\Users\Colin\Desktop\MyProjects\Kit\kitornot\KitProject\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_dd8656d743e508928e018d4e15e476d89d7aa6ff\classes.dex" />
     </item>
 

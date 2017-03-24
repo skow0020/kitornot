@@ -76,10 +76,11 @@ public class RatingActivity extends AppCompatActivity
                 if (e == null) {
                     catObject.increment("positiveRatings");
                     catObject.increment("totalRatings");
+                    catObject.put("averageRating", Double.parseDouble(catObject.get("positiveRatings").toString())/Double.parseDouble(catObject.get("totalRatings").toString()));
                     catObject.saveInBackground(new SaveCallback() {
                         @Override
                         public void done(ParseException e) {
-                            if (e == null) Toast.makeText(getApplication().getBaseContext(), "Rating updated successfully", Toast.LENGTH_LONG).show();
+                            if (e == null) Toast.makeText(getApplication().getBaseContext(), "Rating updated successfully", Toast.LENGTH_SHORT).show();
                             else Toast.makeText(getApplication().getBaseContext(), "Rating failed", Toast.LENGTH_LONG).show();
                             loadRandomCat();
                         }
@@ -96,10 +97,11 @@ public class RatingActivity extends AppCompatActivity
             public void done(ParseObject catObject, ParseException e) {
                 if (e == null) {
                     catObject.increment("totalRatings");
+                    catObject.put("averageRating", Double.parseDouble(catObject.get("positiveRatings").toString())/Double.parseDouble(catObject.get("totalRatings").toString()));
                     catObject.saveInBackground(new SaveCallback() {
                         @Override
                         public void done(ParseException e) {
-                            if (e == null) Toast.makeText(getApplication().getBaseContext(), "Rating updated successfully!", Toast.LENGTH_LONG).show();
+                            if (e == null) Toast.makeText(getApplication().getBaseContext(), "Rating updated successfully!", Toast.LENGTH_SHORT).show();
                             else Toast.makeText(getApplication().getBaseContext(), "Rating failed", Toast.LENGTH_LONG).show();
                             loadRandomCat();
                         }

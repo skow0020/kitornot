@@ -43,7 +43,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".UserCatDetails"
+            android:name=".UserHome.UserCatDetails"
             android:label="@string/title_activity_user_cat_details"
             android:parentActivityName=".UserHome.UserHome"
             android:theme="@style/NoActionBar">
@@ -59,6 +59,24 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.parse.starter.UserHome.UserHome" />
+        </activity>
+        <activity
+            android:name=".TopCats.TopCatsActivity"
+            android:label="@string/title_activity_top_cats"
+            android:parentActivityName=".UserHome.UserHome"
+            android:theme="@style/NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.parse.starter.UserHome.UserHome" />
+        </activity>
+        <activity
+            android:name=".TopCats.TopCatDetails"
+            android:label="@string/title_activity_top_cat_details"
+            android:parentActivityName=".TopCats.TopCatsActivity"
+            android:theme="@style/NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.parse.starter.TopCats.TopCatsActivity" />
         </activity>
     </application>
 

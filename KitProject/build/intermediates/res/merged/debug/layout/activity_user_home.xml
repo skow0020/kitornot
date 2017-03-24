@@ -50,4 +50,13 @@
         android:layout_alignParentRight="true"
         android:onClick="ratingActivity"
         android:src="@android:drawable/star_big_on" />
+
+    <ImageButton
+        android:id="@+id/topCatsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="topCatsActivity"
+        android:src="@android:drawable/star_big_on" />
 </RelativeLayout>
