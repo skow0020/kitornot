@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\Colin\\Desktop\\KitOrNot\\KitProject\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
+        "outputFile": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 106
                 },
                 "from": {
-                    "file": "C:\\Users\\Colin\\.android\\build-cache\\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\\output\\res\\values-port\\values-port.xml",
+                    "file": "C:\\Users\\Colin\\.android\\build-cache\\6d4ccf307234fbecdab11d7fc85da00c4d78b214\\output\\res\\values-port\\values-port.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,

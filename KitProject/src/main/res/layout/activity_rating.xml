@@ -15,22 +15,20 @@
         android:id="@+id/catImage"
         android:layout_alignParentTop="false"
         android:contentDescription="@string/catimage"
-        android:paddingTop="10sp"
-        android:paddingBottom="10sp"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@+id/cuteBtn" />
+        android:layout_centerInParent="true"
+        android:paddingTop="50sp"
+        android:paddingBottom="50sp" />
 
     <ImageButton
-        android:id="@+id/cuteBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/cuteBtn"
+        android:src="@drawable/childish_thumb_up"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:contentDescription="@string/thumbs_up"
-        android:longClickable="false"
-        android:onClick="cuteBtn"
-        android:src="@drawable/childish_thumb_up" />
+        android:onClick="cuteBtn" />
 
     <ImageButton
         android:layout_width="wrap_content"

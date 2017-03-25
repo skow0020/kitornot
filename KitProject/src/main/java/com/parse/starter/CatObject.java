@@ -5,11 +5,9 @@ import android.graphics.Bitmap;
 public class CatObject {
     private Bitmap catImage;
     private double catTotalRatings, catPositiveRatings;
-    private String imageID;
 
-    public CatObject(String objID, Bitmap Image, int totalRatings, int positiveRatings)
+    public CatObject(Bitmap Image, int totalRatings, int positiveRatings)
     {
-        imageID = objID;
         catImage = Image;
         catTotalRatings = totalRatings;
         catPositiveRatings = positiveRatings;

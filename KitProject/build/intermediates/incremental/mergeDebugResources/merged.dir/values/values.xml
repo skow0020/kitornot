@@ -339,7 +339,6 @@
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="cat_backside">Cat Backside</string>
     <string name="catimage">catImage</string>
-    <string name="contact">Contact: skow0020@gmail.com</string>
     <string name="kit_or_not">Kit Or Not?</string>
     <string name="log_in">Log In</string>
     <string name="log_in_str">Log In</string>

@@ -44,19 +44,21 @@ public class RatingActivity extends AppCompatActivity
             public void done(List<ParseObject> objects, ParseException e) {
                 if (e == null)
                 {
-                    ratingCatObjects.clear();
-                    for (ParseObject object : objects)
+                    if (objects.size() > 0)
                     {
-                        ParseFile imgFile = (ParseFile) object.get("image");
-                        totalRatings = (Integer) object.get("totalRatings");
-                        positiveRatings = (Integer) object.get("positiveRatings");
-                        RatingCatObject ratingCat = new RatingCatObject(object.getObjectId(), imgFile, totalRatings, positiveRatings);
-                        ratingCatObjects.add(ratingCat);
-
-                        if (ratingCatObjects.size() == objects.size())
+                        for (ParseObject object : objects)
                         {
-                            Toast.makeText(getApplication().getBaseContext(), "Cats loaded successfully", Toast.LENGTH_LONG).show();
-                            chosenCat = loadRandomCat();
+                            ParseFile imgFile = (ParseFile) object.get("image");
+                            totalRatings = (Integer) object.get("totalRatings");
+                            positiveRatings = (Integer) object.get("positiveRatings");
+                            RatingCatObject ratingCat = new RatingCatObject(object.getObjectId(), imgFile, totalRatings, positiveRatings);
+                            ratingCatObjects.add(ratingCat);
+
+                            if (ratingCatObjects.size() == objects.size())
+                            {
+                                Toast.makeText(getApplication().getBaseContext(), "Cats loaded successfully", Toast.LENGTH_LONG).show();
+                                chosenCat = loadRandomCat();
+                            }
                         }
                     }
                 }

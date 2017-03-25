@@ -13,12 +13,11 @@
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:id="@+id/catImage"
+        android:layout_alignParentTop="false"
         android:contentDescription="@string/catimage"
+        android:layout_centerInParent="true"
         android:paddingTop="50sp"
-        android:paddingBottom="50sp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:paddingBottom="50sp" />
 
     <TextView
         android:layout_width="wrap_content"

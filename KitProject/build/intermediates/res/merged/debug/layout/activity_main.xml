@@ -72,22 +72,12 @@
         android:onClick="signUpOrLogIn" />
 
     <TextView
-        android:id="@+id/login_signup_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/login_signup_btn"
-        android:layout_centerHorizontal="true"
-        android:paddingTop="10dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/log_in"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <TextView
-        android:id="@+id/contact_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/login_signup_txt"
+        android:id="@+id/login_signup_txt"
         android:layout_centerHorizontal="true"
-        android:paddingTop="30dp"
-        android:text="@string/contact"
-        android:textSize="8sp" />
+        android:layout_below="@+id/login_signup_btn"
+        android:paddingTop="10dp" />
 </RelativeLayout>

@@ -58,5 +58,5 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:onClick="topCatsActivity"
-        android:src="@android:drawable/star_big_off" />
+        android:src="@android:drawable/star_big_on" />
 </RelativeLayout>
