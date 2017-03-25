@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -48,8 +49,10 @@ public class UserHome extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_home);
+        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/pacifico.ttf");
 
         TextView userPage = (TextView) findViewById(R.id.userPage);
+        userPage.setTypeface(custom_font);
         userPage.setText(String.format("%s's cats", ParseUser.getCurrentUser().getUsername()));
         SetCatGrid();
 
