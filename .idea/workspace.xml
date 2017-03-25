@@ -15,15 +15,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_KitProject_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_KitProject_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_KitProject_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_KitProject_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_KitProject_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_KitProject_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KitProject/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/KitProject/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KitProject/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/KitProject/build/intermediates/blame/res/debug/single/layout.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KitProject/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/KitProject/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KitProject/build/intermediates/res/merged/debug/layout/activity_rating.xml" afterPath="$PROJECT_DIR$/KitProject/build/intermediates/res/merged/debug/layout/activity_rating.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/RatingActivity/RatingActivity.java" afterPath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/RatingActivity/RatingActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KitProject/src/main/res/layout/activity_rating.xml" afterPath="$PROJECT_DIR$/KitProject/src/main/res/layout/activity_rating.xml" />
     </list>
     <ignored path="KitOrNot - Copy.iws" />
@@ -66,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RatingActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RatingActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/RatingActivity/RatingActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+            <state relative-caret-position="189">
+              <caret line="143" column="61" selection-start-line="143" selection-start-column="61" selection-end-line="143" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,17 +74,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_rating.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="activity_rating.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/KitProject/src/main/res/layout/activity_rating.xml">
-          <provider selected="true" editor-type-id="android-designer2">
+          <provider editor-type-id="android-designer2">
             <state />
           </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
-              <folding>
-                <element signature="e#1192#1211#0" expanded="false" />
-              </folding>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1808,8 +1802,8 @@
         <option value="$PROJECT_DIR$/KitProject/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/KitProject/src/main/res/layout/activity_top_cat_details.xml" />
         <option value="$PROJECT_DIR$/KitProject/src/main/res/layout/activity_user_home.xml" />
-        <option value="$PROJECT_DIR$/KitProject/src/main/res/layout/activity_rating.xml" />
         <option value="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/RatingActivity/RatingActivity.java" />
+        <option value="$PROJECT_DIR$/KitProject/src/main/res/layout/activity_rating.xml" />
       </list>
     </option>
   </component>
@@ -3097,19 +3091,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KitProject/src/main/res/layout/activity_rating.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
-          <folding>
-            <element signature="e#1192#1211#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome/UserHome.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -3120,11 +3101,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/RatingActivity/RatingActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        <state relative-caret-position="189">
+          <caret line="143" column="61" selection-start-line="143" selection-start-column="61" selection-end-line="143" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KitProject/src/main/res/layout/activity_rating.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>
