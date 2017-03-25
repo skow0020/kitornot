@@ -5,6 +5,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -25,6 +26,9 @@ import java.util.Random;
 
 public class RatingActivity extends AppCompatActivity
 {
+    ImageButton thumbUp;
+    ImageButton thumbDown;
+
     int totalRatings, positiveRatings;
     Random generator = new Random();
     RatingCatObject chosenCat;
@@ -35,6 +39,12 @@ public class RatingActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_rating);
+
+        thumbUp = (ImageButton) findViewById(R.id.cuteBtn);
+        thumbDown = (ImageButton) findViewById(R.id.notBtn);
+        thumbDown.setClickable(false);
+        thumbUp.setClickable(false);
 
         ParseQuery<ParseObject> query = new ParseQuery<>("images");
         query.whereNotEqualTo("username", ParseUser.getCurrentUser().getUsername());
@@ -67,6 +77,7 @@ public class RatingActivity extends AppCompatActivity
 
     public void cuteBtn(View view)
     {
+        thumbUp.setClickable(false);
         ParseQuery<ParseObject> query = ParseQuery.getQuery("images");
 
         query.getInBackground(chosenCat.getImageID(), new GetCallback<ParseObject>() {
@@ -89,6 +100,7 @@ public class RatingActivity extends AppCompatActivity
     }
     public void noBtn(View view)
     {
+        thumbDown.setClickable(false);
         ParseQuery<ParseObject> query = ParseQuery.getQuery("images");
 
         query.getInBackground(chosenCat.getImageID(), new GetCallback<ParseObject>() {
@@ -130,6 +142,8 @@ public class RatingActivity extends AppCompatActivity
 
                     ImageView imageView = (ImageView) findViewById(R.id.catImage);
                     imageView.setImageBitmap(chosenCatImage);
+                    thumbDown.setClickable(true);
+                    thumbUp.setClickable(true);
                 }
                 else Toast.makeText(getApplication().getBaseContext(), "Random cat image failed to load", Toast.LENGTH_LONG).show();
             }
