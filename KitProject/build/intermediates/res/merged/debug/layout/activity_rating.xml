@@ -16,8 +16,8 @@
         android:layout_alignParentTop="false"
         android:contentDescription="@string/catimage"
         android:layout_centerInParent="true"
-        android:paddingTop="50sp"
-        android:paddingBottom="50sp" />
+        android:paddingTop="10sp"
+        android:paddingBottom="10sp" />
 
     <ImageButton
         android:layout_width="wrap_content"
