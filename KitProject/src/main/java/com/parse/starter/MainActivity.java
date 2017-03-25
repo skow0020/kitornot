@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/pacifico.ttf");
         title.setTypeface(custom_font);
 
-        signUpModeActive = true;
+        signUpModeActive = false;
 
         RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.relativeLayout);
         ImageView logo = (ImageView) findViewById(R.id.logo);
