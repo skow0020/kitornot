@@ -77,6 +77,7 @@ public class UserHome extends AppCompatActivity {
             public void done(List<ParseObject> objects, ParseException e) {
                 if (e == null)
                 {
+                    catObjects.clear();
                     final int numObjectsReturned = objects.size();
                     if (numObjectsReturned == 0) Toast.makeText(getApplication().getBaseContext(), "You have no cat images to load", Toast.LENGTH_LONG).show();
 
@@ -93,7 +94,7 @@ public class UserHome extends AppCompatActivity {
                                 if (e == null)
                                 {
                                     Bitmap img = BitmapFactory.decodeByteArray(data, 0, data.length);
-                                    CatObject cat = new CatObject(img, totalRatings, positiveRatings);
+                                    CatObject cat = new CatObject(object.getObjectId(), img, totalRatings, positiveRatings);
 
                                     catImages.add(img);
                                     catObjects.add(cat);

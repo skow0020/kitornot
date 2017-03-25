@@ -1,102 +1,102 @@
 [
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
-        "source": "C:\\Users\\Colin\\.android\\build-cache\\6d4ccf307234fbecdab11d7fc85da00c4d78b214\\output\\res\\drawable\\abc_cab_background_top_material.xml"
+        "merged": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\Colin\\.android\\build-cache\\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\\output\\res\\drawable\\abc_edit_text_material.xml"
     },
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
-        "source": "C:\\Users\\Colin\\.android\\build-cache\\6d4ccf307234fbecdab11d7fc85da00c4d78b214\\output\\res\\drawable\\abc_textfield_search_material.xml"
+        "merged": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "C:\\Users\\Colin\\.android\\build-cache\\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\\output\\res\\drawable\\abc_btn_borderless_material.xml"
     },
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
-        "source": "C:\\Users\\Colin\\.android\\build-cache\\6d4ccf307234fbecdab11d7fc85da00c4d78b214\\output\\res\\drawable\\abc_list_selector_holo_dark.xml"
+        "merged": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "C:\\Users\\Colin\\.android\\build-cache\\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\\output\\res\\drawable\\abc_btn_check_material.xml"
     },
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
-        "source": "C:\\Users\\Colin\\.android\\build-cache\\6d4ccf307234fbecdab11d7fc85da00c4d78b214\\output\\res\\drawable\\abc_ratingbar_full_material.xml"
+        "merged": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "C:\\Users\\Colin\\.android\\build-cache\\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\\output\\res\\drawable\\abc_btn_radio_material.xml"
     },
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\loginicon.png",
-        "source": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\src\\main\\res\\drawable\\loginicon.png"
+        "merged": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\thumbdown.png",
+        "source": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\src\\main\\res\\drawable\\thumbdown.png"
     },
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
-        "source": "C:\\Users\\Colin\\.android\\build-cache\\6d4ccf307234fbecdab11d7fc85da00c4d78b214\\output\\res\\drawable\\abc_list_selector_holo_light.xml"
+        "merged": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\loginicon.png",
+        "source": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\src\\main\\res\\drawable\\loginicon.png"
     },
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\snackbar_background.xml",
-        "source": "C:\\Users\\Colin\\.android\\build-cache\\9aa24a459dce41ecb4ffd75675f3a1ee24eda416\\output\\res\\drawable\\snackbar_background.xml"
+        "merged": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\snackbar_background.xml",
+        "source": "C:\\Users\\Colin\\.android\\build-cache\\ecd9d6f8c5a2d58ad55ddbe5f0204eb260af0525\\output\\res\\drawable\\snackbar_background.xml"
     },
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
-        "source": "C:\\Users\\Colin\\.android\\build-cache\\6d4ccf307234fbecdab11d7fc85da00c4d78b214\\output\\res\\drawable\\abc_item_background_holo_light.xml"
+        "merged": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
+        "source": "C:\\Users\\Colin\\.android\\build-cache\\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\\output\\res\\drawable\\abc_dialog_material_background_light.xml"
     },
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
-        "source": "C:\\Users\\Colin\\.android\\build-cache\\6d4ccf307234fbecdab11d7fc85da00c4d78b214\\output\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+        "merged": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\Users\\Colin\\.android\\build-cache\\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\\output\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
     },
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
-        "source": "C:\\Users\\Colin\\.android\\build-cache\\6d4ccf307234fbecdab11d7fc85da00c4d78b214\\output\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+        "merged": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "C:\\Users\\Colin\\.android\\build-cache\\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\\output\\res\\drawable\\abc_cab_background_internal_bg.xml"
     },
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
-        "source": "C:\\Users\\Colin\\.android\\build-cache\\6d4ccf307234fbecdab11d7fc85da00c4d78b214\\output\\res\\drawable\\abc_edit_text_material.xml"
+        "merged": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "C:\\Users\\Colin\\.android\\build-cache\\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\\output\\res\\drawable\\abc_tab_indicator_material.xml"
     },
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
-        "source": "C:\\Users\\Colin\\.android\\build-cache\\6d4ccf307234fbecdab11d7fc85da00c4d78b214\\output\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+        "merged": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "C:\\Users\\Colin\\.android\\build-cache\\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\\output\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
     },
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
-        "source": "C:\\Users\\Colin\\.android\\build-cache\\6d4ccf307234fbecdab11d7fc85da00c4d78b214\\output\\res\\drawable\\abc_btn_check_material.xml"
+        "merged": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "C:\\Users\\Colin\\.android\\build-cache\\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\\output\\res\\drawable\\abc_spinner_textfield_background_material.xml"
     },
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
-        "source": "C:\\Users\\Colin\\.android\\build-cache\\6d4ccf307234fbecdab11d7fc85da00c4d78b214\\output\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+        "merged": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\fab_background.xml",
+        "source": "C:\\Users\\Colin\\.android\\build-cache\\ecd9d6f8c5a2d58ad55ddbe5f0204eb260af0525\\output\\res\\drawable\\fab_background.xml"
     },
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\fab_background.xml",
-        "source": "C:\\Users\\Colin\\.android\\build-cache\\9aa24a459dce41ecb4ffd75675f3a1ee24eda416\\output\\res\\drawable\\fab_background.xml"
+        "merged": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\Users\\Colin\\.android\\build-cache\\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\\output\\res\\drawable\\abc_item_background_holo_light.xml"
     },
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\childish_thumb_up.png",
-        "source": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\src\\main\\res\\drawable\\childish_thumb_up.png"
+        "merged": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "C:\\Users\\Colin\\.android\\build-cache\\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\\output\\res\\drawable\\abc_list_selector_holo_dark.xml"
     },
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
-        "source": "C:\\Users\\Colin\\.android\\build-cache\\6d4ccf307234fbecdab11d7fc85da00c4d78b214\\output\\res\\drawable\\abc_btn_borderless_material.xml"
+        "merged": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
+        "source": "C:\\Users\\Colin\\.android\\build-cache\\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\\output\\res\\drawable\\abc_ratingbar_full_material.xml"
     },
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\thumbdown.png",
-        "source": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\src\\main\\res\\drawable\\thumbdown.png"
+        "merged": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\childish_thumb_up.png",
+        "source": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\src\\main\\res\\drawable\\childish_thumb_up.png"
     },
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
-        "source": "C:\\Users\\Colin\\.android\\build-cache\\6d4ccf307234fbecdab11d7fc85da00c4d78b214\\output\\res\\drawable\\abc_cab_background_internal_bg.xml"
+        "merged": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\Users\\Colin\\.android\\build-cache\\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\\output\\res\\drawable\\abc_item_background_holo_dark.xml"
     },
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
-        "source": "C:\\Users\\Colin\\.android\\build-cache\\6d4ccf307234fbecdab11d7fc85da00c4d78b214\\output\\res\\drawable\\abc_dialog_material_background_light.xml"
+        "merged": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "C:\\Users\\Colin\\.android\\build-cache\\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\\output\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
-        "source": "C:\\Users\\Colin\\.android\\build-cache\\6d4ccf307234fbecdab11d7fc85da00c4d78b214\\output\\res\\drawable\\abc_btn_radio_material.xml"
+        "merged": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
+        "source": "C:\\Users\\Colin\\.android\\build-cache\\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\\output\\res\\drawable\\abc_textfield_search_material.xml"
     },
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
-        "source": "C:\\Users\\Colin\\.android\\build-cache\\6d4ccf307234fbecdab11d7fc85da00c4d78b214\\output\\res\\drawable\\abc_dialog_material_background_dark.xml"
+        "merged": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "C:\\Users\\Colin\\.android\\build-cache\\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\\output\\res\\drawable\\abc_list_selector_holo_light.xml"
     },
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
-        "source": "C:\\Users\\Colin\\.android\\build-cache\\6d4ccf307234fbecdab11d7fc85da00c4d78b214\\output\\res\\drawable\\abc_tab_indicator_material.xml"
+        "merged": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "C:\\Users\\Colin\\.android\\build-cache\\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\\output\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
-        "source": "C:\\Users\\Colin\\.android\\build-cache\\6d4ccf307234fbecdab11d7fc85da00c4d78b214\\output\\res\\drawable\\abc_item_background_holo_dark.xml"
+        "merged": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
+        "source": "C:\\Users\\Colin\\.android\\build-cache\\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\\output\\res\\drawable\\abc_dialog_material_background_dark.xml"
     },
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
-        "source": "C:\\Users\\Colin\\.android\\build-cache\\6d4ccf307234fbecdab11d7fc85da00c4d78b214\\output\\res\\drawable\\abc_switch_thumb_material.xml"
+        "merged": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "C:\\Users\\Colin\\.android\\build-cache\\1a13d09bb2133cccdd4a07ed1cc02d176ebe65a4\\output\\res\\drawable\\abc_cab_background_top_material.xml"
     }
 ]

@@ -1,10 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
-        "source": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\src\\main\\res\\menu\\menu_main.xml"
+        "merged": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\menu\\menu_user_home.xml",
+        "source": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\src\\main\\res\\menu\\menu_user_home.xml"
     },
     {
-        "merged": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\menu\\menu_user_home.xml",
-        "source": "C:\\Users\\Colin\\Desktop\\MyProjects\\Kit\\kitornot\\KitProject\\src\\main\\res\\menu\\menu_user_home.xml"
+        "merged": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
+        "source": "C:\\Users\\Colin\\Desktop\\asdf\\kitornot\\KitProject\\src\\main\\res\\menu\\menu_main.xml"
     }
 ]
