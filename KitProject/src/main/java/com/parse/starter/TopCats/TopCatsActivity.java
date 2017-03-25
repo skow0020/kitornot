@@ -56,15 +56,16 @@ public class TopCatsActivity extends AppCompatActivity {
 
         ParseQuery<ParseObject> query = new ParseQuery<>("images");
         query.orderByDescending("averageRating");
-        query.setLimit(2);
+        query.setLimit(8);
 
         query.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> objects, ParseException e) {
                 if (e == null)
                 {
+                    catObjects.clear();
                     final int numObjectsReturned = objects.size();
-                    if (numObjectsReturned == 0) Toast.makeText(getApplication().getBaseContext(), "You have no cat images to load", Toast.LENGTH_LONG).show();
+                    if (numObjectsReturned == 0) Toast.makeText(getApplication().getBaseContext(), "There are no top cats!", Toast.LENGTH_LONG).show();
                     for (final ParseObject object : objects)
                     {
                         final int totalRatings = (Integer) object.get("totalRatings");
@@ -78,7 +79,7 @@ public class TopCatsActivity extends AppCompatActivity {
                                 if (e == null)
                                 {
                                     Bitmap img = BitmapFactory.decodeByteArray(data, 0, data.length);
-                                    CatObject cat = new CatObject(img, totalRatings, positiveRatings);
+                                    CatObject cat = new CatObject(object.getObjectId(), img, totalRatings, positiveRatings);
                                     catImages.add(img);
                                     catObjects.add(cat);
                                     if (catObjects.size() == numObjectsReturned) topCatsGrid.setAdapter(new ImageAdapter(getApplicationContext(), catImages));
