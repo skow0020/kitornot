@@ -1,6 +1,8 @@
 package com.parse.starter.UserHome;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -10,15 +12,20 @@ import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.ContextMenu;
 import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.parse.DeleteCallback;
 import com.parse.FindCallback;
 import com.parse.GetDataCallback;
 import com.parse.ParseACL;
@@ -40,10 +47,13 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import static android.R.id.list;
+
 public class UserHome extends AppCompatActivity {
     private GridView userCatGrid;
     private ArrayList<Bitmap> catImages = new ArrayList<>();
     public static List<CatObject> catObjects = new ArrayList<>();
+    final Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,12 +75,20 @@ public class UserHome extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        userCatGrid.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
+                return deleteCat(position);
+            }
+        });
     }
 
     //Query Parse server for a list of users cats and set the Grid
     public void SetCatGrid()
     {
         userCatGrid = (GridView) findViewById(R.id.userCats);
+        registerForContextMenu(userCatGrid);
 
         ParseQuery<ParseObject> query = new ParseQuery<>("images");
         query.whereEqualTo("username", ParseUser.getCurrentUser().getUsername()).orderByDescending("createdAt");
@@ -81,6 +99,7 @@ public class UserHome extends AppCompatActivity {
                 if (e == null)
                 {
                     catObjects.clear();
+                    catImages.clear();
                     final int numObjectsReturned = objects.size();
                     if (numObjectsReturned == 0) Toast.makeText(getApplication().getBaseContext(), "You have no cat images to load", Toast.LENGTH_LONG).show();
 
@@ -125,6 +144,52 @@ public class UserHome extends AppCompatActivity {
     {
         Intent i = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(i, 1);
+    }
+
+    public boolean deleteCat(final int position)
+    {
+        final CharSequence[] items = { "Delete" };
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+
+        builder.setTitle("Do you want to delete the image?");
+        builder.setItems(items, new DialogInterface.OnClickListener() {
+
+            public void onClick(DialogInterface dialog, int item) {
+
+                CatObject cat = UserHome.catObjects.get(position);
+                String catID = cat.getImageID();
+
+                ParseQuery<ParseObject> query = new ParseQuery<>("images");
+                query.whereEqualTo("objectId", catID);
+                query.findInBackground(new FindCallback<ParseObject>() {
+                    @Override
+                    public void done(List<ParseObject> objects, ParseException e) {
+                        if (objects.size() != 1) Toast.makeText(getBaseContext(), "Image ID not returned to delete", Toast.LENGTH_LONG).show();
+                        else
+                        {
+                            objects.get(0).deleteInBackground(new DeleteCallback() {
+                                @Override
+                                public void done(ParseException e) {
+                                    if (e == null) Toast.makeText(getBaseContext(), "Deleted Successfully!", Toast.LENGTH_LONG).show();
+                                    else Toast.makeText(getBaseContext(), "Unable to delete Image:" + e.toString(), Toast.LENGTH_LONG).show();
+                                    userCatGrid.setAdapter(null);
+                                    SetCatGrid();
+                                }
+                            });
+                        }
+                    }
+                });
+
+            }
+
+        });
+
+        AlertDialog alert = builder.create();
+
+        alert.show();
+        //do your stuff here
+        return false;
     }
 
     public void ratingActivity(View view)

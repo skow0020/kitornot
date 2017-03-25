@@ -343,6 +343,7 @@
     <string name="kit_or_not">Kit Or Not?</string>
     <string name="log_in">Log In</string>
     <string name="log_in_str">Log In</string>
+    <string name="menu_delete">DELETE</string>
     <string name="no_ratings">No ratings yet</string>
     <string name="parse_app_id">YOUR_APPLICATION_ID</string>
     <string name="parse_client_key">YOUR_CLIENT_KEY</string>

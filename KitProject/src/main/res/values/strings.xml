@@ -31,4 +31,5 @@
     <string name="title_activity_top_cats">TopCatsActivity</string>
     <string name="title_activity_top_cat_details">TopCatDetails</string>
     <string name="contact">Contact: skow0020@gmail.com</string>
+    <string name="menu_delete">DELETE</string>
 </resources>
