@@ -1,6 +1,5 @@
 package com.parse.starter.UserHome;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -15,10 +14,7 @@ import android.provider.MediaStore;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.ContextMenu;
 import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
@@ -54,6 +50,7 @@ public class UserHome extends AppCompatActivity {
     private ArrayList<Bitmap> catImages = new ArrayList<>();
     public static List<CatObject> catObjects = new ArrayList<>();
     final Context context = this;
+    ParseQuery<ParseObject> query;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,7 +87,7 @@ public class UserHome extends AppCompatActivity {
         userCatGrid = (GridView) findViewById(R.id.userCats);
         registerForContextMenu(userCatGrid);
 
-        ParseQuery<ParseObject> query = new ParseQuery<>("images");
+        query = new ParseQuery<>("images");
         query.whereEqualTo("username", ParseUser.getCurrentUser().getUsername()).orderByDescending("createdAt");
 
         query.findInBackground(new FindCallback<ParseObject>() {
@@ -132,13 +129,6 @@ public class UserHome extends AppCompatActivity {
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_user_home, menu);
-        return true;
-    }
-
     //Open internal images when + button pressed
     public void addCat(View view)
     {
@@ -160,7 +150,7 @@ public class UserHome extends AppCompatActivity {
                 CatObject cat = UserHome.catObjects.get(position);
                 String catID = cat.getImageID();
 
-                ParseQuery<ParseObject> query = new ParseQuery<>("images");
+                query = new ParseQuery<>("images");
                 query.whereEqualTo("objectId", catID);
                 query.findInBackground(new FindCallback<ParseObject>() {
                     @Override
@@ -180,15 +170,12 @@ public class UserHome extends AppCompatActivity {
                         }
                     }
                 });
-
             }
 
         });
 
         AlertDialog alert = builder.create();
-
         alert.show();
-        //do your stuff here
         return false;
     }
 
@@ -205,13 +192,8 @@ public class UserHome extends AppCompatActivity {
     }
 
     public static int getOrientation(Context context, Uri photoUri) {
-    /* it's on the external media. */
         Cursor cursor = context.getContentResolver().query(photoUri,
                 new String[] { MediaStore.Images.ImageColumns.ORIENTATION }, null, null, null);
-
-        if (cursor.getCount() != 1) {
-            return -1;
-        }
 
         cursor.moveToFirst();
         return cursor.getInt(0);
@@ -237,7 +219,8 @@ public class UserHome extends AppCompatActivity {
 
         Bitmap srcBitmap;
         is = context.getContentResolver().openInputStream(photoUri);
-        if (rotatedWidth > 1024 || rotatedHeight > 1024) {
+        if (rotatedWidth > 1024 || rotatedHeight > 1024)
+        {
             float widthRatio = ((float) rotatedWidth) / ((float) 1024);
             float heightRatio = ((float) rotatedHeight) / ((float) 1024);
             float maxRatio = Math.max(widthRatio, heightRatio);
@@ -249,11 +232,8 @@ public class UserHome extends AppCompatActivity {
         } else srcBitmap = BitmapFactory.decodeStream(is);
         is.close();
 
-    /*
-     * if the orientation is not 0 (or -1, which means we don't know), we
-     * have to do a rotation.
-     */
-        if (orientation > 0) {
+        if (orientation > 0)
+        {
             Matrix matrix = new Matrix();
             matrix.postRotate(orientation);
 
@@ -276,8 +256,6 @@ public class UserHome extends AppCompatActivity {
             Bitmap bitmapImage;
             try {
                 bitmapImage = getCorrectlyOrientedImage(this, selectedImage);
-
-                //Bitmap bitmapImage = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImage);
 
                 ByteArrayOutputStream stream = new ByteArrayOutputStream();
                 bitmapImage.compress(Bitmap.CompressFormat.PNG, 100, stream);
@@ -313,10 +291,16 @@ public class UserHome extends AppCompatActivity {
                 });
 
             } catch (IOException e) {
-                Log.i("ImageUpload", " FAILED WEIRDLY!!");
                 Toast.makeText(getApplication().getBaseContext(), "There was an error - please try again", Toast.LENGTH_LONG).show();
             }
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_user_home, menu);
+        return true;
     }
 }
 

@@ -21,10 +21,8 @@ public class StarterApplication extends Application {
   public void onCreate() {
     super.onCreate();
 
-    // Enable Local Datastore.
     Parse.enableLocalDatastore(this);
 
-    // Add your initialization code here
     Parse.initialize(new Parse.Configuration.Builder(getApplicationContext())
             .applicationId("b688b965e7d11efeb92422b7c00e0d27f0bd1b38")
             .clientKey("ff1fbfb5e435d0fc6f12196c972e55abe558786a")
@@ -34,8 +32,6 @@ public class StarterApplication extends Application {
 
       ParseUser.enableAutomaticUser();
     ParseACL defaultACL = new ParseACL();
-    // Optionally enable public read access.
-    // defaultACL.setPublicReadAccess(true);
     ParseACL.setDefaultACL(defaultACL, true);
   }
 }

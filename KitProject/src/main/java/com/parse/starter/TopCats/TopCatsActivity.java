@@ -3,6 +3,7 @@ package com.parse.starter.TopCats;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -36,7 +37,8 @@ public class TopCatsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_top_cats);
 
         TextView topCatsLabel = (TextView) findViewById(R.id.topCatsLabel);
-        topCatsLabel.setText(String.format("Top Cats"));
+        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/pacifico.ttf");
+        topCatsLabel.setTypeface(custom_font);
         SetCatGrid();
 
         //Listening for a click on a cat image - Start TopCatDetails activity showing cat image and info on click
@@ -93,5 +95,4 @@ public class TopCatsActivity extends AppCompatActivity {
             }
         });
     }
-
 }

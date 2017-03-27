@@ -19,4 +19,6 @@ public class RatingCatObject {
         return this.catImage;
     }
     String getImageID() { return this.imageID; }
+    int getCatTotalRatings() { return this.catTotalRatings; }
+    int getCatPositiveRatings() { return this.catPositiveRatings; }
 }

@@ -28,8 +28,8 @@ public class UserCatDetails extends AppCompatActivity {
     {
         ImageView catImage = (ImageView) findViewById(R.id.catImage);
         TextView percentText = (TextView) findViewById(R.id.percent);
-
         CatObject cat = UserHome.catObjects.get(catListPosition);
+
         catImage.setImageBitmap(cat.getCatImage());
 
         DecimalFormat df = new DecimalFormat("#.##");

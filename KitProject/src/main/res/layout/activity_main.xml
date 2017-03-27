@@ -75,7 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/log_in"
+        android:text="@string/sign_up"
         android:id="@+id/login_signup_txt"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/login_signup_btn"

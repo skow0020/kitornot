@@ -26,14 +26,12 @@ import java.util.Random;
 
 public class RatingActivity extends AppCompatActivity
 {
-    ImageButton thumbUp;
-    ImageButton thumbDown;
-
-    int totalRatings, positiveRatings;
-    Random generator = new Random();
-    RatingCatObject chosenCat;
-    Bitmap chosenCatImage;
-    public static List<RatingCatObject> ratingCatObjects = new ArrayList<>();
+    private ImageButton thumbUp, thumbDown;
+    private int totalRatings, positiveRatings;
+    private Random generator = new Random();
+    private RatingCatObject chosenCat;
+    private Bitmap chosenCatImage;
+    private List<RatingCatObject> ratingCatObjects;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -45,6 +43,7 @@ public class RatingActivity extends AppCompatActivity
         thumbDown = (ImageButton) findViewById(R.id.notBtn);
         thumbDown.setClickable(false);
         thumbUp.setClickable(false);
+        ratingCatObjects = new ArrayList<>();
 
         ParseQuery<ParseObject> query = new ParseQuery<>("images");
         query.whereNotEqualTo("username", ParseUser.getCurrentUser().getUsername());
@@ -124,7 +123,6 @@ public class RatingActivity extends AppCompatActivity
     public RatingCatObject loadRandomCat()
     {
         chosenCat = ratingCatObjects.get(generator.nextInt(ratingCatObjects.size()));
-
         ParseFile imgFile = chosenCat.getcatImage();
 
         imgFile.getDataInBackground(new GetDataCallback() {
@@ -140,8 +138,8 @@ public class RatingActivity extends AppCompatActivity
                         chosenCatImage = Bitmap.createScaledBitmap(chosenCatImage, 512, nh, true);
                     }
 
-                    ImageView imageView = (ImageView) findViewById(R.id.catImage);
-                    imageView.setImageBitmap(chosenCatImage);
+                    ImageView catImage = (ImageView) findViewById(R.id.catImage);
+                    catImage.setImageBitmap(chosenCatImage);
                     thumbDown.setClickable(true);
                     thumbUp.setClickable(true);
                 }
