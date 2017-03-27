@@ -18,6 +18,7 @@ import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
+import com.parse.starter.CatObject;
 import com.parse.starter.R;
 
 import java.util.ArrayList;
@@ -27,11 +28,10 @@ import java.util.Random;
 public class RatingActivity extends AppCompatActivity
 {
     private ImageButton thumbUp, thumbDown;
-    private int totalRatings, positiveRatings;
     private Random generator = new Random();
-    private RatingCatObject chosenCat;
+    private CatObject chosenCat;
     private Bitmap chosenCatImage;
-    private List<RatingCatObject> ratingCatObjects;
+    private List<CatObject> catObjects;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -43,7 +43,7 @@ public class RatingActivity extends AppCompatActivity
         thumbDown = (ImageButton) findViewById(R.id.notBtn);
         thumbDown.setClickable(false);
         thumbUp.setClickable(false);
-        ratingCatObjects = new ArrayList<>();
+        catObjects = new ArrayList<>();
 
         ParseQuery<ParseObject> query = new ParseQuery<>("images");
         query.whereNotEqualTo("username", ParseUser.getCurrentUser().getUsername());
@@ -53,16 +53,15 @@ public class RatingActivity extends AppCompatActivity
             public void done(List<ParseObject> objects, ParseException e) {
                 if (e == null)
                 {
-                    ratingCatObjects.clear();
+                    catObjects.clear();
                     for (ParseObject object : objects)
                     {
                         ParseFile imgFile = (ParseFile) object.get("image");
-                        totalRatings = (Integer) object.get("totalRatings");
-                        positiveRatings = (Integer) object.get("positiveRatings");
-                        RatingCatObject ratingCat = new RatingCatObject(object.getObjectId(), imgFile, totalRatings, positiveRatings);
-                        ratingCatObjects.add(ratingCat);
+                        CatObject ratingCat = new CatObject(object.getObjectId());
+                        ratingCat.setParseImage(imgFile);
+                        catObjects.add(ratingCat);
 
-                        if (ratingCatObjects.size() == objects.size())
+                        if (catObjects.size() == objects.size())
                         {
                             Toast.makeText(getApplication().getBaseContext(), "Cats loaded successfully", Toast.LENGTH_LONG).show();
                             chosenCat = loadRandomCat();
@@ -120,10 +119,10 @@ public class RatingActivity extends AppCompatActivity
         });
     }
 
-    public RatingCatObject loadRandomCat()
+    public CatObject loadRandomCat()
     {
-        chosenCat = ratingCatObjects.get(generator.nextInt(ratingCatObjects.size()));
-        ParseFile imgFile = chosenCat.getcatImage();
+        chosenCat = catObjects.get(generator.nextInt(catObjects.size()));
+        ParseFile imgFile = chosenCat.getParseImage();
 
         imgFile.getDataInBackground(new GetDataCallback() {
             @Override

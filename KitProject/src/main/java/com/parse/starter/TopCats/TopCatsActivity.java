@@ -81,7 +81,11 @@ public class TopCatsActivity extends AppCompatActivity {
                                 if (e == null)
                                 {
                                     Bitmap img = BitmapFactory.decodeByteArray(data, 0, data.length);
-                                    CatObject cat = new CatObject(object.getObjectId(), img, totalRatings, positiveRatings);
+                                    CatObject cat = new CatObject(object.getObjectId());
+                                    cat.setCatImage(img);
+                                    cat.setCatPositiveRatings(((Integer) object.get("positiveRatings")));
+                                    cat.setTotalRatings(((Integer) object.get("totalRatings")));
+
                                     catImages.add(img);
                                     catObjects.add(cat);
                                     if (catObjects.size() == numObjectsReturned) topCatsGrid.setAdapter(new ImageAdapter(getApplicationContext(), catImages));

@@ -102,9 +102,6 @@ public class UserHome extends AppCompatActivity {
 
                     for (final ParseObject object : objects)
                     {
-                        final int totalRatings = (Integer) object.get("totalRatings");
-                        final int positiveRatings = (Integer) object.get("positiveRatings");
-
                         ParseFile imgFile = (ParseFile) object.get("image");
 
                         imgFile.getDataInBackground(new GetDataCallback() {
@@ -113,7 +110,10 @@ public class UserHome extends AppCompatActivity {
                                 if (e == null)
                                 {
                                     Bitmap img = BitmapFactory.decodeByteArray(data, 0, data.length);
-                                    CatObject cat = new CatObject(object.getObjectId(), img, totalRatings, positiveRatings);
+                                    CatObject cat = new CatObject(object.getObjectId());
+                                    cat.setCatImage(img);
+                                    cat.setCatPositiveRatings(((Integer) object.get("positiveRatings")));
+                                    cat.setTotalRatings(((Integer) object.get("totalRatings")));
 
                                     catImages.add(img);
                                     catObjects.add(cat);
