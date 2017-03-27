@@ -1,4 +1,4 @@
-package com.parse.starter.UserHome;
+package com.parse.kit.UserHome;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -13,7 +13,6 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
@@ -31,11 +30,11 @@ import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
-import com.parse.starter.CatObject;
-import com.parse.starter.ImageAdapter;
-import com.parse.starter.R;
-import com.parse.starter.RatingActivity.RatingActivity;
-import com.parse.starter.TopCats.TopCatsActivity;
+import com.parse.kit.CatObject;
+import com.parse.kit.ImageAdapter;
+import com.parse.kit.R;
+import com.parse.kit.RatingActivity.RatingActivity;
+import com.parse.kit.TopCats.TopCatsActivity;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -43,9 +42,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.R.id.list;
-
-public class UserHome extends AppCompatActivity {
+public class UserHomeActivity extends AppCompatActivity {
     private GridView userCatGrid;
     private ArrayList<Bitmap> catImages = new ArrayList<>();
     public static List<CatObject> catObjects = new ArrayList<>();
@@ -67,7 +64,7 @@ public class UserHome extends AppCompatActivity {
         userCatGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent i = new Intent(UserHome.this, UserCatDetails.class);
+                Intent i = new Intent(UserHomeActivity.this, UserCatDetails.class);
                 i.putExtra("catListPosition", position);
                 startActivity(i);
             }
@@ -147,7 +144,7 @@ public class UserHome extends AppCompatActivity {
 
             public void onClick(DialogInterface dialog, int item) {
 
-                CatObject cat = UserHome.catObjects.get(position);
+                CatObject cat = UserHomeActivity.catObjects.get(position);
                 String catID = cat.getImageID();
 
                 query = new ParseQuery<>("images");
@@ -181,13 +178,13 @@ public class UserHome extends AppCompatActivity {
 
     public void ratingActivity(View view)
     {
-        Intent i = new Intent(UserHome.this, RatingActivity.class);
+        Intent i = new Intent(UserHomeActivity.this, RatingActivity.class);
         startActivity(i);
     }
 
     public void topCatsActivity(View view)
     {
-        Intent i = new Intent(UserHome.this, TopCatsActivity.class);
+        Intent i = new Intent(UserHomeActivity.this, TopCatsActivity.class);
         startActivity(i);
     }
 

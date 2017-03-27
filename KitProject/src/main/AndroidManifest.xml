@@ -7,14 +7,14 @@
   ~ of patent rights can be found in the PATENTS file in the same directory.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.parse.starter">
+    package="com.parse.kit">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:name=".StarterApplication"
+        android:name="com.parse.kit.StarterApplication"
         android:allowBackup="true"
         android:icon="@drawable/loginicon"
         android:label="@string/app_name"
@@ -28,7 +28,7 @@
             android:value="@string/parse_client_key" />
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.parse.kit.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -38,45 +38,45 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".UserHome.UserHome"
+            android:name="com.parse.kit.UserHome.UserHomeActivity"
             android:label="@string/yourcats"
             android:screenOrientation="portrait"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".UserHome.UserCatDetails"
+            android:name="com.parse.kit.UserHome.UserCatDetails"
             android:label="@string/title_activity_user_cat_details"
-            android:parentActivityName=".UserHome.UserHome"
+            android:parentActivityName="com.parse.kit.UserHome.UserHomeActivity"
             android:theme="@style/NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.parse.starter.UserHome.UserHome" />
+                android:value="com.parse.kit.UserHome.UserHomeActivity" />
         </activity>
         <activity
-            android:name=".RatingActivity.RatingActivity"
+            android:name="com.parse.kit.RatingActivity.RatingActivity"
             android:label="@string/title_activity_rating"
-            android:parentActivityName=".UserHome.UserHome"
+            android:parentActivityName="com.parse.kit.UserHome.UserHomeActivity"
             android:theme="@style/NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.parse.starter.UserHome.UserHome" />
+                android:value="com.parse.kit.UserHome.UserHomeActivity" />
         </activity>
         <activity
-            android:name=".TopCats.TopCatsActivity"
+            android:name="com.parse.kit.TopCats.TopCatsActivity"
             android:label="@string/title_activity_top_cats"
-            android:parentActivityName=".UserHome.UserHome"
+            android:parentActivityName="com.parse.kit.UserHome.UserHomeActivity"
             android:theme="@style/NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.parse.starter.UserHome.UserHome" />
+                android:value="com.parse.kit.UserHome.UserHomeActivity" />
         </activity>
         <activity
-            android:name=".TopCats.TopCatDetails"
+            android:name="com.parse.kit.TopCats.TopCatDetails"
             android:label="@string/title_activity_top_cat_details"
-            android:parentActivityName=".TopCats.TopCatsActivity"
+            android:parentActivityName="com.parse.kit.TopCats.TopCatsActivity"
             android:theme="@style/NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.parse.starter.TopCats.TopCatsActivity" />
+                android:value="com.parse.kit.TopCats.TopCatsActivity" />
         </activity>
     </application>
 

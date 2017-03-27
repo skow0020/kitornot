@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.parse.starter.TopCats.TopCatsActivity"
+    tools:context="com.parse.kit.TopCats.TopCatsActivity"
     tools:showIn="@layout/activity_top_cats">
 
 </android.support.constraint.ConstraintLayout>

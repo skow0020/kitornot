@@ -1,4 +1,4 @@
-package com.parse.starter.TopCats;
+package com.parse.kit.TopCats;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -18,9 +18,9 @@ import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
-import com.parse.starter.CatObject;
-import com.parse.starter.ImageAdapter;
-import com.parse.starter.R;
+import com.parse.kit.CatObject;
+import com.parse.kit.ImageAdapter;
+import com.parse.kit.R;
 
 import java.util.ArrayList;
 import java.util.List;

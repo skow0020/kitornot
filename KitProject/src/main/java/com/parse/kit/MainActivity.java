@@ -6,7 +6,7 @@
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  */
-package com.parse.starter;
+package com.parse.kit;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -29,7 +29,7 @@ import com.parse.ParseAnalytics;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
-import com.parse.starter.UserHome.UserHome;
+import com.parse.kit.UserHome.UserHomeActivity;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, View.OnKeyListener
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void userHome ()
     {
-        Intent i =  new Intent(getApplicationContext(), UserHome.class);
+        Intent i =  new Intent(getApplicationContext(), UserHomeActivity.class);
         startActivity(i);
     }
 

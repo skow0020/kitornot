@@ -1,4 +1,4 @@
-package com.parse.starter.TopCats;
+package com.parse.kit.TopCats;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,8 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.parse.starter.CatObject;
-import com.parse.starter.R;
+import com.parse.kit.CatObject;
+import com.parse.kit.R;
 
 import java.text.DecimalFormat;
 

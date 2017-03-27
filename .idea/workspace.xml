@@ -11,7 +11,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db46db15-6f2e-4031-a08c-4687444247f7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/RatingActivity/RatingCatObject.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/UserHome/UserHomeActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/CatObject.java" afterPath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/CatObject.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/ImageAdapter.java" afterPath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/ImageAdapter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/MainActivity.java" afterPath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/MainActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/RatingActivity/RatingActivity.java" afterPath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/RatingActivity/RatingActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/StarterApplication.java" afterPath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/StarterApplication.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/TopCats/TopCatDetails.java" afterPath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/TopCats/TopCatDetails.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/TopCats/TopCatsActivity.java" afterPath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/TopCats/TopCatsActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome/UserCatDetails.java" afterPath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/UserHome/UserCatDetails.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
@@ -20,10 +28,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_KitProject_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_KitProject_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_KitProject_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_KitProject_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/CatObject.java" afterPath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/CatObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/RatingActivity/RatingActivity.java" afterPath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/RatingActivity/RatingActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/TopCats/TopCatsActivity.java" afterPath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/TopCats/TopCatsActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome/UserHome.java" afterPath="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome/UserHome.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KitProject/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/KitProject/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KitProject/src/main/res/layout/content_top_cat_details.xml" afterPath="$PROJECT_DIR$/KitProject/src/main/res/layout/content_top_cat_details.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KitProject/src/main/res/layout/content_top_cats.xml" afterPath="$PROJECT_DIR$/KitProject/src/main/res/layout/content_top_cats.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KitProject/src/main/res/menu/menu_user_home.xml" afterPath="$PROJECT_DIR$/KitProject/src/main/res/menu/menu_user_home.xml" />
     </list>
     <ignored path="KitOrNot - Copy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,32 +63,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserHome.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome/UserHome.java">
+      <file leaf-file-name="UserHomeActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/UserHome/UserHomeActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="132">
-              <caret line="115" column="96" selection-start-line="115" selection-start-column="96" selection-end-line="115" selection-end-column="96" />
+              <caret line="112" column="96" selection-start-line="112" selection-start-column="96" selection-end-line="112" selection-end-column="96" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="CatObject.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/CatObject.java">
+        <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/CatObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+            <state relative-caret-position="119">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#299#300#0" expanded="true" />
-                <element signature="e#330#331#0" expanded="true" />
+                <element signature="e#295#296#0" expanded="true" />
+                <element signature="e#326#327#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="TopCatDetails.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/TopCats/TopCatDetails.java">
+        <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/TopCats/TopCatDetails.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
               <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
@@ -90,7 +98,7 @@
         </entry>
       </file>
       <file leaf-file-name="RatingActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/RatingActivity/RatingActivity.java">
+        <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/RatingActivity/RatingActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
               <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
@@ -100,7 +108,7 @@
         </entry>
       </file>
       <file leaf-file-name="TopCatsActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/TopCats/TopCatsActivity.java">
+        <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/TopCats/TopCatsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="169">
               <caret line="85" column="36" selection-start-line="85" selection-start-column="36" selection-end-line="86" selection-end-column="96" />
@@ -1829,6 +1837,7 @@
         <option value="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/TopCats/TopCatsActivity.java" />
         <option value="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/CatObject.java" />
         <option value="$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome/UserHome.java" />
+        <option value="$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/CatObject.java" />
       </list>
     </option>
   </component>
@@ -1950,7 +1959,7 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="starter" />
+              <option name="myItemId" value="kit" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1968,7 +1977,7 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="starter" />
+              <option name="myItemId" value="kit" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1990,7 +1999,7 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="starter" />
+              <option name="myItemId" value="kit" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -2012,7 +2021,7 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="starter" />
+              <option name="myItemId" value="kit" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -2643,15 +2652,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1608" y="-125" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3259053" sideWeight="0.468509" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44150418" sideWeight="0.22557841" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44150418" sideWeight="0.7744216" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44150418" sideWeight="0.5083548" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44150418" sideWeight="0.7744216" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24421594" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286908" sideWeight="0.4974293" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -2659,7 +2668,8 @@
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20179948" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20179948" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32729805" sideWeight="0.49164525" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2674,7 +2684,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286908" sideWeight="0.49421594" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -2692,31 +2701,31 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome/UserHome.java</url>
-          <line>183</line>
+          <url>file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/UserHome/UserHomeActivity.java</url>
+          <line>180</line>
           <properties />
           <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome/UserHome.java</url>
-          <line>117</line>
+          <url>file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/UserHome/UserHomeActivity.java</url>
+          <line>114</line>
           <properties />
           <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/CatObject.java</url>
+          <url>file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/CatObject.java</url>
           <line>31</line>
           <properties />
           <option name="timeStamp" value="70" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/CatObject.java</url>
+          <url>file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/CatObject.java</url>
           <line>33</line>
           <properties />
           <option name="timeStamp" value="71" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/TopCats/TopCatsActivity.java</url>
+          <url>file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/TopCats/TopCatsActivity.java</url>
           <line>85</line>
           <properties />
           <option name="timeStamp" value="73" />
@@ -2727,7 +2736,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/RatingActivity/RatingActivity.java">
+    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/RatingActivity/RatingActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
@@ -2735,7 +2744,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome/UserHome.java">
+    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/UserHome/UserHomeActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4114">
           <caret line="242" column="9" selection-start-line="242" selection-start-column="9" selection-end-line="242" selection-end-column="9" />
@@ -2743,7 +2752,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome/UserCatDetails.java">
+    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/UserHome/UserCatDetails.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="42" column="53" selection-start-line="42" selection-start-column="53" selection-end-line="42" selection-end-column="53" />
@@ -2751,21 +2760,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/StarterApplication.java">
+    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/StarterApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/RatingActivity/RatingActivity.java">
+    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/RatingActivity/RatingActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
@@ -2773,7 +2782,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome/UserHome.java">
+    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/UserHome/UserHomeActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4386">
           <caret line="258" column="9" selection-start-line="258" selection-start-column="9" selection-end-line="258" selection-end-column="9" />
@@ -2781,7 +2790,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome/UserCatDetails.java">
+    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/UserHome/UserCatDetails.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -2789,7 +2798,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/RatingActivity/RatingActivity.java">
+    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/RatingActivity/RatingActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1513">
           <caret line="89" column="12" selection-start-line="89" selection-start-column="12" selection-end-line="89" selection-end-column="12" />
@@ -2798,7 +2807,7 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-22/android/view/View.java" />
-    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome/UserHome.java">
+    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/UserHome/UserHomeActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3281">
           <caret line="233" column="50" selection-start-line="233" selection-start-column="50" selection-end-line="233" selection-end-column="50" />
@@ -2806,7 +2815,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/RatingActivity/RatingActivity.java">
+    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/RatingActivity/RatingActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1071">
           <caret line="89" column="12" selection-start-line="89" selection-start-column="12" selection-end-line="89" selection-end-column="12" />
@@ -2822,7 +2831,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/RatingActivity/RatingActivity.java">
+    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/RatingActivity/RatingActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1088">
           <caret line="84" column="29" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
@@ -2865,7 +2874,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/local.properties" />
-    <entry file="file://$PROJECT_DIR$/KitProject/build/generated/source/r/debug/com/parse/starter/R.java">
+    <entry file="file://$PROJECT_DIR$/KitProject/build/generated/source/r/debug/com/parse/kit/R.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3315">
           <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
@@ -2873,7 +2882,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KitProject/build/generated/source/buildConfig/debug/com/parse/starter/BuildConfig.java">
+    <entry file="file://$PROJECT_DIR$/KitProject/build/generated/source/buildConfig/debug/com/parse/kit/BuildConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
@@ -3002,7 +3011,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/ImageAdapter.java">
+    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/ImageAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="45" column="49" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
@@ -3010,7 +3019,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/StarterApplication.java">
+    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/StarterApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
@@ -3018,7 +3027,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1853">
           <caret line="146" column="58" selection-start-line="146" selection-start-column="58" selection-end-line="146" selection-end-column="58" />
@@ -3034,7 +3043,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome/UserCatDetails.java">
+    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/UserHome/UserCatDetails.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
@@ -3063,7 +3072,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/RatingActivity/RatingActivity.java">
+    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/RatingActivity/RatingActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
@@ -3079,19 +3088,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/CatObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#299#300#0" expanded="true" />
-            <element signature="e#330#331#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/TopCats/TopCatsActivity.java">
+    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/TopCats/TopCatsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="85" column="36" selection-start-line="85" selection-start-column="36" selection-end-line="86" selection-end-column="96" />
@@ -3099,15 +3096,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/UserHome/UserHome.java">
+    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/UserHome/UserHomeActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
-          <caret line="115" column="96" selection-start-line="115" selection-start-column="96" selection-end-line="115" selection-end-column="96" />
+          <caret line="112" column="96" selection-start-line="112" selection-start-column="96" selection-end-line="112" selection-end-column="96" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/starter/TopCats/TopCatDetails.java">
+    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/TopCats/TopCatDetails.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
@@ -3120,6 +3117,18 @@
         <state relative-caret-position="272">
           <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="19" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KitProject/src/main/java/com/parse/kit/CatObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#295#296#0" expanded="true" />
+            <element signature="e#326#327#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

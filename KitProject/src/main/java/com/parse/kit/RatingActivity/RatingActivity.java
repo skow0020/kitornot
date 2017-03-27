@@ -1,4 +1,4 @@
-package com.parse.starter.RatingActivity;
+package com.parse.kit.RatingActivity;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -18,8 +18,8 @@ import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
-import com.parse.starter.CatObject;
-import com.parse.starter.R;
+import com.parse.kit.CatObject;
+import com.parse.kit.R;
 
 import java.util.ArrayList;
 import java.util.List;

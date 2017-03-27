@@ -1,4 +1,4 @@
-package com.parse.starter.UserHome;
+package com.parse.kit.UserHome;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,8 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.parse.starter.CatObject;
-import com.parse.starter.R;
+import com.parse.kit.CatObject;
+import com.parse.kit.R;
 
 import java.text.DecimalFormat;
 
@@ -28,7 +28,7 @@ public class UserCatDetails extends AppCompatActivity {
     {
         ImageView catImage = (ImageView) findViewById(R.id.catImage);
         TextView percentText = (TextView) findViewById(R.id.percent);
-        CatObject cat = UserHome.catObjects.get(catListPosition);
+        CatObject cat = UserHomeActivity.catObjects.get(catListPosition);
 
         catImage.setImageBitmap(cat.getCatImage());
 

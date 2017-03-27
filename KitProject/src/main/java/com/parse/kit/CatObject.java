@@ -1,4 +1,4 @@
-package com.parse.starter;
+package com.parse.kit;
 
 import android.graphics.Bitmap;
 
