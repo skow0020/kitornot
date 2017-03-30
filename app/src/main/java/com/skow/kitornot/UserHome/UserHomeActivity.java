@@ -52,9 +52,9 @@ public class UserHomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_home);
-        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/pacifico.ttf");
 
         TextView userPage = (TextView) findViewById(R.id.userPage);
+        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/pacifico.ttf");
         userPage.setTypeface(custom_font);
         userPage.setText(String.format("%s's cats", ParseUser.getCurrentUser().getUsername()));
         SetCatGrid();

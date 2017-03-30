@@ -1,6 +1,7 @@
 package com.skow.kitornot.UserHome;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
@@ -29,6 +30,10 @@ public class UserCatDetails extends AppCompatActivity {
         ImageView catImage = (ImageView) findViewById(R.id.catImage);
         TextView percentText = (TextView) findViewById(R.id.percent);
         CatObject cat = UserHomeActivity.catObjects.get(catListPosition);
+
+        TextView cuteness = (TextView) findViewById(R.id.cuteness);
+        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/pacifico.ttf");
+        cuteness.setTypeface(custom_font);
 
         catImage.setImageBitmap(cat.getCatImage());
 

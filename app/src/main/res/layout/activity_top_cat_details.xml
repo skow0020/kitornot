@@ -14,11 +14,12 @@
         android:layout_height="match_parent"
         android:id="@+id/catImage"
         android:contentDescription="@string/catimage"
-        android:paddingTop="50sp"
-        android:paddingBottom="50sp"
+        android:paddingTop="10sp"
+        android:paddingBottom="5sp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/button2" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -27,5 +28,36 @@
         android:id="@+id/percent"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_below="@+id/catImage"
+        android:id="@+id/cuteness"
+        android:textColor="#4258d2"
+        android:textSize="30sp"
+        android:text="@string/cuteness"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Button"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Button"
+        android:visibility="invisible" />
 
 </RelativeLayout>
