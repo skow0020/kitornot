@@ -86,8 +86,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         else
         {
-            String x = String.valueOf(usernameField.getText());
-            String y = String.valueOf(passwordField.getText());
             ParseUser.logInInBackground(String.valueOf(usernameField.getText()), String.valueOf(passwordField.getText()), new LogInCallback() {
                 @Override
                 public void done(ParseUser user, ParseException e)

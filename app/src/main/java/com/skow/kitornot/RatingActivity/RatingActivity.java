@@ -28,9 +28,7 @@ import java.util.Random;
 public class RatingActivity extends AppCompatActivity
 {
     private ImageButton thumbUp, thumbDown;
-    private Random generator = new Random();
     private CatObject chosenCat;
-    private Bitmap chosenCatImage;
     private List<CatObject> catObjects;
 
     @Override
@@ -121,15 +119,17 @@ public class RatingActivity extends AppCompatActivity
 
     public CatObject loadRandomCat()
     {
-        chosenCat = catObjects.get(generator.nextInt(catObjects.size()));
-        ParseFile imgFile = chosenCat.getParseImage();
+        Random generator = new Random();
+
+        CatObject randomCat = catObjects.get(generator.nextInt(catObjects.size()));
+        ParseFile imgFile = randomCat.getParseImage();
 
         imgFile.getDataInBackground(new GetDataCallback() {
             @Override
             public void done(byte[] data, ParseException e) {
                 if (e == null)
                 {
-                    chosenCatImage = BitmapFactory.decodeByteArray(data, 0, data.length);
+                    Bitmap chosenCatImage = BitmapFactory.decodeByteArray(data, 0, data.length);
 
                     if (chosenCatImage.getHeight() > 4160 || chosenCatImage.getWidth() > 4160)
                     {
@@ -146,6 +146,6 @@ public class RatingActivity extends AppCompatActivity
             }
         });
         setContentView(R.layout.activity_rating);
-        return chosenCat;
+        return randomCat;
     }
 }
