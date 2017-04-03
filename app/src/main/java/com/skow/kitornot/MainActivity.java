@@ -1,9 +1,12 @@
 package com.skow.kitornot;
 
+import android.app.Application;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -28,12 +31,44 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView changeSignUpModeTextView;
     private Button signUpButton;
     private Boolean signUpModeActive;
+    public static int catTapCount = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Thread t1 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while(catTapCount < 20)
+                {
+                    try {
+                        Thread.sleep(250);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    if (catTapCount == 5)
+                    {
+                        showToast("Meow!!");
+                        catTapCount++;
+                    }
+                    else if (catTapCount == 11)
+                    {
+                        showToast("Stop it!!");
+                        catTapCount++;
+                    }
+                    else if (catTapCount == 17)
+                    {
+                        showToast("I bite you!!");
+                        catTapCount++;
+                    }
+                }
+            }
+        });
+
+        t1.start();
 
         //Set font of the title text
         TextView title = (TextView) findViewById(R.id.apptitle);
@@ -59,6 +94,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         ParseAnalytics.trackAppOpenedInBackground(getIntent());
         if (ParseUser.getCurrentUser().getUsername() != null) userHome();
+    }
+
+    public void showToast(final String text)
+    {
+        runOnUiThread(new Runnable() {
+            public void run()
+            {
+                Toast toast = Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.TOP| Gravity.CENTER_HORIZONTAL, 0, 350);
+                toast.show();
+            }
+        });
     }
 
     public void signUpOrLogIn(View view)
@@ -133,10 +180,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         else if (v.getId() == R.id.logo || v.getId() == R.id.relativeLayout)
         {
+            if (v.getId() == R.id.logo) catTapCount++;
+
             InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
         }
         else if ( v.getId() == R.id.password) passwordField.setText("");
         else if (v.getId() == R.id.username) usernameField.setText("");
+    }
+}
+
+class CatTalker extends Application implements Runnable
+{
+    private Thread t;
+
+    public void run()
+    {
+        while(true) {
+            if (MainActivity.catTapCount == 5)
+            {
+                Toast.makeText(this, "Meow!!", Toast.LENGTH_LONG).show();
+            }
+        }
+    }
+
+    public void start() {
+        if (t ==null) {
+            t = new Thread (this);
+            t.start();
+        }
     }
 }
