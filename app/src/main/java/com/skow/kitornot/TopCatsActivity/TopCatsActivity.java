@@ -1,6 +1,7 @@
 package com.skow.kitornot.TopCatsActivity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
@@ -35,6 +36,7 @@ public class TopCatsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_top_cats);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         TextView topCatsLabel = (TextView) findViewById(R.id.topCatsLabel);
         Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/pacifico.ttf");

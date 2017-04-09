@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/KitorNot2.iml" filepath="$PROJECT_DIR$/KitorNot2.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kitornot.iml" filepath="$PROJECT_DIR$/kitornot.iml" />
     </modules>
   </component>
 </project>

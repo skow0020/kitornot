@@ -1,5 +1,6 @@
 package com.skow.kitornot.RatingActivity;
 
+import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -36,6 +37,7 @@ public class RatingActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rating);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         thumbUp = (ImageButton) findViewById(R.id.cuteBtn);
         thumbDown = (ImageButton) findViewById(R.id.notBtn);
