@@ -74,7 +74,8 @@ public class UserHomeActivity extends AppCompatActivity {
         userCatGrid.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
-                return deleteCat(position);
+                deleteCat(position);
+                return true;
             }
         });
     }
