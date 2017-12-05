@@ -6,7 +6,7 @@
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  */
-package com.skow.kitornot;
+package com.skow.kitornot2;
 
 import android.app.Application;
 

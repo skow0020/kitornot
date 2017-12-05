@@ -1,4 +1,4 @@
-package com.skow.kitornot.UserHome;
+package com.skow.kitornot2.UserHome;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -30,11 +30,11 @@ import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
-import com.skow.kitornot.CatObject;
-import com.skow.kitornot.ImageAdapter;
-import com.skow.kitornot.R;
-import com.skow.kitornot.RatingActivity.RatingActivity;
-import com.skow.kitornot.TopCatsActivity.TopCatsActivity;
+import com.skow.kitornot2.CatObject;
+import com.skow.kitornot2.ImageAdapter;
+import com.skow.kitornot2.R;
+import com.skow.kitornot2.RatingActivity.RatingActivity;
+import com.skow.kitornot2.TopCatsActivity.TopCatsActivity;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

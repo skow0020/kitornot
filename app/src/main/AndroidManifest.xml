@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.skow.kitornot">
+    package="com.skow.kitornot2">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:name="com.skow.kitornot.ParseConnection"
+        android:name="com.skow.kitornot2.ParseConnection"
         android:allowBackup="true"
         android:icon="@drawable/loginicon"
         android:label="@string/app_name"
         android:roundIcon="@drawable/loginicon"
         android:largeHeap="true"
         android:theme="@style/NoActionBar">
-        <activity android:name=".MainActivity"
+        <activity android:name="com.skow.kitornot2.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -24,45 +24,45 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.skow.kitornot.UserHome.UserHomeActivity"
+            android:name="com.skow.kitornot2.UserHome.UserHomeActivity"
             android:label="@string/yourcats"
             android:screenOrientation="portrait"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name="com.skow.kitornot.UserHome.UserCatDetails"
+            android:name="com.skow.kitornot2.UserHome.UserCatDetails"
             android:label="@string/title_activity_user_cat_details"
-            android:parentActivityName="com.skow.kitornot.UserHome.UserHomeActivity"
+            android:parentActivityName="com.skow.kitornot2.UserHome.UserHomeActivity"
             android:theme="@style/NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.skow.kitornot.UserHome.UserHomeActivity" />
+                android:value="com.skow.kitornot2.UserHome.UserHomeActivity" />
         </activity>
         <activity
-            android:name="com.skow.kitornot.RatingActivity.RatingActivity"
+            android:name="com.skow.kitornot2.RatingActivity.RatingActivity"
             android:label="@string/title_activity_rating"
-            android:parentActivityName="com.skow.kitornot.UserHome.UserHomeActivity"
+            android:parentActivityName="com.skow.kitornot2.UserHome.UserHomeActivity"
             android:theme="@style/NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.skow.kitornot.UserHome.UserHomeActivity" />
+                android:value="com.skow.kitornot2.UserHome.UserHomeActivity" />
         </activity>
         <activity
-            android:name="com.skow.kitornot.TopCatsActivity.TopCatsActivity"
+            android:name="com.skow.kitornot2.TopCatsActivity.TopCatsActivity"
             android:label="@string/title_activity_top_cats"
-            android:parentActivityName="com.skow.kitornot.UserHome.UserHomeActivity"
+            android:parentActivityName="com.skow.kitornot2.UserHome.UserHomeActivity"
             android:theme="@style/NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.skow.kitornot.UserHome.UserHomeActivity" />
+                android:value="com.skow.kitornot2.UserHome.UserHomeActivity" />
         </activity>
         <activity
-            android:name="com.skow.kitornot.TopCatsActivity.TopCatDetails"
+            android:name="com.skow.kitornot2.TopCatsActivity.TopCatDetails"
             android:label="@string/title_activity_top_cat_details"
-            android:parentActivityName="com.skow.kitornot.TopCatsActivity.TopCatsActivity"
+            android:parentActivityName="com.skow.kitornot2.TopCatsActivity.TopCatsActivity"
             android:theme="@style/NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.skow.kitornot.TopCatsActivity.TopCatsActivity" />
+                android:value="com.skow.kitornot2.TopCatsActivity.TopCatsActivity" />
         </activity>
     </application>
 

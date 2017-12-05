@@ -1,4 +1,4 @@
-package com.skow.kitornot.RatingActivity;
+package com.skow.kitornot2.RatingActivity;
 
 import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
@@ -19,8 +19,8 @@ import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
-import com.skow.kitornot.CatObject;
-import com.skow.kitornot.R;
+import com.skow.kitornot2.CatObject;
+import com.skow.kitornot2.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,6 +58,8 @@ public class RatingActivity extends AppCompatActivity
                     {
                         ParseFile imgFile = (ParseFile) object.get("image");
                         CatObject ratingCat = new CatObject(object.getObjectId());
+                        ratingCat.setCatPositiveRatings(Integer.parseInt(object.get("positiveRatings").toString()));
+                        ratingCat.setTotalRatings(Integer.parseInt(object.get("totalRatings").toString()));
                         ratingCat.setParseImage(imgFile);
                         catObjects.add(ratingCat);
 
@@ -89,7 +91,7 @@ public class RatingActivity extends AppCompatActivity
                         public void done(ParseException e) {
                             if (e == null) Toast.makeText(getApplication().getBaseContext(), "Rating updated successfully", Toast.LENGTH_SHORT).show();
                             else Toast.makeText(getApplication().getBaseContext(), "Rating failed", Toast.LENGTH_LONG).show();
-                            loadRandomCat();
+                            chosenCat = loadRandomCat();
                         }
                     });
                 }
@@ -109,9 +111,12 @@ public class RatingActivity extends AppCompatActivity
                     catObject.saveInBackground(new SaveCallback() {
                         @Override
                         public void done(ParseException e) {
-                            if (e == null) Toast.makeText(getApplication().getBaseContext(), "Rating updated successfully!", Toast.LENGTH_SHORT).show();
+                            if (e == null)
+                            {
+                                Toast.makeText(getApplication().getBaseContext(), "Rating updated successfully!", Toast.LENGTH_SHORT).show();
+                            }
                             else Toast.makeText(getApplication().getBaseContext(), "Rating failed", Toast.LENGTH_LONG).show();
-                            loadRandomCat();
+                            chosenCat = loadRandomCat();
                         }
                     });
                 }

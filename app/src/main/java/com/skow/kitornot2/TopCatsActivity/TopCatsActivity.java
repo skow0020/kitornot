@@ -1,4 +1,4 @@
-package com.skow.kitornot.TopCatsActivity;
+package com.skow.kitornot2.TopCatsActivity;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -19,9 +19,9 @@ import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
-import com.skow.kitornot.CatObject;
-import com.skow.kitornot.ImageAdapter;
-import com.skow.kitornot.R;
+import com.skow.kitornot2.CatObject;
+import com.skow.kitornot2.ImageAdapter;
+import com.skow.kitornot2.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -72,9 +72,6 @@ public class TopCatsActivity extends AppCompatActivity {
                     if (numObjectsReturned == 0) Toast.makeText(getApplication().getBaseContext(), "There are no top cats!", Toast.LENGTH_LONG).show();
                     for (final ParseObject object : objects)
                     {
-                        final int totalRatings = (Integer) object.get("totalRatings");
-                        final int positiveRatings = (Integer) object.get("positiveRatings");
-
                         ParseFile imgFile = (ParseFile) object.get("image");
 
                         imgFile.getDataInBackground(new GetDataCallback() {

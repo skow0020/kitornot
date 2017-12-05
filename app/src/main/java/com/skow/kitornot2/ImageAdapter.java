@@ -1,4 +1,4 @@
-package com.skow.kitornot;
+package com.skow.kitornot2;
 
 import android.content.Context;
 import android.graphics.Bitmap;

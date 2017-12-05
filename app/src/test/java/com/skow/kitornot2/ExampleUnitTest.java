@@ -1,4 +1,4 @@
-package com.skow.kitornot;
+package com.skow.kitornot2;
 
 import org.junit.Test;
 

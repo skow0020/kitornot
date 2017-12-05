@@ -1,4 +1,4 @@
-package com.skow.kitornot;
+package com.skow.kitornot2;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.skow.kitornot", appContext.getPackageName());
+        assertEquals("com.skow.kitornot2", appContext.getPackageName());
     }
 }

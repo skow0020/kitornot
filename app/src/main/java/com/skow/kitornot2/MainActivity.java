@@ -1,7 +1,6 @@
-package com.skow.kitornot;
+package com.skow.kitornot2;
 
 import android.app.Application;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -22,7 +21,7 @@ import com.parse.ParseAnalytics;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
-import com.skow.kitornot.UserHome.UserHomeActivity;
+import com.skow.kitornot2.UserHome.UserHomeActivity;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, View.OnKeyListener

@@ -1,4 +1,4 @@
-package com.skow.kitornot.TopCatsActivity;
+package com.skow.kitornot2.UserHome;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -8,17 +8,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.skow.kitornot.CatObject;
-import com.skow.kitornot.R;
+import com.skow.kitornot2.CatObject;
+import com.skow.kitornot2.R;
 
 import java.text.DecimalFormat;
 
-public class TopCatDetails extends AppCompatActivity {
+public class UserCatDetails extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_top_cat_details);
+        setContentView(R.layout.activity_user_cat_details);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         Intent i = getIntent();
@@ -31,7 +31,7 @@ public class TopCatDetails extends AppCompatActivity {
     {
         ImageView catImage = (ImageView) findViewById(R.id.catImage);
         TextView percentText = (TextView) findViewById(R.id.percent);
-        CatObject cat = TopCatsActivity.catObjects.get(catListPosition);
+        CatObject cat = UserHomeActivity.catObjects.get(catListPosition);
 
         TextView cuteness = (TextView) findViewById(R.id.cuteness);
         Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/pacifico.ttf");
@@ -44,5 +44,4 @@ public class TopCatDetails extends AppCompatActivity {
         if (cat.getTotalRatings() > 0) percentText.setText(String.format("%s%%", df.format(cat.getPercentage())));
         else percentText.setText(R.string.no_ratings);
     }
-
 }
