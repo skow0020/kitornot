@@ -27,8 +27,7 @@ public class TopCatDetails extends AppCompatActivity {
         loadDetails(catListPosition);
     }
 
-    private void loadDetails(int catListPosition)
-    {
+    private void loadDetails(int catListPosition) {
         ImageView catImage = (ImageView) findViewById(R.id.catImage);
         TextView percentText = (TextView) findViewById(R.id.percent);
         CatObject cat = TopCatsActivity.catObjects.get(catListPosition);
@@ -41,8 +40,10 @@ public class TopCatDetails extends AppCompatActivity {
 
         DecimalFormat df = new DecimalFormat("#.##");
 
-        if (cat.getTotalRatings() > 0) percentText.setText(String.format("%s%%", df.format(cat.getPercentage())));
-        else percentText.setText(R.string.no_ratings);
+        if (cat.getTotalRatings() > 0)
+            percentText.setText(String.format("%s%%", df.format(cat.getPercentage())));
+        else
+            percentText.setText(R.string.no_ratings);
     }
 
 }

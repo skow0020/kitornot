@@ -10,30 +10,46 @@ public class CatObject {
     private int catTotalRatings, catPositiveRatings;
     private String imageID;
 
-    public CatObject(String objID)
-    {
+    public CatObject(String objID) {
         imageID = objID;
     }
 
-    public double getPercentage()
-    {
-        if (catTotalRatings == 0)  return 0;
-        else return 100*(double)catPositiveRatings/catTotalRatings;
+    public double getPercentage() {
+        if (catTotalRatings == 0)
+            return 0;
+        else
+            return 100 * (double) catPositiveRatings / catTotalRatings;
     }
 
-    public double getTotalRatings() { return catTotalRatings; }
+    public double getTotalRatings() {
+        return catTotalRatings;
+    }
 
-    public Bitmap getCatImage() {return catImage; }
+    public Bitmap getCatImage() {
+        return catImage;
+    }
 
-    public String getImageID() { return imageID; }
+    public String getImageID() {
+        return imageID;
+    }
 
-    public ParseFile getParseImage() { return parseImage; }
+    public ParseFile getParseImage() {
+        return parseImage;
+    }
 
-    public void setTotalRatings(int totalRatings) { catTotalRatings = totalRatings; }
+    public void setTotalRatings(int totalRatings) {
+        catTotalRatings = totalRatings;
+    }
 
-    public void setCatPositiveRatings(int totalRatings) { catPositiveRatings = totalRatings; }
+    public void setCatPositiveRatings(int totalRatings) {
+        catPositiveRatings = totalRatings;
+    }
 
-    public void setCatImage(Bitmap img) {catImage = img; }
+    public void setCatImage(Bitmap img) {
+        catImage = img;
+    }
 
-    public void setParseImage(ParseFile file) { parseImage = file; }
+    public void setParseImage(ParseFile file) {
+        parseImage = file;
+    }
 }
