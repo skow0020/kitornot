@@ -14,11 +14,11 @@ public class CatObject {
         imageID = objID;
     }
 
-    public double getPercentage() {
+    public int getPercentage() {
         if (catTotalRatings == 0)
             return 0;
         else
-            return 100 * (double) catPositiveRatings / catTotalRatings;
+            return 100 * catPositiveRatings / catTotalRatings;
     }
 
     public double getTotalRatings() {
