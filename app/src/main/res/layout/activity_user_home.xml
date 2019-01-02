@@ -44,6 +44,7 @@
 
     <ImageButton
         android:id="@+id/ratingBtn"
+        android:contentDescription="@+id/rating_btn-desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -54,6 +55,7 @@
 
     <ImageButton
         android:id="@+id/topCatsBtn"
+        android:contentDescription="@+id/top_cats_btn_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

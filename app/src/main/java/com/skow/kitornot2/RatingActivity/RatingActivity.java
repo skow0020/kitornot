@@ -26,13 +26,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class RatingActivity extends AppCompatActivity {
+public class RatingActivity extends AppCompatActivity
+{
     private ImageButton thumbUp, thumbDown;
     private CatObject chosenCat;
     private List<CatObject> catObjects;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rating);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -49,9 +51,11 @@ public class RatingActivity extends AppCompatActivity {
         query.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> objects, ParseException e) {
-                if (e == null) {
+                if (e == null)
+                {
                     catObjects.clear();
-                    for (ParseObject object : objects) {
+                    for (ParseObject object : objects)
+                    {
                         ParseFile imgFile = (ParseFile) object.get("image");
                         CatObject ratingCat = new CatObject(object.getObjectId());
                         ratingCat.setCatPositiveRatings(Integer.parseInt(object.get("positiveRatings").toString()));
@@ -59,20 +63,20 @@ public class RatingActivity extends AppCompatActivity {
                         ratingCat.setParseImage(imgFile);
                         catObjects.add(ratingCat);
 
-                        if (catObjects.size() == objects.size()) {
-                            Toast.makeText(getApplication().getBaseContext(), "Cats loaded successfully",
-                                    Toast.LENGTH_LONG).show();
+                        if (catObjects.size() == objects.size())
+                        {
+                            Toast.makeText(getApplication().getBaseContext(), "Cats loaded successfully", Toast.LENGTH_LONG).show();
                             chosenCat = loadRandomCat();
                         }
                     }
-                } else
-                    Toast.makeText(getApplication().getBaseContext(), "Images failed to laod", Toast.LENGTH_LONG)
-                            .show();
+                }
+                else Toast.makeText(getApplication().getBaseContext(), "Images failed to laod", Toast.LENGTH_LONG).show();
             }
         });
     }
 
-    public void cuteBtn(View view) {
+    public void cuteBtn(View view)
+    {
         thumbUp.setClickable(false);
         ParseQuery<ParseObject> query = ParseQuery.getQuery("images");
 
@@ -81,17 +85,12 @@ public class RatingActivity extends AppCompatActivity {
                 if (e == null) {
                     catObject.increment("positiveRatings");
                     catObject.increment("totalRatings");
-                    catObject.put("averageRating", Double.parseDouble(catObject.get("positiveRatings").toString())
-                            / Double.parseDouble(catObject.get("totalRatings").toString()));
+                    catObject.put("averageRating", Double.parseDouble(catObject.get("positiveRatings").toString())/ Double.parseDouble(catObject.get("totalRatings").toString()));
                     catObject.saveInBackground(new SaveCallback() {
                         @Override
                         public void done(ParseException e) {
-                            if (e == null)
-                                Toast.makeText(getApplication().getBaseContext(), "Rating updated successfully",
-                                        Toast.LENGTH_SHORT).show();
-                            else
-                                Toast.makeText(getApplication().getBaseContext(), "Rating failed", Toast.LENGTH_LONG)
-                                        .show();
+                            if (e == null) Toast.makeText(getApplication().getBaseContext(), "Rating updated successfully", Toast.LENGTH_SHORT).show();
+                            else Toast.makeText(getApplication().getBaseContext(), "Rating failed", Toast.LENGTH_LONG).show();
                             chosenCat = loadRandomCat();
                         }
                     });
@@ -99,8 +98,8 @@ public class RatingActivity extends AppCompatActivity {
             }
         });
     }
-
-    public void noBtn(View view) {
+    public void noBtn(View view)
+    {
         thumbDown.setClickable(false);
         ParseQuery<ParseObject> query = ParseQuery.getQuery("images");
 
@@ -108,17 +107,15 @@ public class RatingActivity extends AppCompatActivity {
             public void done(ParseObject catObject, ParseException e) {
                 if (e == null) {
                     catObject.increment("totalRatings");
-                    catObject.put("averageRating", Double.parseDouble(catObject.get("positiveRatings").toString())
-                            / Double.parseDouble(catObject.get("totalRatings").toString()));
+                    catObject.put("averageRating", Double.parseDouble(catObject.get("positiveRatings").toString())/ Double.parseDouble(catObject.get("totalRatings").toString()));
                     catObject.saveInBackground(new SaveCallback() {
                         @Override
                         public void done(ParseException e) {
-                            if (e == null) {
-                                Toast.makeText(getApplication().getBaseContext(), "Rating updated successfully!",
-                                        Toast.LENGTH_SHORT).show();
-                            } else
-                                Toast.makeText(getApplication().getBaseContext(), "Rating failed", Toast.LENGTH_LONG)
-                                        .show();
+                            if (e == null)
+                            {
+                                Toast.makeText(getApplication().getBaseContext(), "Rating updated successfully!", Toast.LENGTH_SHORT).show();
+                            }
+                            else Toast.makeText(getApplication().getBaseContext(), "Rating failed", Toast.LENGTH_LONG).show();
                             chosenCat = loadRandomCat();
                         }
                     });
@@ -127,7 +124,8 @@ public class RatingActivity extends AppCompatActivity {
         });
     }
 
-    public CatObject loadRandomCat() {
+    public CatObject loadRandomCat()
+    {
         Random generator = new Random();
 
         CatObject randomCat = catObjects.get(generator.nextInt(catObjects.size()));
@@ -136,11 +134,13 @@ public class RatingActivity extends AppCompatActivity {
         imgFile.getDataInBackground(new GetDataCallback() {
             @Override
             public void done(byte[] data, ParseException e) {
-                if (e == null) {
+                if (e == null)
+                {
                     Bitmap chosenCatImage = BitmapFactory.decodeByteArray(data, 0, data.length);
 
-                    if (chosenCatImage.getHeight() > 4160 || chosenCatImage.getWidth() > 4160) {
-                        int nh = (int) (chosenCatImage.getHeight() * (512.0 / chosenCatImage.getWidth()));
+                    if (chosenCatImage.getHeight() > 4160 || chosenCatImage.getWidth() > 4160)
+                    {
+                        int nh = (int) ( chosenCatImage.getHeight() * (512.0 / chosenCatImage.getWidth()) );
                         chosenCatImage = Bitmap.createScaledBitmap(chosenCatImage, 512, nh, true);
                     }
 
@@ -148,9 +148,8 @@ public class RatingActivity extends AppCompatActivity {
                     catImage.setImageBitmap(chosenCatImage);
                     thumbDown.setClickable(true);
                     thumbUp.setClickable(true);
-                } else
-                    Toast.makeText(getApplication().getBaseContext(), "Random cat image failed to load",
-                            Toast.LENGTH_LONG).show();
+                }
+                else Toast.makeText(getApplication().getBaseContext(), "Random cat image failed to load", Toast.LENGTH_LONG).show();
             }
         });
         setContentView(R.layout.activity_rating);

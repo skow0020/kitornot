@@ -54,7 +54,8 @@ public class TopCatsActivity extends AppCompatActivity {
         });
     }
 
-    public void SetCatGrid() {
+    public void SetCatGrid()
+    {
         topCatsGrid = (GridView) findViewById(R.id.topCats);
 
         ParseQuery<ParseObject> query = new ParseQuery<>("images");
@@ -64,19 +65,20 @@ public class TopCatsActivity extends AppCompatActivity {
         query.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> objects, ParseException e) {
-                if (e == null) {
+                if (e == null)
+                {
                     catObjects.clear();
                     final int numObjectsReturned = objects.size();
-                    if (numObjectsReturned == 0)
-                        Toast.makeText(getApplication().getBaseContext(), "There are no top cats!", Toast.LENGTH_LONG)
-                                .show();
-                    for (final ParseObject object : objects) {
+                    if (numObjectsReturned == 0) Toast.makeText(getApplication().getBaseContext(), "There are no top cats!", Toast.LENGTH_LONG).show();
+                    for (final ParseObject object : objects)
+                    {
                         ParseFile imgFile = (ParseFile) object.get("image");
 
                         imgFile.getDataInBackground(new GetDataCallback() {
                             @Override
                             public void done(byte[] data, ParseException e) {
-                                if (e == null) {
+                                if (e == null)
+                                {
                                     Bitmap img = BitmapFactory.decodeByteArray(data, 0, data.length);
                                     CatObject cat = new CatObject(object.getObjectId());
                                     cat.setCatImage(img);
@@ -85,17 +87,14 @@ public class TopCatsActivity extends AppCompatActivity {
 
                                     catImages.add(img);
                                     catObjects.add(cat);
-                                    if (catObjects.size() == numObjectsReturned)
-                                        topCatsGrid.setAdapter(new ImageAdapter(getApplicationContext(), catImages));
-                                } else
-                                    Toast.makeText(getApplication().getBaseContext(), "Top Cats images failed to load",
-                                            Toast.LENGTH_LONG).show();
+                                    if (catObjects.size() == numObjectsReturned) topCatsGrid.setAdapter(new ImageAdapter(getApplicationContext(), catImages));
+                                }
+                                else Toast.makeText(getApplication().getBaseContext(), "Top Cats images failed to load", Toast.LENGTH_LONG).show();
                             }
                         });
                     }
-                } else
-                    Toast.makeText(getApplication().getBaseContext(), "Top cats failed to load", Toast.LENGTH_LONG)
-                            .show();
+                }
+                else Toast.makeText(getApplication().getBaseContext(), "Top cats failed to load", Toast.LENGTH_LONG).show();
             }
         });
     }
