@@ -20,8 +20,8 @@ android:
   components:
     - tools
     - platform-tools
-    - build-tools-28.0.3
-    - android-28
+    - build-tools-$ANDROID_BUILD_TOOLS_VERSION
+    - android-26
     - extra-google-m2repository
     - extra-android-m2repository
     # Google Play Services
@@ -37,6 +37,7 @@ script:
         - ./gradlew clean
         - ./gradlew assembleDebug
         - ./gradlew assembleDebugAndroidTest
+        
 before_install:
           - mkdir "$ANDROID_HOME/licenses" || true
           - echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_HOME/licenses/android-sdk-license"
