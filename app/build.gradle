@@ -2,13 +2,17 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.2"
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+    buildToolsVersion "28.0.3"
     defaultConfig {
         applicationId "com.skow.kitornot2"
-        minSdkVersion 15
+        minSdkVersion 21
         targetSdkVersion 26
-        versionCode 5
-        versionName "2.1"
+        versionCode 6
+        versionName "2.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -24,10 +28,10 @@ dependencies {
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    implementation 'com.android.support:appcompat-v7:25.3.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-    implementation 'com.parse.bolts:bolts-tasks:1.3.0'
+    implementation 'com.android.support:appcompat-v7:26.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation 'com.parse.bolts:bolts-tasks:1.4.0'
     implementation 'com.parse:parse-android:1.14.1'
-    implementation 'com.android.support:design:25.3.0'
+    implementation 'com.android.support:design:26.0.0'
     testImplementation 'junit:junit:4.12'
 }

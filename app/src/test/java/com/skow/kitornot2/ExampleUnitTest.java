@@ -10,16 +10,15 @@ import static org.junit.Assert.*;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 public class ExampleUnitTest {
+    CatObject cat = new CatObject("12345");
 
     @Test
     public void createCatObject() throws Exception {
-        CatObject cat = new CatObject("12345");
         assertEquals("12345", cat.getImageID());
     }
 
     @Test
     public void catObjectGetPercentage() throws Exception {
-        CatObject cat = new CatObject("12345");
         cat.setCatPositiveRatings(200);
         cat.setTotalRatings(400);
         assertTrue(cat.getTotalRatings() == 400.0);
@@ -29,7 +28,6 @@ public class ExampleUnitTest {
 
     @Test
     public void catObjectGetPercentageDiv0() throws Exception {
-        CatObject cat = new CatObject("12345");
         cat.setCatPositiveRatings(200);
         cat.setTotalRatings(0);
         assertTrue(cat.getTotalRatings() == 0.0);
