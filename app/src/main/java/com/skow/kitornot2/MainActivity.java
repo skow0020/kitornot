@@ -184,29 +184,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
         }
-        else if ( v.getId() == R.id.password) passwordField.setText("");
-        else if (v.getId() == R.id.username) usernameField.setText("");
-    }
-}
-
-class CatTalker extends Application implements Runnable
-{
-    private Thread t;
-
-    public void run()
-    {
-        while(true) {
-            if (MainActivity.catTapCount == 5)
-            {
-                Toast.makeText(this, "Meow!!", Toast.LENGTH_LONG).show();
-            }
-        }
-    }
-
-    public void start() {
-        if (t ==null) {
-            t = new Thread (this);
-            t.start();
-        }
     }
 }

@@ -11,7 +11,7 @@ android {
         applicationId "com.skow.kitornot2"
         minSdkVersion 21
         targetSdkVersion 26
-        versionCode 6
+        versionCode 7
         versionName "2.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }

@@ -27,10 +27,10 @@ public class ParseConnection extends Application {
             .applicationId("b688b965e7d11efeb92422b7c00e0d27f0bd1b38")
             .clientKey("ff1fbfb5e435d0fc6f12196c972e55abe558786a")
             .server("http://ec2-52-91-81-222.compute-1.amazonaws.com:80/parse/")
-    .build()
+            .build()
     );
 
-      ParseUser.enableAutomaticUser();
+    ParseUser.enableAutomaticUser();
     ParseACL defaultACL = new ParseACL();
     ParseACL.setDefaultACL(defaultACL, true);
   }
