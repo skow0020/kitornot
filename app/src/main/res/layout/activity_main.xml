@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/logo"
         android:src="@drawable/loginicon"
+        android:paddingTop="30dp"
         android:contentDescription="@string/cat_backside"
         android:layout_below="@+id/apptitle"
         android:layout_centerHorizontal="true" />

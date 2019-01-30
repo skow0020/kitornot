@@ -34,7 +34,7 @@ public class UserCatDetails extends AppCompatActivity {
         CatObject cat = UserHomeActivity.catObjects.get(catListPosition);
 
         TextView cuteness = (TextView) findViewById(R.id.cuteness);
-        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/pacifico.ttf");
+        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/vollkorn-reg.ttf");
         cuteness.setTypeface(custom_font);
 
         catImage.setImageBitmap(cat.getCatImage());

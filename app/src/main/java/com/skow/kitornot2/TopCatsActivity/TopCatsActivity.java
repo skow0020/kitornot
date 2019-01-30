@@ -39,7 +39,7 @@ public class TopCatsActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         TextView topCatsLabel = (TextView) findViewById(R.id.topCatsLabel);
-        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/pacifico.ttf");
+        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/vollkorn-reg.ttf");
         topCatsLabel.setTypeface(custom_font);
         SetCatGrid();
 

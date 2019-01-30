@@ -56,7 +56,7 @@ public class UserHomeActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         TextView userPage = (TextView) findViewById(R.id.userPage);
-        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/pacifico.ttf");
+        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/vollkorn-reg.ttf");
         userPage.setTypeface(custom_font);
         userPage.setText(String.format("%s's cats", ParseUser.getCurrentUser().getUsername()));
         SetCatGrid();
@@ -135,13 +135,13 @@ public class UserHomeActivity extends AppCompatActivity {
         startActivityForResult(i, 1);
     }
 
-    public boolean deleteCat(final int position)
+    private boolean deleteCat(final int position)
     {
         final CharSequence[] items = { "Delete" };
 
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
 
-        builder.setTitle("Do you want to delete the image?");
+        builder.setTitle("Do you want to remove your photo?");
         builder.setItems(items, new DialogInterface.OnClickListener() {
 
             public void onClick(DialogInterface dialog, int item) {
@@ -190,7 +190,7 @@ public class UserHomeActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    public static int getOrientation(Context context, Uri photoUri) {
+    private static int getOrientation(Context context, Uri photoUri) {
         Cursor cursor = context.getContentResolver().query(photoUri,
                 new String[] { MediaStore.Images.ImageColumns.ORIENTATION }, null, null, null);
 
@@ -198,7 +198,7 @@ public class UserHomeActivity extends AppCompatActivity {
         return cursor.getInt(0);
     }
 
-    public static Bitmap getCorrectlyOrientedImage(Context context, Uri photoUri) throws IOException {
+    private static Bitmap getCorrectlyOrientedImage(Context context, Uri photoUri) throws IOException {
         InputStream is = context.getContentResolver().openInputStream(photoUri);
         BitmapFactory.Options dbo = new BitmapFactory.Options();
         dbo.inJustDecodeBounds = true;

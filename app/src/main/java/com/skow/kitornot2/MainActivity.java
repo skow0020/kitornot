@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //Set font of the title text
         TextView title = (TextView) findViewById(R.id.apptitle);
-        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/pacifico.ttf");
+        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/vollkorn-reg.ttf");
         title.setTypeface(custom_font);
 
         signUpModeActive = false;
