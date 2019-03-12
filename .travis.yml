@@ -31,19 +31,7 @@ script:
 - "./gradlew assembleDebug"
 - "./gradlew assembleDebugAndroidTest"
 before_install:
-- openssl aes-256-cbc -K $encrypted_78d2226953c4_key -iv $encrypted_78d2226953c4_iv -in kitornot.keystore.enc -out kitornot.keystore -d
 - mkdir "$ANDROID_HOME/licenses" || true
 - echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_HOME/licenses/android-sdk-license"
 - echo -e "\n84831b9409646a918e30573bab4c9c91346d8abd" > "$ANDROID_HOME/licenses/android-sdk-preview-license"
 - chmod +x gradlew
-deploy:
-  provider: releases
-  skip_cleanup: true
-  overwrite: true
-  api_key:
-    secure: ax/C9t3YSNo51FN4uRB7JnuMu6zUjYyq4/QYAFh2zVHLR0Ms41Pyb8vj2OMlG3zzp42hozmQ+Eu40MNvyWCKP0VrXu7LcH5o6NyAMpq0O4wa26gAvSNXmLtlT6EcIFUJM9ZzDZggGgXQNSxQdumrDlj9iRlEIJbZ4wJ9V6UlysloGn5YvMUyYFYqzfyhGXL8aKBLGNDdkr28HOSORuh8UtGnXE1pG1nt5dokScxRXE7fgZWE1jGlSk+7MZb8x6ZqQCUoelgLTWzTc8VMFgi4BVodoTt9+QW2MPlKN/6w1gqkBc3Xa2B5MZw4ivneHwikSND6Rnmzq393NB6J8fze6MHaaM6v9YUEbrwIBpwZ5GhcJ8FFNGJ2ic25U5ZHLNDqhqHckYyPgD0C/5oPrDYgem9z+N8HwI225fS5INnp9jQ827/zGHQ/Q/mkqxQ9z3jPLUUO8Q2MNBimesMaWPsy9ZrmZ5H3KXDkSkYSJrQ1fIUj0sGnVwsFrh36Yj0MApH6KLRaJvyeuZmGj5XVt9IY+g/d0u9Po5QFDxJKvlj5Q1m3ln7V0lmrA0PYwmGTHsR5MatOhx78UKoTk65vnbyWK9lYRyHONwuqTJJKZf59L8Vx8d6FblYnsMKEUyD2pHx0CYOjtfSFAAIwuyluPDXs2yb3AD/XXGv+S32s96X5kR4=
-  file_glob: true
-  file: app/release/app-release.apk
-  on:
-    repo: skow0020/kitornot
-    tags: true
