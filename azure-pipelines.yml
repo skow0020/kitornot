@@ -17,4 +17,24 @@ steps:
     gradleOptions: '-Xmx3072m'
     publishJUnitResults: false
     testResultsFiles: '**/TEST-*.xml'
-    tasks: 'assembleDebug'
+    tasks: 'assembleDebug, assembleDebugAndroidTest'
+
+- task: DownloadSecureFile@1
+  inputs:
+    secureFile: 'kitornot.keystore'
+
+- task: AndroidSigning@2
+  inputs:
+    apkFiles: '**/*.apk'
+    jarsign: true
+    jarsignerKeystoreFile: '$(Agent.TempDirectory)/kitornot.keystore'
+    jarsignerKeystorePassword: '$(keystorePassword)'
+    jarsignerKeystoreAlias: '$(keystoreAlias)'
+    jarsignerKeyPassword: '$(keyPassword)'
+    zipalign: true
+
+- task: CopyFiles@2
+  inputs:
+    contents: '**/*.apk'
+    targetFolder: '$(build.artifactStagingDirectory)'
+- task: PublishBuildArtifacts@1
