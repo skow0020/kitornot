@@ -23,18 +23,19 @@ steps:
   inputs:
     secureFile: 'kitornot.keystore'
 
-- task: AndroidSigning@2
-  inputs:
-    apkFiles: '**/*.apk'
-    jarsign: true
-    jarsignerKeystoreFile: '$(Agent.TempDirectory)'
-    jarsignerKeystorePassword: '$(keystorePassword)'
-    jarsignerKeystoreAlias: '$(keystoreAlias)'
-    jarsignerKeyPassword: '$(keyPassword)'
-    zipalign: true
+# SIGNING AND DEPLOYING STUFF? Not working yet - keystore file not working
+# - task: AndroidSigning@2
+#   inputs:
+#     apkFiles: '**/*.apk'
+#     jarsign: true
+#     jarsignerKeystoreFile: '$(Agent.TempDirectory)/kitornot.keystore'
+#     jarsignerKeystorePassword: '$(keystorePassword)'
+#     jarsignerKeystoreAlias: '$(keystoreAlias)'
+#     jarsignerKeyPassword: '$(keyPassword)'
+#     zipalign: true
 
-- task: CopyFiles@2
-  inputs:
-    contents: '**/*.apk'
-    targetFolder: '$(build.artifactStagingDirectory)'
-- task: PublishBuildArtifacts@1
+# - task: CopyFiles@2
+#   inputs:
+#     contents: '**/*.apk'
+#     targetFolder: '$(build.artifactStagingDirectory)'
+# - task: PublishBuildArtifacts@1
