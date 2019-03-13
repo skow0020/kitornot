@@ -27,7 +27,7 @@ steps:
   inputs:
     apkFiles: '**/*.apk'
     jarsign: true
-    jarsignerKeystoreFile: '$(Agent.TempDirectory)/kitornot.keystore'
+    jarsignerKeystoreFile: '$(Agent.TempDirectory)'
     jarsignerKeystorePassword: '$(keystorePassword)'
     jarsignerKeystoreAlias: '$(keystoreAlias)'
     jarsignerKeyPassword: '$(keyPassword)'
