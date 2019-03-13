@@ -17,7 +17,7 @@ steps:
     gradleOptions: '-Xmx3072m'
     publishJUnitResults: false
     testResultsFiles: '**/TEST-*.xml'
-    tasks: 'assembleDebug, assembleDebugAndroidTest'
+    tasks: 'assembleDebug'
 
 - task: DownloadSecureFile@1
   inputs:
